@@ -2,19 +2,31 @@
 
 Dashboard interativo de monitorização de campanhas promocionais de pneus ligeiros em Portugal.
 
-## Conteúdo
-- `index.html`: interface do dashboard.
-- `campanhas.csv`: base de dados inicial dos registos incluídos.
+## Componentes
+- `index.html`: dashboard interativo.
+- `campanhas.csv`: base de dados inicial do dashboard; os registos são preliminares e não constituem inventário exaustivo.
+- `revisao.html`: área de revisão de candidatas recolhidas automaticamente.
+- `scripts/monitorizar_fontes.py`: verifica alterações técnicas nas páginas-fonte já registadas; não interpreta semanticamente o conteúdo.
+- `scripts/recolher_campanhas.py`: recolhe resultados de pesquisa RSS como potenciais campanhas.
+- `scripts/interpretar_campanhas.py`: sugere campos a partir do título e publicador RSS, sem confirmar factos.
+- `.github/workflows/monitorizacao.yml`: execução agendada e manual da monitorização.
 - `.github/workflows/pages.yml`: publicação do site através do GitHub Pages.
+
+## Dashboard e revisão
+- Dashboard: https://bruno1996santos-jpg.github.io/marketscope-pneus-portugal/
+- Revisão: https://bruno1996santos-jpg.github.io/marketscope-pneus-portugal/revisao.html
+
+Na área de revisão, consulte a fonte original, corrija os campos e marque cada candidata como aprovada, rejeitada ou pendente. As alterações e decisões são guardadas no armazenamento local do navegador usado para a revisão. Não são enviadas automaticamente para o GitHub. Exporte as campanhas aprovadas em JSON ou CSV para posterior integração manual na base de dados do dashboard. Limpar os dados do navegador ou usar outro dispositivo pode tornar as alterações locais indisponíveis.
+
+## Monitorização
+O workflow corre diariamente às 07:30 UTC e também pode ser iniciado manualmente em **Actions → Monitorizar fontes MarketScope → Run workflow**. Os resultados são guardados em `monitorizacao/`, quando existem alterações.
+
+A recolha usa resultados RSS e a interpretação é heurística, baseada apenas no título e no publicador. A monitorização de fontes conhecidas deteta alterações técnicas (por exemplo, conteúdo ou estado HTTP), não valida o significado comercial das alterações. Nenhuma candidata deve ser tratada como campanha confirmada sem verificação da fonte primária e das respetivas condições.
 
 ## Publicação
 1. No repositório, abrir **Settings → Pages**.
 2. Em **Build and deployment → Source**, escolher **GitHub Actions**.
-3. Abrir o separador **Actions** e acompanhar o workflow **Deploy MarketScope to GitHub Pages**. Também é possível executá-lo manualmente através de **Run workflow**.
-4. Após conclusão com sucesso, o URL do site será apresentado no deployment. Para um repositório de projeto, o endereço normalmente segue o padrão `https://<utilizador>.github.io/<nome-do-repositorio>/`.
-
-## Atualização dos dados
-O dashboard inclui dados de um levantamento inicial, com referência indicada na interface. Para atualizar a informação é necessário alterar `index.html` e/ou `campanhas.csv` e enviar um commit para `main`; o workflow publica as alterações automaticamente. A recolha automática das páginas externas e a sincronização do CSV com a interface não estão implementadas neste momento.
+3. Acompanhar o workflow de publicação no separador **Actions**.
 
 ## Limitações
-As campanhas registadas não constituem um inventário exaustivo. Consultar sempre as páginas oficiais e regulamentos ligados nos cartões antes de tomar decisões comerciais. Campos não confirmados devem permanecer identificados como tal.
+O levantamento não é exaustivo e os dados podem mudar. Consultar sempre as páginas oficiais e regulamentos antes de usar a informação para decisões comerciais. Datas, valores, elegibilidade e mecânicas não confirmados devem permanecer identificados como tal.
