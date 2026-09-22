@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MarketScope | Pedir recuperação</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>
+body{font:16px system-ui;background:#f3f5f8;color:#182230;margin:0}.wrap{max-width:520px;margin:8vh auto;padding:24px}.card{background:white;border:1px solid #dce2ea;border-radius:12px;padding:24px;box-shadow:0 5px 20px #1822300d}h1{margin-top:0}label{display:block;margin:14px 0 6px}input,button{font:inherit;padding:12px;border:1px solid #cbd5e1;border-radius:7px;box-sizing:border-box;width:100%}button{background:#1455a0;color:white;cursor:pointer;margin-top:16px}#msg{overflow-wrap:anywhere}.note{color:#526174}
+</style></head>
+<body><main class="wrap"><section class="card"><h1>MarketScope</h1><h2>Solicitar recuperação de palavra-passe</h2><p class="note">Introduza o email associado à sua conta. Enviaremos um link para definir uma nova palavra-passe.</p>
+<form id="form"><label for="email">Email</label><input id="email" type="email" autocomplete="email" required><button id="submit" type="submit">Enviar link de recuperação</button></form><p id="msg" role="status"></p><p><a href="./revisao.html">Voltar à página de revisão</a></p></section></main>
+<script>
+const supabase=window.supabase.createClient('https://lgjrnuelvwsvmbusufvu.supabase.co','sb_publishable_VAeZZvYfq134xQVSJ0APxQ_f1x75mXG');
+const form=document.getElementById('form'),msg=document.getElementById('msg'),submit=document.getElementById('submit');
+form.addEventListener('submit',async e=>{e.preventDefault();submit.disabled=true;msg.textContent='A enviar…';const email=document.getElementById('email').value.trim();const {error}=await supabase.auth.resetPasswordForEmail(email,{redirectTo:'https://bruno1996santos-jpg.github.io/marketscope-pneus-portugal/recuperar-password.html'});submit.disabled=false;if(error){msg.textContent='Não foi possível enviar o pedido: '+error.message;return}msg.textContent='Se existir uma conta associada a este email, receberá uma mensagem com o link de recuperação. Verifique também o spam/lixo eletrónico.';});
+</script></body></html>
