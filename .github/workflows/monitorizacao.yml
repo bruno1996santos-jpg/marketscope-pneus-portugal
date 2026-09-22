@@ -1,0 +1,30 @@
+name: Monitorizar fontes MarketScope
+on:
+  schedule:
+    - cron: '30 7 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Verificar fontes
+        run: python scripts/monitorizar_fontes.py
+      - name: Guardar relatório e estado
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add monitorizacao/fontes.json monitorizacao/relatorio.md
+          if ! git diff --cached --quiet; then
+            git commit -m 'Atualizar monitorização diária de fontes'
+            git push
+          else
+            echo 'Sem alterações para guardar.'
+          fi
