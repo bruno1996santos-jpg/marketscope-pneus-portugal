@@ -180,7 +180,12 @@ def official_candidate(brand,url,now):
         benefits=re.findall(r'[^.!?]{0,50}(?:desconto direto|vouchers?|reembolso)[^.!?]{0,80}',text,re.I)[:4]
         if benefits: evidence.append('benefício: '+' | '.join(dict.fromkeys(x.strip() for x in benefits)))
         summary='; '.join(evidence) if evidence else 'detalhes por confirmar'
-        return {'candidate_id':'CAND-'+key,'detetada_em_utc':now,'consulta':'fonte oficial direta',
+        # Enriquecimento: quando existe adaptador válido, junta a evidência do snapshot
+        # à extração direta em vez de o usar apenas quando a página falha.
+        adapter=SOURCE_ADAPTERS.get(url)
+        if adapter and date.today()<=date.fromisoformat(adapter['end']):
+            summary=summary+'; enriquecimento do adaptador: '+adapter['summary']
+        return {'candidate_id':'CAND-'+key,'detetada_em_utc':now,'consulta':'fonte oficial direta + enriquecimento' if adapter else 'fonte oficial direta',
                 'titulo':f'{brand} — promoção/campanha detetada em fonte oficial',
                 'url':url,'publicador':brand,'estado_validacao':'Pendente de validação',
                 'notas':'Detetada diretamente em fonte oficial. Extração automática: '+summary+'. Confirmar elegibilidade e vigência.',
