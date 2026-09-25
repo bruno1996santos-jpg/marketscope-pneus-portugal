@@ -32,6 +32,10 @@ OFFICIAL_PAGES = [
     ('Pirelli','https://www.pirelli.com/tyres/pt-pt/carro/ofertas-promocoes'),
     ('Goodyear','https://www.goodyear.eu/pt_pt/consumer/promotion-hub/disfrute-ao-maximo-may-2026-portugal--pid-7004/terms-and-conditions.html'),
     ('Cooper','https://www.goodyear.eu/pt_pt/consumer/promotion-hub/national-promotion-sell-out-may-portugal-cooper-pid-6903/terms-and-conditions.html'),
+    ('Norauto','https://www.norauto.pt/e/marca-pneu-norauto.html'),
+    ('Norauto Goodyear','https://www.norauto.pt/e/marca-pneu-goodyear.html'),
+    ('Norauto Pneus','https://www.norauto.pt/e/pneu.html'),
+    ('Hankook / Confortauto','https://premioshk.pt/bases-legales'),
 ]
 
 QUERIES = [
