@@ -8,6 +8,20 @@ from urllib.parse import quote
 from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
 
+# As fontes abaixo espelham a monitorização diária do MarketScope:
+# marcas oficiais + redes/retalhistas + pesquisa complementar.
+SOURCES = {
+    'Continental': ['continental-tires.com'],
+    'Michelin': ['michelin.pt'],
+    'Pirelli': ['pirelli.com'],
+    'Goodyear': ['goodyear.eu'],
+    'Hankook': ['hankooktire.com'],
+    'Bridgestone': ['bridgestone.pt', 'bridgestone-emia.com'],
+    'Norauto': ['norauto.pt'],
+    'Feu Vert': ['feuvert.pt'],
+    'Confortauto': ['confortauto.pt'],
+}
+
 QUERIES = [
     '"pneus" promoção Portugal desconto',
     '"pneus" campanha Portugal reembolso',
@@ -15,18 +29,15 @@ QUERIES = [
     '"pneus" "oferta" Portugal automóvel',
     '"pneus" voucher Portugal automóvel',
     '"pneus" "na compra" Portugal',
-    '"pneus" promoção Portugal Michelin',
-    '"pneus" promoção Portugal Continental',
-    '"pneus" promoção Portugal Bridgestone',
-    '"pneus" promoção Portugal Goodyear',
-    '"pneus" promoção Portugal Pirelli',
-    '"pneus" promoção Portugal Hankook',
-    '"pneus" promoção Portugal Norauto',
-    '"pneus" promoção Portugal Feu Vert',
-    '"pneus" promoção Portugal Confortauto',
-    '"pneus" promoção Portugal Euromaster',
-    '"pneus" promoção Portugal First Stop',
 ]
+for source in SOURCES:
+    QUERIES += [
+        f'"pneus" promoção Portugal "{source}"',
+        f'"pneus" campanha Portugal "{source}"',
+        f'"pneus" desconto Portugal "{source}"',
+        f'"pneus" reembolso Portugal "{source}"',
+        f'"pneus" oferta Portugal "{source}"',
+    ]
 OUT='monitorizacao/candidatas.csv'
 FIELDS=['candidate_id','detetada_em_utc','consulta','titulo','url','publicador','estado_validacao','notas','filter_score','filter_reasons']
 
