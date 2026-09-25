@@ -149,7 +149,9 @@ def official_candidate(brand,url,now):
         evidence=[]
         if dates: evidence.append('datas: '+', '.join(dict.fromkeys(dates)))
         if euros: evidence.append('valores: '+', '.join(dict.fromkeys(euros)))
-        if qty: evidence.append('mecânica: '+' | '.join(dict.fromkeys(qty)))\n        if benefits: evidence.append('benefício: '+' | '.join(dict.fromkeys(x.strip() for x in benefits)))
+        if qty: evidence.append('mecânica: '+' | '.join(dict.fromkeys(qty)))
+        benefits=re.findall(r'[^.!?]{0,50}(?:desconto direto|vouchers?|reembolso)[^.!?]{0,80}',text,re.I)[:4]
+        if benefits: evidence.append('benefício: '+' | '.join(dict.fromkeys(x.strip() for x in benefits)))
         summary='; '.join(evidence) if evidence else 'detalhes por confirmar'
         return {'candidate_id':'CAND-'+key,'detetada_em_utc':now,'consulta':'fonte oficial direta',
                 'titulo':f'{brand} — promoção/campanha detetada em fonte oficial',
