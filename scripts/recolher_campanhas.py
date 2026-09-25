@@ -51,6 +51,9 @@ EXCLUDE=[
  r'pneus chineses',r'tarifas?',r'importa[cç][aã]o'
 ]
 COMMERCIAL_EXCLUDE=[r'pneu(?:s)? comercial',r've[ií]culos? comerciais?',r'frota(?:s)?']
+BIKE_PUBLISHERS=[r'mountainbikes?',r'ciclismo',r'bike']
+PORTUGAL_SIGNAL=[r'\bportugal\b',r'\bportugu[eê]s(?:a|es|as)?\b',r'\bnacional\b']
+PT_RETAILERS=[r'norauto',r'feu vert',r'confortauto',r'euromaster',r'first stop',r'roady',r'midas']
 
 def norm(s):
     return unicodedata.normalize('NFKC',s or '').lower()
@@ -59,7 +62,7 @@ def hit(patterns,text):
     return any(re.search(p,text,re.I) for p in patterns)
 
 def score(title,publisher,query):
-    t=norm(title); q=norm(query); reasons=[]; n=0
+    t=norm(title); p=norm(publisher); q=norm(query); reasons=[]; n=0
     if hit(TYRE,t): n+=3; reasons.append('pneus')
     if hit(PROMO,t): n+=4; reasons.append('sinal promocional')
     if hit(LIGHT,t): n+=2; reasons.append('ligeiros/automóvel')
@@ -69,8 +72,15 @@ def score(title,publisher,query):
         n-=10; reasons.append('exclusão temática')
     if hit(COMMERCIAL_EXCLUDE,t):
         n-=8; reasons.append('segmento comercial/frotas')
-    # Gate obrigatório: o próprio título tem de falar de pneus e de uma mecânica/promessa promocional.
-    eligible=hit(TYRE,t) and hit(PROMO,t) and not hit(EXCLUDE,t) and not hit(COMMERCIAL_EXCLUDE,t)
+    if hit(BIKE_PUBLISHERS,p):
+        n-=10; reasons.append('fonte de ciclismo')
+    # Sinal geográfico: Portugal no título ou retalhista com operação nacional conhecida.
+    geo=hit(PORTUGAL_SIGNAL,t) or hit(PT_RETAILERS,t)
+    if geo: n+=3; reasons.append('sinal Portugal')
+    # Gate obrigatório: pneus + promoção, sem exclusões. Resultados sem sinal geográfico
+    # continuam possíveis para revisão, mas exigem evidência automóvel/ligeiros e score superior.
+    eligible=hit(TYRE,t) and hit(PROMO,t) and not hit(EXCLUDE,t) and not hit(COMMERCIAL_EXCLUDE,t) and not hit(BIKE_PUBLISHERS,p)
+    if eligible and not geo and not hit(LIGHT,t): eligible=False
     return n,reasons,eligible
 
 def main():
