@@ -17,10 +17,11 @@ SOURCES = {
     'Pirelli': ['pirelli.com'],
     'Goodyear': ['goodyear.eu'],
     'Hankook': ['hankooktire.com'],
-    'Bridgestone': ['bridgestone.pt', 'bridgestone-emia.com'],
+    'Bridgestone': ['bridgestone.pt', 'bridgestone-emia.com', 'promocoes.bridgestone.pt'],
     'Norauto': ['norauto.pt'],
     'Feu Vert': ['feuvert.pt'],
     'Confortauto': ['confortauto.pt'],
+    'Euromaster': ['euromaster.pt'],
 }
 
 # Páginas oficiais promocionais conhecidas e verificadas. São consultadas diretamente
@@ -36,6 +37,8 @@ OFFICIAL_PAGES = [
     ('Norauto Goodyear','https://www.norauto.pt/e/marca-pneu-goodyear.html'),
     ('Norauto Pneus','https://www.norauto.pt/e/pneu.html'),
     ('Hankook / Confortauto','https://premioshk.pt/bases-legales'),
+    ('Bridgestone','https://promocoes.bridgestone.pt/'),
+    ('Continental / Euromaster','https://www.euromaster.pt/promocao/pneus-continental'),
 ]
 
 QUERIES = [
