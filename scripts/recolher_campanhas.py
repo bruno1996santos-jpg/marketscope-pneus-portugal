@@ -34,7 +34,7 @@ OFFICIAL_PAGES = [
     ('Goodyear','https://www.goodyear.eu/pt_pt/consumer/promotion-hub/disfrute-ao-maximo-may-2026-portugal--pid-7004/terms-and-conditions.html'),
     ('Cooper','https://www.goodyear.eu/pt_pt/consumer/promotion-hub/national-promotion-sell-out-may-portugal-cooper-pid-6903/terms-and-conditions.html'),
     ('Norauto','https://www.norauto.pt/e/marca-pneu-norauto.html'),
-    ('Norauto Goodyear','https://www.norauto.pt/e/marca-pneu-goodyear.html'),
+    ('Goodyear / Norauto','https://www.norauto.pt/e/marca-pneu-goodyear.html'),
     ('Norauto Pneus','https://www.norauto.pt/e/pneu.html'),
     ('Hankook / Confortauto','https://premioshk.pt/bases-legales'),
     ('Bridgestone','https://promocoes.bridgestone.pt/'),
@@ -149,7 +149,7 @@ def official_candidate(brand,url,now):
         evidence=[]
         if dates: evidence.append('datas: '+', '.join(dict.fromkeys(dates)))
         if euros: evidence.append('valores: '+', '.join(dict.fromkeys(euros)))
-        if qty: evidence.append('mecânica: '+' | '.join(dict.fromkeys(qty)))
+        if qty: evidence.append('mecânica: '+' | '.join(dict.fromkeys(qty)))\n        if benefits: evidence.append('benefício: '+' | '.join(dict.fromkeys(x.strip() for x in benefits)))
         summary='; '.join(evidence) if evidence else 'detalhes por confirmar'
         return {'candidate_id':'CAND-'+key,'detetada_em_utc':now,'consulta':'fonte oficial direta',
                 'titulo':f'{brand} — promoção/campanha detetada em fonte oficial',
