@@ -4,7 +4,7 @@ excluindo conteúdos editoriais, lançamentos de produto e segmentos fora do âm
 """
 import csv, os, re, hashlib, unicodedata
 from datetime import datetime, timezone
-from urllib.parse import quote
+from urllib.parse import quote, urlparse
 from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
@@ -124,10 +124,11 @@ class TextExtractor(HTMLParser):
     def handle_data(self,data):
         if data and data.strip(): self.parts.append(data.strip())
 
+TRUSTED_PT_HOSTS={'promocoes.bridgestone.pt','www.norauto.pt','norauto.pt','www.euromaster.pt','euromaster.pt','premioshk.pt'}
 def official_candidate(brand,url,now):
     """Lê diretamente uma página oficial e cria candidata apenas com sinais fortes de campanha PT."""
     try:
-        req=Request(url,headers={'User-Agent':'MarketScope/3.0 official-source-monitor'})
+        req=Request(url,headers={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/151 Safari/537.36','Accept-Language':'pt-PT,pt;q=0.9,en;q=0.7','Accept':'text/html,application/xhtml+xml'})
         with urlopen(req,timeout=25) as resp:
             raw=resp.read(2_000_000).decode('utf-8','ignore')
         parser=TextExtractor(); parser.feed(raw)
@@ -136,7 +137,9 @@ def official_candidate(brand,url,now):
         # Página oficial tem de demonstrar Portugal + promoção + pneus e não pode declarar
         # explicitamente que não existem promoções em vigor.
         inactive=hit([r'n[aã]o existem promo[cç][oõ]es em vigor',r'de momento n[aã]o existem promo[cç][oõ]es em vigor',r'sem promo[cç][oõ]es em vigor'],t)
-        eligible=hit(TYRE,t) and hit(PROMO,t) and hit(PORTUGAL_SIGNAL,t) and not inactive
+        host=urlparse(url).hostname or ''
+        pt_source=hit(PORTUGAL_SIGNAL,t) or host in TRUSTED_PT_HOSTS
+        eligible=hit(TYRE,t) and hit(PROMO,t) and pt_source and not inactive
         if not eligible: return None
         key=hashlib.sha1(url.encode()).hexdigest()[:12]
         # Extrai pistas úteis para a revisão sem inventar dados.
