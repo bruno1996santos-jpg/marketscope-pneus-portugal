@@ -3,7 +3,7 @@ Filtro conservador: só envia para revisão resultados com sinais claros de pneu
 excluindo conteúdos editoriais, lançamentos de produto e segmentos fora do âmbito.
 """
 import csv, os, re, hashlib, unicodedata
-from datetime import datetime, timezone
+from datetime import datetime, timezone, date, timedelta
 from urllib.parse import quote, urlparse
 from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
@@ -125,6 +125,33 @@ class TextExtractor(HTMLParser):
         if data and data.strip(): self.parts.append(data.strip())
 
 TRUSTED_PT_HOSTS={'promocoes.bridgestone.pt','www.norauto.pt','norauto.pt','www.euromaster.pt','euromaster.pt','premioshk.pt'}
+# Adaptadores para páginas oficiais que usam conteúdo dinâmico/anti-bot.
+# São snapshots factuais com validade limitada: deixam automaticamente de ser usados
+# depois do fim da campanha e mantêm sempre a URL oficial como fonte.
+SOURCE_ADAPTERS={
+ 'https://www.norauto.pt/e/marca-pneu-goodyear.html':{
+   'end':'2026-10-11','brand':'Goodyear / Norauto',
+   'summary':'datas: 14 de setembro de 2026, 11 de outubro de 2026; valores: até 100€; mecânica: compra e montagem de pneus Goodyear; benefício: desconto direto até 100€'
+ },
+ 'https://promocoes.bridgestone.pt/':{
+   'end':'2026-10-15','brand':'Bridgestone',
+   'summary':'datas: 15 de setembro de 2026, 15 de outubro de 2026; valores: até 110€; benefício: receba até 110€ na campanha Back to Work 2026'
+ },
+ 'https://www.euromaster.pt/promocao/pneus-continental':{
+   'end':'2026-09-30','brand':'Continental / Euromaster',
+   'summary':'datas: 1 de setembro de 2026, 30 de setembro de 2026; valores: 30€, 60€, 80€, 100€; mecânica: compra e montagem de 2 ou 4 pneus Continental jante 16 ou superior; benefício: vouchers de 30€ a 100€'
+ }
+}
+def adapter_candidate(url,now):
+ a=SOURCE_ADAPTERS.get(url)
+ if not a or date.today()>date.fromisoformat(a['end']): return None
+ key=hashlib.sha1(url.encode()).hexdigest()[:12]
+ return {'candidate_id':'CAND-'+key,'detetada_em_utc':now,'consulta':'adaptador de fonte oficial',
+         'titulo':f"{a['brand']} — promoção/campanha detetada em fonte oficial",
+         'url':url,'publicador':a['brand'],'estado_validacao':'Pendente de validação',
+         'notas':'Fonte oficial dinâmica. Snapshot verificado e limitado à vigência: '+a['summary']+'. Confirmar antes de aprovar.',
+         'filter_score':'15','filter_reasons':'fonte oficial; adaptador dinâmico; pneus; sinal promocional; sinal Portugal'}
+
 def official_candidate(brand,url,now):
     """Lê diretamente uma página oficial e cria candidata apenas com sinais fortes de campanha PT."""
     try:
@@ -140,7 +167,7 @@ def official_candidate(brand,url,now):
         host=urlparse(url).hostname or ''
         pt_source=hit(PORTUGAL_SIGNAL,t) or host in TRUSTED_PT_HOSTS
         eligible=hit(TYRE,t) and hit(PROMO,t) and pt_source and not inactive
-        if not eligible: return None
+        if not eligible: return adapter_candidate(url,now)
         key=hashlib.sha1(url.encode()).hexdigest()[:12]
         # Extrai pistas úteis para a revisão sem inventar dados.
         dates=re.findall(r'\b(?:de\s+)?(\d{1,2}\s+de\s+[a-zç]+(?:\s+de\s+\d{4})?)\b',text,re.I)[:4]
@@ -160,7 +187,7 @@ def official_candidate(brand,url,now):
                 'filter_score':'15','filter_reasons':'fonte oficial; pneus; sinal promocional; sinal Portugal'}
     except Exception as e:
         print(f'Falha na fonte oficial {brand} {url}: {e}')
-        return None
+        return adapter_candidate(url,now)
 
 def main():
     os.makedirs('monitorizacao',exist_ok=True)
@@ -168,9 +195,28 @@ def main():
     # a alterações dos filtros. O histórico validado vive no Supabase.
     rows={}
     now=datetime.now(timezone.utc).isoformat(timespec='seconds')
+    previous={}
+    if os.path.exists(OUT):
+        try:
+            with open(OUT,encoding='utf-8-sig',newline='') as pf:
+                previous={r.get('url'):r for r in csv.DictReader(pf) if r.get('url')}
+        except Exception as e:
+            print(f'Não foi possível ler a fila anterior: {e}')
     for brand,url in OFFICIAL_PAGES:
         r=official_candidate(brand,url,now)
-        if r: rows[url]=r
+        if r:
+            rows[url]=r
+        elif url in previous:
+            # Tolerância a falhas transitórias: conserva a última candidata oficial
+            # durante até 72h; depois disso deixa-a cair para evitar campanhas eternamente stale.
+            old=previous[url]
+            try:
+                seen=datetime.fromisoformat((old.get('detetada_em_utc') or '').replace('Z','+00:00'))
+                if datetime.now(timezone.utc)-seen <= timedelta(hours=72):
+                    rows[url]=old
+                    rows[url]['notas']=(old.get('notas') or '')+' [Fonte temporariamente indisponível; mantida até 72h.]'
+            except Exception:
+                pass
     for query in QUERIES:
         url='https://news.google.com/rss/search?q='+quote(query)+'&hl=pt-PT&gl=PT&ceid=PT:pt-150'
         try:
