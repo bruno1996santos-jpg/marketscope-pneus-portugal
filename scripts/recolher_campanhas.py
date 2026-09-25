@@ -48,7 +48,10 @@ EXCLUDE=[
  r'lan[cç]a(?:mento|do|da| novos?)',r'apresenta novos?',r'novo pneu',
  r'teste(?:s)? de pneus',r'comparativo',r'review',r'ensaio',
  r'f[aá]brica',r'resultados financeiros',r'mercado de pneus',
- r'pneus chineses',r'tarifas?',r'importa[cç][aã]o'
+ r'pneus chineses',r'tarifas?',r'importa[cç][aã]o',
+ r'c[aâ]maras? de ar',r'\bburaco(?:s)?\b',r'indemniza[cç][aã](?:o|ões)',
+ r'campanha de sensibiliza[cç][aã]o',r'sensibiliza[cç][aã]o',
+ r'estrela(?:s)? michelin',r'chef(?:s)?',r'restaurante(?:s)?'
 ]
 COMMERCIAL_EXCLUDE=[r'pneu(?:s)? comercial',r've[ií]culos? comerciais?',r'frota(?:s)?']
 BIKE_PUBLISHERS=[r'mountainbikes?',r'ciclismo',r'bike']
