@@ -135,7 +135,11 @@ SOURCE_ADAPTERS={
  },
  'https://promocoes.bridgestone.pt/':{
    'end':'2026-10-15','brand':'Bridgestone',
-   'summary':'datas: 15 de setembro de 2026, 15 de outubro de 2026; valores: até 110€; benefício: receba até 110€ na campanha Back to Work 2026'
+   'summary':'datas: 15 de setembro de 2026, 15 de outubro de 2026; valores: até 110€; mecânica: troca/compra de pneus Bridgestone; benefício: receba até 110€ na campanha Back to Work 2026'
+ },
+ 'https://www.michelin.pt/promocoes-michelin/euromaster-2026':{
+   'end':'2026-08-16','brand':'Michelin / Euromaster',
+   'summary':'datas: 3 de agosto de 2026, 16 de agosto de 2026; valores: 20€, 30€, 40€, 60€, 80€; mecânica: compra e montagem de 2 ou 4 pneus Michelin jante 15 ou superior; benefício: reembolso ou vale digital até 80€'
  },
  'https://www.euromaster.pt/promocao/pneus-continental':{
    'end':'2026-09-30','brand':'Continental / Euromaster',
