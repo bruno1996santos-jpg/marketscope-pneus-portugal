@@ -27,7 +27,8 @@ SOURCES = {
 # em cada execução; Google News fica como canal complementar de descoberta.
 OFFICIAL_PAGES = [
     ('Continental','https://www.continental-tires.com/pt/pt/pneus-promocao/'),
-    ('Michelin','https://www.michelin.pt/promocoes-michelin'),
+    ('Michelin Concessionários','https://www.michelin.pt/promocoes-michelin/concessionarios-2026'),
+    ('Michelin Euromaster','https://www.michelin.pt/promocoes-michelin/euromaster-2026'),
     ('Pirelli','https://www.pirelli.com/tyres/pt-pt/carro/ofertas-promocoes'),
     ('Goodyear','https://www.goodyear.eu/pt_pt/consumer/promotion-hub/disfrute-ao-maximo-may-2026-portugal--pid-7004/terms-and-conditions.html'),
     ('Cooper','https://www.goodyear.eu/pt_pt/consumer/promotion-hub/national-promotion-sell-out-may-portugal-cooper-pid-6903/terms-and-conditions.html'),
@@ -127,14 +128,23 @@ def official_candidate(brand,url,now):
         t=norm(text)
         # Página oficial tem de demonstrar Portugal + promoção + pneus e não pode declarar
         # explicitamente que não existem promoções em vigor.
-        inactive=hit([r'n[aã]o existem promo[cç][oõ]es em vigor',r'sem promo[cç][oõ]es em vigor'],t)
+        inactive=hit([r'n[aã]o existem promo[cç][oõ]es em vigor',r'de momento n[aã]o existem promo[cç][oõ]es em vigor',r'sem promo[cç][oõ]es em vigor'],t)
         eligible=hit(TYRE,t) and hit(PROMO,t) and hit(PORTUGAL_SIGNAL,t) and not inactive
         if not eligible: return None
         key=hashlib.sha1(url.encode()).hexdigest()[:12]
+        # Extrai pistas úteis para a revisão sem inventar dados.
+        dates=re.findall(r'\b(?:de\s+)?(\d{1,2}\s+de\s+[a-zç]+(?:\s+de\s+\d{4})?)\b',text,re.I)[:4]
+        euros=re.findall(r'\b(?:até\s+)?\d+(?:[.,]\d{1,2})?\s?€\b',text,re.I)[:8]
+        qty=re.findall(r'\b(?:compra|compre|montagem|monte)[^.!?]{0,80}\b[24]\s+pneus\b',text,re.I)[:4]
+        evidence=[]
+        if dates: evidence.append('datas: '+', '.join(dict.fromkeys(dates)))
+        if euros: evidence.append('valores: '+', '.join(dict.fromkeys(euros)))
+        if qty: evidence.append('mecânica: '+' | '.join(dict.fromkeys(qty)))
+        summary='; '.join(evidence) if evidence else 'detalhes por confirmar'
         return {'candidate_id':'CAND-'+key,'detetada_em_utc':now,'consulta':'fonte oficial direta',
                 'titulo':f'{brand} — promoção/campanha detetada em fonte oficial',
                 'url':url,'publicador':brand,'estado_validacao':'Pendente de validação',
-                'notas':'Detetada diretamente em fonte oficial; confirmar datas, mecânica, elegibilidade e se a campanha continua em vigor.',
+                'notas':'Detetada diretamente em fonte oficial. Extração automática: '+summary+'. Confirmar elegibilidade e vigência.',
                 'filter_score':'15','filter_reasons':'fonte oficial; pneus; sinal promocional; sinal Portugal'}
     except Exception as e:
         print(f'Falha na fonte oficial {brand} {url}: {e}')
