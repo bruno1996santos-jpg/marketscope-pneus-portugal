@@ -7,6 +7,7 @@ from datetime import datetime, timezone
 from urllib.parse import quote
 from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
+from html.parser import HTMLParser
 
 # As fontes abaixo espelham a monitorização diária do MarketScope:
 # marcas oficiais + redes/retalhistas + pesquisa complementar.
@@ -21,6 +22,16 @@ SOURCES = {
     'Feu Vert': ['feuvert.pt'],
     'Confortauto': ['confortauto.pt'],
 }
+
+# Páginas oficiais promocionais conhecidas e verificadas. São consultadas diretamente
+# em cada execução; Google News fica como canal complementar de descoberta.
+OFFICIAL_PAGES = [
+    ('Continental','https://www.continental-tires.com/pt/pt/pneus-promocao/'),
+    ('Michelin','https://www.michelin.pt/promocoes-michelin'),
+    ('Pirelli','https://www.pirelli.com/tyres/pt-pt/carro/ofertas-promocoes'),
+    ('Goodyear','https://www.goodyear.eu/pt_pt/consumer/promotion-hub/disfrute-ao-maximo-may-2026-portugal--pid-7004/terms-and-conditions.html'),
+    ('Cooper','https://www.goodyear.eu/pt_pt/consumer/promotion-hub/national-promotion-sell-out-may-portugal-cooper-pid-6903/terms-and-conditions.html'),
+]
 
 QUERIES = [
     '"pneus" promoção Portugal desconto',
@@ -94,8 +105,40 @@ def score(title,publisher,query):
     # Gate obrigatório: pneus + promoção, sem exclusões. Resultados sem sinal geográfico
     # continuam possíveis para revisão, mas exigem evidência automóvel/ligeiros e score superior.
     eligible=hit(TYRE,t) and hit(PROMO,t) and not hit(EXCLUDE,t) and not hit(COMMERCIAL_EXCLUDE,t) and not hit(BIKE_PUBLISHERS,p)
-    if eligible and not geo and not hit(LIGHT,t): eligible=False
+    # MarketScope é exclusivamente Portugal: sem evidência geográfica no próprio resultado,
+    # a notícia não entra na fila. Evita promoções estrangeiras como Campneus/Elo.
+    if eligible and not geo: eligible=False
     return n,reasons,eligible
+
+class TextExtractor(HTMLParser):
+    def __init__(self):
+        super().__init__(); self.parts=[]
+    def handle_data(self,data):
+        if data and data.strip(): self.parts.append(data.strip())
+
+def official_candidate(brand,url,now):
+    """Lê diretamente uma página oficial e cria candidata apenas com sinais fortes de campanha PT."""
+    try:
+        req=Request(url,headers={'User-Agent':'MarketScope/3.0 official-source-monitor'})
+        with urlopen(req,timeout=25) as resp:
+            raw=resp.read(2_000_000).decode('utf-8','ignore')
+        parser=TextExtractor(); parser.feed(raw)
+        text=' '.join(parser.parts)
+        t=norm(text)
+        # Página oficial tem de demonstrar Portugal + promoção + pneus e não pode declarar
+        # explicitamente que não existem promoções em vigor.
+        inactive=hit([r'n[aã]o existem promo[cç][oõ]es em vigor',r'sem promo[cç][oõ]es em vigor'],t)
+        eligible=hit(TYRE,t) and hit(PROMO,t) and hit(PORTUGAL_SIGNAL,t) and not inactive
+        if not eligible: return None
+        key=hashlib.sha1(url.encode()).hexdigest()[:12]
+        return {'candidate_id':'CAND-'+key,'detetada_em_utc':now,'consulta':'fonte oficial direta',
+                'titulo':f'{brand} — promoção/campanha detetada em fonte oficial',
+                'url':url,'publicador':brand,'estado_validacao':'Pendente de validação',
+                'notas':'Detetada diretamente em fonte oficial; confirmar datas, mecânica, elegibilidade e se a campanha continua em vigor.',
+                'filter_score':'15','filter_reasons':'fonte oficial; pneus; sinal promocional; sinal Portugal'}
+    except Exception as e:
+        print(f'Falha na fonte oficial {brand} {url}: {e}')
+        return None
 
 def main():
     os.makedirs('monitorizacao',exist_ok=True)
@@ -103,6 +146,9 @@ def main():
     # a alterações dos filtros. O histórico validado vive no Supabase.
     rows={}
     now=datetime.now(timezone.utc).isoformat(timespec='seconds')
+    for brand,url in OFFICIAL_PAGES:
+        r=official_candidate(brand,url,now)
+        if r: rows[url]=r
     for query in QUERIES:
         url='https://news.google.com/rss/search?q='+quote(query)+'&hl=pt-PT&gl=PT&ceid=PT:pt-150'
         try:
