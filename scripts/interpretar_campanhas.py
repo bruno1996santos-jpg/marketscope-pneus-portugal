@@ -27,10 +27,15 @@ def iso_pt_date(s, fallback_year=2026):
  try:return f'{year:04d}-{month:02d}-{int(m.group(1)):02d}'
  except:return ''
 def inferred_period(dates, official):
- if not official or len(dates)<2:return ('','')
- a,b=iso_pt_date(dates[0]),iso_pt_date(dates[1])
- if a and b and a<=b:return (a,b)
- return ('','')
+ if not official:return ('','')
+ parsed=[]
+ for d in dates:
+  x=iso_pt_date(d)
+  if x and x not in parsed: parsed.append(x)
+ # Só preenche um período quando existem pelo menos duas datas distintas.
+ # Evita transformar referências duplicadas à mesma data num período de 1 dia.
+ if len(parsed)<2:return ('','')
+ return (parsed[0],parsed[1]) if parsed[0] < parsed[1] else ('','')
 def main():
  os.makedirs('monitorizacao',exist_ok=True); out=[]
  if not os.path.exists(SRC):
@@ -42,7 +47,7 @@ def main():
    dates=re.findall(r'\b(\d{1,2}\s+de\s+[A-Za-zÀ-ÿçÇ]+(?:\s+de\s+\d{4})?)\b',text,re.I)
    dates=list(dict.fromkeys(dates))
    mech=classify(text)
-   if re.search(r'compra\s+e\s+montagem\s+de\s+2\s+ou\s+4\s+pneus',text,re.I): mech=['Compra e montagem de 2 ou 4 pneus']
+   if re.search(r'compra\s+e\s+montagem\s*,?\s*(?:de\s+)?2\s+ou\s+4\s+pneus',text,re.I): mech=['Compra e montagem de 2 ou 4 pneus']
    elif re.search(r'(?:compra\s+e\s+)?montagem\s+de[^.!?]{0,30}2\s+pneus',text,re.I): mech=['Compra/montagem de pelo menos 2 pneus']
    official='fonte oficial' in low
    start,end=inferred_period(dates,official)
