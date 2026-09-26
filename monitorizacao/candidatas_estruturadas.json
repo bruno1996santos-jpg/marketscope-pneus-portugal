@@ -1,10 +1,10 @@
 {
-  "gerado_em": "2026-09-25T16:40:47.774956+00:00",
+  "gerado_em": "2026-09-26T07:34:46.563532+00:00",
   "aviso": "Sugestões automáticas, não verificadas. Validar com a fonte primária.",
   "campanhas": [
     {
       "candidate_id": "CAND-f1b5386577fc",
-      "detetada_em_utc": "2026-09-25T16:40:28+00:00",
+      "detetada_em_utc": "2026-09-26T07:34:09+00:00",
       "consulta": "fonte oficial direta",
       "titulo": "Michelin Concessionários — promoção/campanha detetada em fonte oficial",
       "url": "https://www.michelin.pt/promocoes-michelin/concessionarios-2026",
@@ -40,7 +40,7 @@
     },
     {
       "candidate_id": "CAND-d344c8d827cc",
-      "detetada_em_utc": "2026-09-25T16:40:28+00:00",
+      "detetada_em_utc": "2026-09-26T07:34:09+00:00",
       "consulta": "fonte oficial direta + enriquecimento",
       "titulo": "Michelin Euromaster — promoção/campanha detetada em fonte oficial",
       "url": "https://www.michelin.pt/promocoes-michelin/euromaster-2026",
@@ -74,7 +74,7 @@
     },
     {
       "candidate_id": "CAND-f5e48ae47bfb",
-      "detetada_em_utc": "2026-09-25T16:40:28+00:00",
+      "detetada_em_utc": "2026-09-26T07:34:09+00:00",
       "consulta": "fonte oficial direta",
       "titulo": "Pirelli — promoção/campanha detetada em fonte oficial",
       "url": "https://www.pirelli.com/tyres/pt-pt/carro/ofertas-promocoes",
@@ -103,7 +103,7 @@
     },
     {
       "candidate_id": "CAND-c90011eca2bb",
-      "detetada_em_utc": "2026-09-25T16:40:28+00:00",
+      "detetada_em_utc": "2026-09-26T07:34:09+00:00",
       "consulta": "fonte oficial direta",
       "titulo": "Goodyear — promoção/campanha detetada em fonte oficial",
       "url": "https://www.goodyear.eu/pt_pt/consumer/promotion-hub/disfrute-ao-maximo-may-2026-portugal--pid-7004/terms-and-conditions.html",
@@ -137,7 +137,7 @@
     },
     {
       "candidate_id": "CAND-6d6413f23c19",
-      "detetada_em_utc": "2026-09-25T16:40:28+00:00",
+      "detetada_em_utc": "2026-09-26T07:34:09+00:00",
       "consulta": "fonte oficial direta",
       "titulo": "Cooper — promoção/campanha detetada em fonte oficial",
       "url": "https://www.goodyear.eu/pt_pt/consumer/promotion-hub/national-promotion-sell-out-may-portugal-cooper-pid-6903/terms-and-conditions.html",
@@ -171,7 +171,7 @@
     },
     {
       "candidate_id": "CAND-19f6eccd46a0",
-      "detetada_em_utc": "2026-09-25T16:40:28+00:00",
+      "detetada_em_utc": "2026-09-26T07:34:09+00:00",
       "consulta": "adaptador de fonte oficial",
       "titulo": "Goodyear / Norauto — promoção/campanha detetada em fonte oficial",
       "url": "https://www.norauto.pt/e/marca-pneu-goodyear.html",
@@ -205,7 +205,7 @@
     },
     {
       "candidate_id": "CAND-a82804122e73",
-      "detetada_em_utc": "2026-09-25T16:40:28+00:00",
+      "detetada_em_utc": "2026-09-26T07:34:09+00:00",
       "consulta": "fonte oficial direta",
       "titulo": "Hankook / Confortauto — promoção/campanha detetada em fonte oficial",
       "url": "https://premioshk.pt/bases-legales",
@@ -242,7 +242,7 @@
     },
     {
       "candidate_id": "CAND-4958c8611dec",
-      "detetada_em_utc": "2026-09-25T16:40:28+00:00",
+      "detetada_em_utc": "2026-09-26T07:34:09+00:00",
       "consulta": "fonte oficial direta + enriquecimento",
       "titulo": "Bridgestone — promoção/campanha detetada em fonte oficial",
       "url": "https://promocoes.bridgestone.pt/",
@@ -278,7 +278,7 @@
     },
     {
       "candidate_id": "CAND-eed0df04f385",
-      "detetada_em_utc": "2026-09-25T16:40:28+00:00",
+      "detetada_em_utc": "2026-09-26T07:34:09+00:00",
       "consulta": "fonte oficial direta + enriquecimento",
       "titulo": "Continental / Euromaster — promoção/campanha detetada em fonte oficial",
       "url": "https://www.euromaster.pt/promocao/pneus-continental",
@@ -312,35 +312,6 @@
       "ambito": "Portugal",
       "publico_alvo": "Pneus ligeiros? Confirmar",
       "resumo_interpretacao": "Extração automática da fonte oficial/notas; datas e valores pré-preenchidos quando existe evidência estruturada; confirmar antes de aprovar.",
-      "validado_por": "",
-      "observacoes_revisor": ""
-    },
-    {
-      "candidate_id": "CAND-7ab28e549877",
-      "detetada_em_utc": "2026-09-25T16:40:28+00:00",
-      "consulta": "\"pneus\" promoção Portugal \"Continental\"",
-      "titulo": "Continental Pneus Portugal assinala regresso com nova campanha - Jornal das Oficinas",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPeDY1dGFMdjlsT3FWakw1VjhmWkQxb0kxOS14SlEtM0RtdnV0ekhYb3pGcTBJcWhhb280YjFnXzAxS3k1Y2hEdmVMUE5WamhRMjh3YWlBMExsTUVFMVlWdWNDOFY4Vi05NmRTNlBWbVp4bGhBc3ZaaHo2ODNCckJlYml4WkpxUGhKN3pDbVBPeXZlalM3d0IxSFhwN0I1WnpRWXRObE91OVY?oc=5",
-      "publicador": "Jornal das Oficinas",
-      "estado_validacao": "Pendente de validação",
-      "notas": "Pré-filtrada automaticamente; confirmar elegibilidade, datas, mecânica e fonte primária.",
-      "filter_score": "11",
-      "filter_reasons": "pneus; sinal promocional; sinal Portugal",
-      "marca_sugerida": "Continental",
-      "retalhista_sugerido": "",
-      "mecanicas_sugeridas": [
-        "Por determinar"
-      ],
-      "beneficio_sugerido": "Por determinar",
-      "oferta_sugerida": "",
-      "condicoes_sugeridas": "Pré-filtrada automaticamente; confirmar elegibilidade, datas, mecânica e fonte primária.",
-      "valores_detetados": [],
-      "datas_detetadas": [],
-      "data_inicio": "",
-      "data_fim": "",
-      "ambito": "Portugal",
-      "publico_alvo": "Pneus ligeiros? Confirmar",
-      "resumo_interpretacao": "Extração automática do resultado de pesquisa; consultar a fonte original.",
       "validado_por": "",
       "observacoes_revisor": ""
     }
