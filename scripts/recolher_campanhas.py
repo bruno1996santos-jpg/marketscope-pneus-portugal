@@ -138,7 +138,7 @@ SOURCE_ADAPTERS={
    'summary':'datas: 15 de setembro de 2026, 15 de outubro de 2026; valores: até 110€; mecânica: troca/compra de pneus Bridgestone; benefício: receba até 110€ na campanha Back to Work 2026'
  },
  'https://www.michelin.pt/promocoes-michelin/euromaster-2026':{
-   'end':'2026-08-16','brand':'Michelin / Euromaster',
+   'end':'2026-10-31','brand':'Michelin / Euromaster',
    'summary':'datas: 3 de agosto de 2026, 16 de agosto de 2026; valores: 20€, 30€, 40€, 60€, 80€; mecânica: compra e montagem de 2 ou 4 pneus Michelin jante 15 ou superior; benefício: reembolso ou vale digital até 80€'
  },
  'https://www.euromaster.pt/promocao/pneus-continental':{
@@ -244,6 +244,17 @@ def main():
                     rows[link]={'candidate_id':'CAND-'+key,'detetada_em_utc':now,'consulta':query,'titulo':title,'url':link,'publicador':pub,'estado_validacao':'Pendente de validação','notas':'Pré-filtrada automaticamente; confirmar elegibilidade, datas, mecânica e fonte primária.','filter_score':str(s),'filter_reasons':'; '.join(reasons)}
         except Exception as e:
             print(f'Falha na consulta {query!r}: {e}')
+    official_brands=set()
+    known_brands=['continental','mabor','uniroyal','michelin','pirelli','goodyear','hankook','bridgestone','dunlop','cooper','firestone','nokian']
+    for rr in rows.values():
+        if 'fonte oficial' in (rr.get('consulta') or '').lower():
+            pp=norm(rr.get('publicador') or '')
+            official_brands.update(b for b in known_brands if b in pp)
+    for uu,rr in list(rows.items()):
+        if 'fonte oficial' not in (rr.get('consulta') or '').lower():
+            tt=norm((rr.get('titulo') or '')+' '+(rr.get('publicador') or ''))
+            if any(b in tt for b in official_brands):
+                del rows[uu]
     with open(OUT,'w',encoding='utf-8-sig',newline='') as f:
         w=csv.DictWriter(f,fieldnames=FIELDS); w.writeheader(); w.writerows(sorted(rows.values(),key=lambda r:(int(r.get('filter_score') or 0),r['detetada_em_utc']),reverse=True))
     print(f'{len(rows)} candidatas elegíveis guardadas em {OUT}; validar manualmente.')
