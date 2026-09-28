@@ -49,7 +49,7 @@ def main():
    mech=classify(text)
    if re.search(r'compra\s+e\s+montagem\s*,?\s*(?:de\s+)?2\s+ou\s+4\s+pneus',text,re.I): mech=['Compra e montagem de 2 ou 4 pneus']
    elif re.search(r'(?:compra\s+e\s+)?montagem\s+de[^.!?]{0,30}2\s+pneus',text,re.I): mech=['Compra/montagem de pelo menos 2 pneus']
-    elif re.search(r'(?:troca|compra)[^.!?]{0,50}pneus\s+bridgestone',text,re.I): mech=['Compra/troca de pneus Bridgestone']
+   elif re.search(r'(?:troca|compra)[^.!?]{0,50}pneus\s+bridgestone',text,re.I): mech=['Compra/troca de pneus Bridgestone']
    official='fonte oficial' in low
    start,end=inferred_period(dates,official)
    vals=money(text)
