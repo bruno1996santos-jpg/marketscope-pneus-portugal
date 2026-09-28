@@ -139,7 +139,7 @@ SOURCE_ADAPTERS={
  },
  'https://www.michelin.pt/promocoes-michelin/euromaster-2026':{
    'end':'2026-12-31','brand':'Michelin / Euromaster',
-   'summary':'datas: 3 de agosto de 2026, 16 de agosto de 2026; valores: 20€, 30€, 40€, 60€, 80€; mecânica: compra e montagem de 2 ou 4 pneus Michelin jante 15 ou superior; benefício: reembolso ou vale digital até 80€'
+   'summary':'datas: 3 de agosto de 2026; 16 de agosto de 2026; valores: 20€, 30€, 40€, 60€, 80€; mecânica: compra e montagem de 2 ou 4 pneus Michelin jante 15 ou superior; benefício: reembolso ou vale digital até 80€'
  },
  'https://www.euromaster.pt/promocao/pneus-continental':{
    'end':'2026-09-30','brand':'Continental / Euromaster',
