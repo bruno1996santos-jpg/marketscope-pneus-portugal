@@ -35,7 +35,9 @@ def inferred_period(dates, official):
  # Só preenche um período quando existem pelo menos duas datas distintas.
  # Evita transformar referências duplicadas à mesma data num período de 1 dia.
  if len(parsed)<2:return ('','')
- return (parsed[0],parsed[1]) if parsed[0] < parsed[1] else ('','')
+ # A fonte pode repetir a data final antes da inicial; usa os extremos cronológicos.
+ parsed=sorted(parsed)
+ return (parsed[0],parsed[-1])
 def main():
  os.makedirs('monitorizacao',exist_ok=True); out=[]
  if not os.path.exists(SRC):
