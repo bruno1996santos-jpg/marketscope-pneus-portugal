@@ -1,6 +1,6 @@
 # Monitorização automática de fontes — MarketScope
 
-Verificação UTC: 2026-10-01T07:38:53+00:00
+Verificação UTC: 2026-10-02T07:38:17+00:00
 
 > Esta verificação deteta alterações técnicas no conteúdo das páginas. Não confirma automaticamente novas campanhas nem altera os dados do dashboard; as alterações identificadas exigem validação humana.
 
