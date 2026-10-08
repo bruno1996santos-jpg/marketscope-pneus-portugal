@@ -185,6 +185,16 @@ def official_candidate(brand,url,now):
         if qty: evidence.append('mecânica: '+' | '.join(dict.fromkeys(qty)))
         benefits=re.findall(r'[^.!?]{0,50}(?:desconto direto|vouchers?|reembolso)[^.!?]{0,80}',text,re.I)[:4]
         if benefits: evidence.append('benefício: '+' | '.join(dict.fromkeys(x.strip() for x in benefits if x.strip())))
+        # Extrai o contexto em torno dos montantes em vez de depender de trechos HTML.
+        # Nunca associa um valor a uma campanha sem estar presente na página consultada.
+        value_matches=list(re.finditer(r'(?<!\\w)(?:até\\s+)?\\d{1,4}(?:[.,]\\d{1,2})?\\s?€',text,re.I))
+        value_context=[]
+        for match in value_matches[:12]:
+            context=text[max(0,match.start()-85):min(len(text),match.end()+85)].strip()
+            if re.search(r'voucher|vale|reembolso|desconto|oferta|ganhe|receba|pneus',context,re.I):
+                value_context.append(context)
+        if value_context:
+            evidence.append('contexto de valores: '+' | '.join(dict.fromkeys(value_context[:5])))
         summary='; '.join(evidence) if evidence else 'detalhes por confirmar'
         # Enriquecimento: quando existe adaptador válido, junta a evidência do snapshot
         # à extração direta em vez de o usar apenas quando a página falha.
