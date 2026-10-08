@@ -1,4 +1,4 @@
-name: Monitorizar fontes MarketScope
+name: Verificar fontes MarketScope
 on:
   schedule:
     - cron: '30 7 * * *'
@@ -15,19 +15,27 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
-      - name: Verificar fontes conhecidas
+      - name: Verificar fontes conhecidas (sem criar candidatas paralelas)
         run: python scripts/monitorizar_fontes.py
-      - name: Descobrir potenciais campanhas
-        run: python scripts/recolher_campanhas.py
-      - name: Interpretar candidatas
-        run: python scripts/interpretar_campanhas.py
-      - name: Guardar relatórios e candidatas
+      - name: Validar estrutura da base do relatório diário
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('monitorizacao/relatorio_diario.json')
+          d = json.loads(p.read_text(encoding='utf-8'))
+          assert isinstance(d.get('campanhas'), list), 'O relatório diário deve incluir campanhas[]'
+          ids = [x.get('candidate_id') for x in d['campanhas']]
+          assert all(ids) and len(ids) == len(set(ids)), 'IDs em falta ou duplicados'
+          print('Relatório diário válido:', len(ids), 'campanhas')
+          PY
+      - name: Guardar monitorização técnica
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add monitorizacao/fontes.json monitorizacao/relatorio.md monitorizacao/candidatas.csv monitorizacao/candidatas_estruturadas.json
+          git add monitorizacao/fontes.json monitorizacao/relatorio.md
           if ! git diff --cached --quiet; then
-            git commit -m 'Atualizar monitorização e interpretação de campanhas'
+            git commit -m 'Atualizar verificação técnica de fontes'
             git push
           else
             echo 'Sem alterações para guardar.'
