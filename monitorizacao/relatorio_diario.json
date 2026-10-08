@@ -2,7 +2,7 @@
   "schema_version": 1,
   "updated_at": "2026-10-08",
   "origin": "Relatório diário de monitorização de campanhas de pneus ligeiros — ChatGPT",
-  "notice": "Registos da pesquisa diária e histórico recuperado. Todos sujeitos a validação manual; datas passadas não implicam campanha ativa.",
+  "notice": "Fonte única do relatório diário, incluindo campanhas históricas. Registos pendentes de verificação e aprovação humana; conservar campanhas terminadas e fontes originais.",
   "campanhas": [
     {
       "candidate_id": "DIARIO-CONTINENTAL-OUTONO-2026",
@@ -288,6 +288,173 @@
       "publicador": "Hankook — bases legais Portugal; Confortauto Portugal",
       "notas": "Jante 17–19: 2 pneus=30€, 4=60€; jante 20+: 2=40€, 4=80€. Só pessoas singulares maiores de idade; 1 participação por NIF/fatura, máximo 4 pneus. Registo até 15/08/2026; campanha limitada a orçamento de prémios de 100.000€. Relatórios anteriores mencionavam 31/08; regulamento oficial confirma fim em 31/07.",
       "resumo_interpretacao": "Campanha terminada recuperada dos relatórios diários e confirmada nas bases legais portuguesas Hankook/Confortauto."
+    },
+    {
+      "ambito": "Portugal",
+      "publico_alvo": "Consumidor final — pneus ligeiros",
+      "estado_validacao": "Pendente de validação",
+      "origem_historica": "Relatórios anteriores de monitorização de pneus 2026",
+      "data_ultima_verificacao": "2026-10-08",
+      "candidate_id": "DIARIO-MICHELIN-SOLEDAD-MAI-JUN-2026",
+      "titulo": "Michelin × Grupo Soledad — Maio–Junho 2026",
+      "marca_sugerida": "Michelin",
+      "retalhista_sugerido": "Rede Soledad Portugal — oficinas aderentes",
+      "data_inicio": "2026-05-20",
+      "data_fim": "2026-06-12",
+      "mecanicas_sugeridas": [
+        "Compra e montagem de 2 ou 4 pneus Michelin turismo/SUV/4x4 de jante 15 polegadas ou superior"
+      ],
+      "numero_pneus": "2 ou 4",
+      "jante_dimensao": "15 polegadas ou superior",
+      "modelos_abrangidos": "Turismo/SUV/4x4 Michelin; modelos específicos por confirmar",
+      "oferta_sugerida": "Reembolso, vale combustível, vale Pingo Doce ou vale Decathlon, de 20 € a 80 €",
+      "valores_detetados": [
+        "20€",
+        "30€",
+        "40€",
+        "60€",
+        "80€"
+      ],
+      "valor_minimo": 20,
+      "valor_maximo": 80,
+      "url": "https://www.michelin.pt/promocoes-michelin/gruposoledad-2026",
+      "regulamento_url": "https://www.michelin.pt/promocoes-michelin/gruposoledad-2026",
+      "publicador": "Michelin Portugal — promoção Grupo Soledad 2026",
+      "notas": "Turismo/SUV/4x4: jante 15–16: 2 pneus=20€, 4=40€; jante 17: 2=30€, 4=60€; jante 18+: 2=40€, 4=80€. Excluídos os escalões de veículos comerciais da análise. Até 8 pneus validados por participante, sujeito a bases legais.",
+      "resumo_interpretacao": "Campanha histórica detetada em setembro e agora cruzada com regulamento oficial Michelin."
+    },
+    {
+      "ambito": "Portugal",
+      "publico_alvo": "Consumidor final — pneus ligeiros",
+      "estado_validacao": "Pendente de validação",
+      "origem_historica": "Relatórios anteriores de monitorização de pneus 2026",
+      "data_ultima_verificacao": "2026-10-08",
+      "candidate_id": "DIARIO-GOODYEAR-NORAUTO-MAI-2026",
+      "titulo": "Goodyear × Norauto — Maio 2026",
+      "marca_sugerida": "Goodyear",
+      "retalhista_sugerido": "Oficinas aderentes (promoção designada Norauto 2026 de Maio)",
+      "data_inicio": "2026-05-04",
+      "data_fim": "2026-05-24",
+      "mecanicas_sugeridas": [
+        "Compra e montagem de pelo menos 2 pneus Goodyear Summer, All Season ou Winter de turismo/SUV/4x4"
+      ],
+      "numero_pneus": "2 ou 4",
+      "jante_dimensao": "16 polegadas ou superior nos escalões de oferta identificados",
+      "modelos_abrangidos": "Summer, All Season e Winter para turismo/SUV/4x4",
+      "oferta_sugerida": "Reembolso por transferência bancária, de 10 € a 80 € consoante a jante e a quantidade",
+      "valores_detetados": [
+        "10€",
+        "15€",
+        "20€",
+        "30€",
+        "40€",
+        "60€",
+        "80€"
+      ],
+      "valor_minimo": 10,
+      "valor_maximo": 80,
+      "url": "https://www.goodyear.eu/pt_pt/consumer/promotion-hub/disfrute-ao-maximo-may-2026-portugal--pid-7004/terms-and-conditions.html",
+      "regulamento_url": "https://www.goodyear.eu/pt_pt/consumer/promotion-hub/disfrute-ao-maximo-may-2026-portugal--pid-7004/terms-and-conditions.html",
+      "publicador": "Goodyear Portugal — bases legais Norauto Maio 2026",
+      "notas": "Jante 16: 2 pneus=10€, 4=20€; jante 17: 2=15€, 4=30€; jante 18: 2=30€, 4=60€; jante 19+: 2=40€, 4=80€. Limitada a 500 reembolsos; registo até 31/05/2026. Regulamento exclui Açores e Madeira. Verificar oficina aderente.",
+      "resumo_interpretacao": "Campanha histórica identificada nos relatórios anteriores; oferta e escalões confirmados pelo regulamento Goodyear."
+    },
+    {
+      "ambito": "Portugal",
+      "publico_alvo": "Consumidor final — pneus ligeiros",
+      "estado_validacao": "Pendente de validação",
+      "origem_historica": "Relatórios anteriores de monitorização de pneus 2026",
+      "data_ultima_verificacao": "2026-10-08",
+      "candidate_id": "DIARIO-GOODYEAR-VULCO-MAR-MAI-2026",
+      "titulo": "Goodyear × Vulco — Vais Mais Longe 2026",
+      "marca_sugerida": "Goodyear",
+      "retalhista_sugerido": "Rede Vulco — oficinas aderentes",
+      "data_inicio": "2026-03-16",
+      "data_fim": "2026-05-17",
+      "mecanicas_sugeridas": [
+        "Compra e montagem de pelo menos 2 pneus Goodyear Summer, All Season ou Winter para turismo/SUV/4x4; código fornecido pela oficina"
+      ],
+      "numero_pneus": "2 ou 4",
+      "jante_dimensao": "17 polegadas ou superior nos escalões de oferta",
+      "modelos_abrangidos": "Summer, All Season e Winter Goodyear turismo/SUV/4x4",
+      "oferta_sugerida": "Cheque digital Cepsa/Moeve, Cartão Dá ou Amazon.es, de 25 € a 100 €",
+      "valores_detetados": [
+        "25€",
+        "35€",
+        "50€",
+        "60€",
+        "80€",
+        "100€"
+      ],
+      "valor_minimo": 25,
+      "valor_maximo": 100,
+      "url": "https://www.goodyear.eu/content/dam/goodyear/consumer/countries/portugal/promotions/2026/base-de-promocao-goodyear-promo-sell-q1-portugal-solo-vulco.pdf",
+      "regulamento_url": "https://www.goodyear.eu/content/dam/goodyear/consumer/countries/portugal/promotions/2026/base-de-promocao-goodyear-promo-sell-q1-portugal-solo-vulco.pdf",
+      "publicador": "Goodyear Portugal — regulamento Vulco Q1 2026",
+      "notas": "Jante 17: 2 pneus=25€, 4=60€; jante 18: 2=35€, 4=80€; jante 19+: 2=50€, 4=100€. Até 500 cheques; registo até 19/05/2026. Exclui Açores e Madeira. Atenção: um resumo antigo apontava 03/05, mas o regulamento oficial indica fim em 17/05/2026; data do regulamento adotada.",
+      "resumo_interpretacao": "Identificada em relatórios antigos; divergência de data corrigida com base no regulamento oficial, preservada na nota."
+    },
+    {
+      "ambito": "Portugal",
+      "publico_alvo": "Consumidor final — pneus ligeiros",
+      "estado_validacao": "Pendente de validação",
+      "origem_historica": "Relatórios anteriores de monitorização de pneus 2026",
+      "data_ultima_verificacao": "2026-10-08",
+      "candidate_id": "DIARIO-NORAUTO-PREVENSYS-SET-2026",
+      "titulo": "Norauto Prevensys — Desconto Direto Setembro 2026",
+      "marca_sugerida": "Norauto",
+      "retalhista_sugerido": "Norauto Portugal — centros e loja online com montagem",
+      "data_inicio": "2026-09-01",
+      "data_fim": "2026-09-13",
+      "mecanicas_sugeridas": [
+        "Compra e montagem de pneus Norauto Prevensys; desconto por pneu em função da jante"
+      ],
+      "numero_pneus": "Até 8 unidades por cliente",
+      "jante_dimensao": "Até 15; 16–17; 18–19; 20 ou superior",
+      "modelos_abrangidos": "Pneus Norauto Prevensys",
+      "oferta_sugerida": "Desconto direto de 5 €, 10 €, 15 € ou 20 € por pneu, até 80 € por cliente",
+      "valores_detetados": [
+        "5€",
+        "10€",
+        "15€",
+        "20€",
+        "80€"
+      ],
+      "valor_minimo": 5,
+      "valor_maximo": 80,
+      "url": "https://www.norauto.pt/e/marca-pneu-norauto.html",
+      "regulamento_url": "https://www.norauto.pt/e/marca-pneu-norauto.html",
+      "publicador": "Norauto Portugal — página oficial de pneus e promoções",
+      "notas": "Jante até 15: 5€ por pneu; 16–17: 10€; 18–19: 15€; 20+: 20€. Até 8 pneus por cliente e montagem obrigatória. Entrega ao domicílio excluída.",
+      "resumo_interpretacao": "Campanha histórica identificada em setembro e reconfirmada em página oficial Norauto."
+    },
+    {
+      "ambito": "Portugal",
+      "publico_alvo": "Consumidor final — pneus ligeiros",
+      "estado_validacao": "Pendente de validação",
+      "origem_historica": "Relatórios anteriores de monitorização de pneus 2026",
+      "data_ultima_verificacao": "2026-10-08",
+      "candidate_id": "DIARIO-NORAUTO-CLUBE-GARANTIA-SET-2026",
+      "titulo": "Clube Norauto — Garantia pneus Prevensys Setembro 2026",
+      "marca_sugerida": "Norauto",
+      "retalhista_sugerido": "Norauto Portugal — centros e loja online",
+      "data_inicio": "2026-09-01",
+      "data_fim": "2026-09-30",
+      "mecanicas_sugeridas": [
+        "Compra e montagem de pneus Norauto Prevensys por membros Clube Norauto"
+      ],
+      "numero_pneus": "Por confirmar",
+      "jante_dimensao": "Por confirmar",
+      "modelos_abrangidos": "Pneus Norauto Prevensys",
+      "oferta_sugerida": "Oferta do contrato de garantia de pneus, exclusiva para membros Clube Norauto",
+      "valores_detetados": [],
+      "valor_minimo": null,
+      "valor_maximo": null,
+      "url": "https://www.norauto.pt/e/marca-pneu-norauto.html",
+      "regulamento_url": "https://www.norauto.pt/e/marca-pneu-norauto.html",
+      "publicador": "Norauto Portugal — página oficial de pneus e promoções",
+      "notas": "Oferta do contrato de garantia de pneus na compra e montagem entre 01/09 e 30/09/2026. Condições detalhadas da garantia e quantidade elegível por confirmar.",
+      "resumo_interpretacao": "Campanha histórica identificada em setembro; datas e oferta verificadas na página oficial Norauto."
     }
   ]
 }
