@@ -66,7 +66,9 @@ def main():
    benefits=classify(text)
    benefit_matches=re.findall(r'(?:vouchers?|vales?|reembolso|desconto(?:\s+direto)?|cart[aã]o(?:\s+oferta)?)[^.;|]{0,90}',text,re.I)
    benefit_matches=[x.strip() for x in benefit_matches if re.search(r'\d+\s?€|at[eé]\s+\d+',x,re.I)]
-   offer=(' | '.join(dict.fromkeys(benefit_matches[:3])) if benefit_matches else ('Valores detetados na fonte: '+', '.join(vals) if vals else ''))
+   # A oferta pode ter o montante ANTES da palavra "vouchers".
+   leading_offer=re.search(r'(?:ganhe|receba|obtenha|até)\s+(?:até\s+)?\d+(?:[.,]\d{1,2})?\s*€\s+(?:em\s+)?(?:vouchers?|vales?|reembolso|desconto)',text,re.I)
+   offer=(leading_offer.group(0) if leading_offer else (' | '.join(dict.fromkeys(benefit_matches[:3])) if benefit_matches else ('Valores detetados na fonte: '+', '.join(vals) if vals else '')))
    quantity='2 ou 4' if re.search(r'2\s+ou\s+4\s+pneus',text,re.I) else ('2' if re.search(r'\b2\s+pneus',text,re.I) else '')
    rim_match=re.search(r'jante\s*(?:de\s*)?(\d{2})(?:\s*(?:ou superior|\+))?',text,re.I)
    rim=('Jante '+rim_match.group(1)+' ou superior') if rim_match and re.search(r'jante\s*(?:de\s*)?\d{2}\s*(?:ou superior|\+)',text,re.I) else ('Jante '+rim_match.group(1) if rim_match else '')
