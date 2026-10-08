@@ -6,6 +6,13 @@ SRC='monitorizacao/candidatas.csv'; OUT='monitorizacao/candidatas_estruturadas.j
 BRANDS=['Continental','Mabor','Uniroyal','Michelin','Pirelli','Goodyear','Hankook','Bridgestone','Dunlop','Cooper','Firestone','Nokian']
 RETAILERS=['Norauto','Feu Vert','Confortauto','Euromaster','First Stop','Roady','Midas','Pneus Online']
 
+def normalize_evidence(value):
+ """Normaliza escapes Unicode literais e entidades HTML sem alterar outros dados."""
+ value=re.sub(r'\\\\u([0-9a-fA-F]{4})',lambda m: chr(int(m.group(1),16)),value or '')
+ value=html.unescape(value)
+ value=re.sub(r'<[^>]*>', ' ', value)
+ return re.sub(r'\s+', ' ', value).strip()
+
 def classify(text):
  t=text.lower(); found=[]
  rules=[('Reembolso',r'reembolso|cashback|devolu[cç][aã]o'),('Desconto direto',r'desconto|€\s?\d+\s?de desconto'),('Cartão oferta / voucher',r'voucher|cart[aã]o oferta|vale de'),('Oferta de brinde',r'oferta|gr[aá]tis|brinde'),('Garantia',r'garantia'),('Financiamento',r'financiamento|presta[cç][oõ]es')]
@@ -64,7 +71,7 @@ def main():
    quantity='2 ou 4' if re.search(r'2\s+ou\s+4\s+pneus',text,re.I) else ('2' if re.search(r'\b2\s+pneus',text,re.I) else '')
    rim_match=re.search(r'jante\s*(?:de\s*)?(\d{2})(?:\s*(?:ou superior|\+))?',text,re.I)
    rim=('Jante '+rim_match.group(1)+' ou superior') if rim_match and re.search(r'jante\s*(?:de\s*)?\d{2}\s*(?:ou superior|\+)',text,re.I) else ('Jante '+rim_match.group(1) if rim_match else '')
-   conditions=r.get('notas','')
+   conditions=normalize_evidence(r.get('notas',''))
    out.append({**r,'marca_sugerida':brands[0] if len(brands)==1 else (' / '.join(brands) if brands else ''),'retalhista_sugerido':retailers[0] if len(retailers)==1 else ' / '.join(retailers),'mecanicas_sugeridas':mech,'beneficio_sugerido':' / '.join(benefits),'oferta_sugerida':offer,'numero_pneus':quantity,'jante_dimensao':rim,'condicoes_sugeridas':conditions,'valores_detetados':vals,'datas_detetadas':dates,'data_inicio':start,'data_fim':end,'ambito':'Portugal' if ('sinal portugal' in low or 'portugal' in low) else 'Portugal? Confirmar','publico_alvo':'Pneus ligeiros? Confirmar','resumo_interpretacao':('Extração automática da fonte oficial/notas; datas e valores pré-preenchidos quando existe evidência estruturada; confirmar antes de aprovar.' if official else 'Extração automática do resultado de pesquisa; consultar a fonte original.'),'estado_validacao':r.get('estado_validacao','Pendente de validação'),'validado_por':'','observacoes_revisor':''})
  with open(OUT,'w',encoding='utf-8') as f: json.dump({'gerado_em':datetime.now(timezone.utc).isoformat(),'aviso':'Sugestões automáticas, não verificadas. Validar com a fonte primária.','campanhas':out},f,ensure_ascii=False,indent=2)
  print(f'{len(out)} registos estruturados em {OUT}')
