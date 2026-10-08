@@ -2,7 +2,7 @@
 Filtro conservador: só envia para revisão resultados com sinais claros de pneus + promoção,
 excluindo conteúdos editoriais, lançamentos de produto e segmentos fora do âmbito.
 """
-import csv, os, re, hashlib, unicodedata
+import csv, os, re, hashlib, unicodedata, html
 from datetime import datetime, timezone, date, timedelta
 from urllib.parse import quote, urlparse
 from urllib.request import Request, urlopen
@@ -163,7 +163,9 @@ def official_candidate(brand,url,now):
         with urlopen(req,timeout=25) as resp:
             raw=resp.read(2_000_000).decode('utf-8','ignore')
         parser=TextExtractor(); parser.feed(raw)
-        text=' '.join(parser.parts)
+        text=html.unescape(' '.join(parser.parts))
+        text=re.sub(r'<[^>]+>', ' ', text)
+        text=re.sub(r'\\s+', ' ', text).strip()
         t=norm(text)
         # Página oficial tem de demonstrar Portugal + promoção + pneus e não pode declarar
         # explicitamente que não existem promoções em vigor.
@@ -182,7 +184,7 @@ def official_candidate(brand,url,now):
         if euros: evidence.append('valores: '+', '.join(dict.fromkeys(euros)))
         if qty: evidence.append('mecânica: '+' | '.join(dict.fromkeys(qty)))
         benefits=re.findall(r'[^.!?]{0,50}(?:desconto direto|vouchers?|reembolso)[^.!?]{0,80}',text,re.I)[:4]
-        if benefits: evidence.append('benefício: '+' | '.join(dict.fromkeys(x.strip() for x in benefits)))
+        if benefits: evidence.append('benefício: '+' | '.join(dict.fromkeys(x.strip() for x in benefits if x.strip())))
         summary='; '.join(evidence) if evidence else 'detalhes por confirmar'
         # Enriquecimento: quando existe adaptador válido, junta a evidência do snapshot
         # à extração direta em vez de o usar apenas quando a página falha.
