@@ -1,5 +1,5 @@
 """Interpretação heurística de candidatas: extrai sinais, nunca confirma factos automaticamente."""
-import csv, os, re, json
+import csv, os, re, json, html
 from datetime import datetime, timezone
 import unicodedata
 SRC='monitorizacao/candidatas.csv'; OUT='monitorizacao/candidatas_estruturadas.json'
@@ -44,7 +44,9 @@ def main():
   print('Sem candidatas por interpretar.'); return
  with open(SRC,encoding='utf-8-sig',newline='') as f:
   for r in csv.DictReader(f):
-   text=' '.join([r.get('titulo',''),r.get('publicador',''),r.get('notas',''),r.get('filter_reasons','')]); low=text.lower()
+   text=html.unescape(' '.join([r.get('titulo',''),r.get('publicador',''),r.get('notas',''),r.get('filter_reasons','')]))
+   text=re.sub(r'<[^>]*>', ' ', text)
+   text=re.sub(r'\\s+', ' ', text).strip(); low=text.lower()
    brands=[x for x in BRANDS if x.lower() in low]; retailers=[x for x in RETAILERS if x.lower() in low]
    dates=re.findall(r'\b(\d{1,2}\s+de\s+[A-Za-zÀ-ÿçÇ]+(?:\s+de\s+\d{4})?)\b',text,re.I)
    dates=list(dict.fromkeys(dates))
@@ -56,7 +58,9 @@ def main():
    start,end=inferred_period(dates,official)
    vals=money(text)
    benefits=classify(text)
-   offer=('Valores detetados na fonte: '+', '.join(vals)) if vals else ''
+   benefit_matches=re.findall(r'(?:vouchers?|vales?|reembolso|desconto(?:\\s+direto)?|cart[aã]o(?:\\s+oferta)?)[^.;|]{0,90}',text,re.I)
+   benefit_matches=[x.strip() for x in benefit_matches if re.search(r'\\d+\\s?€|at[eé]\\s+\\d+',x,re.I)]
+   offer=(' | '.join(dict.fromkeys(benefit_matches[:3])) if benefit_matches else ('Valores detetados na fonte: '+', '.join(vals) if vals else ''))
    quantity='2 ou 4' if re.search(r'2\s+ou\s+4\s+pneus',text,re.I) else ('2' if re.search(r'\b2\s+pneus',text,re.I) else '')
    rim_match=re.search(r'jante\s*(?:de\s*)?(\d{2})(?:\s*(?:ou superior|\+))?',text,re.I)
    rim=('Jante '+rim_match.group(1)+' ou superior') if rim_match and re.search(r'jante\s*(?:de\s*)?\d{2}\s*(?:ou superior|\+)',text,re.I) else ('Jante '+rim_match.group(1) if rim_match else '')
