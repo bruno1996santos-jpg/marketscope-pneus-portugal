@@ -2,7 +2,7 @@
   "schema_version": 1,
   "updated_at": "2026-10-08",
   "origin": "Relatório diário de monitorização de campanhas de pneus ligeiros — ChatGPT",
-  "notice": "Dados de pesquisa sujeitos a verificação do regulamento; não aprovados automaticamente.",
+  "notice": "Registos da pesquisa diária e histórico recuperado. Todos sujeitos a validação manual; datas passadas não implicam campanha ativa.",
   "campanhas": [
     {
       "candidate_id": "DIARIO-CONTINENTAL-OUTONO-2026",
@@ -154,6 +154,140 @@
       "notas": "Desconto aplicado ao produto; montagem obrigatória; até 8 unidades por cliente; exclui entrega ao domicílio e frotas/renting; limitado ao stock. Consultar tabela por jante.",
       "resumo_interpretacao": "Campanha do relatório diário corroborada pela página Norauto.",
       "estado_validacao": "Pendente de validação"
+    },
+    {
+      "ambito": "Portugal",
+      "publico_alvo": "Consumidor final — pneus ligeiros",
+      "estado_validacao": "Pendente de validação",
+      "origem_historica": "Relatórios diários anteriores (setembro/outubro 2026)",
+      "data_ultima_verificacao": "2026-10-08",
+      "candidate_id": "DIARIO-CONTINENTAL-EUROMASTER-SET-2026",
+      "titulo": "Continental × Euromaster — Setembro 2026",
+      "marca_sugerida": "Continental",
+      "retalhista_sugerido": "Euromaster — centros aderentes",
+      "data_inicio": "2026-09-01",
+      "data_fim": "2026-09-30",
+      "mecanicas_sugeridas": [
+        "Compra e montagem de 2 ou 4 pneus Continental, jante 16 polegadas ou superior"
+      ],
+      "numero_pneus": "2 ou 4",
+      "jante_dimensao": "16 polegadas ou superior",
+      "modelos_abrangidos": "Pneus Continental para turismo e SUV/4x4; modelos concretos por confirmar",
+      "oferta_sugerida": "Vouchers de 30 € a 100 €, escalonados por jante e quantidade de pneus",
+      "valores_detetados": [
+        "30€",
+        "60€",
+        "80€",
+        "100€"
+      ],
+      "valor_minimo": 30,
+      "valor_maximo": 100,
+      "url": "https://www.euromaster.pt/promocao/pneus-continental",
+      "regulamento_url": "https://www.euromaster.pt/promocao/pneus-continental",
+      "publicador": "Euromaster Portugal — página e condições da promoção",
+      "notas": "Jante 16: 2 pneus=30€; 4=60€. Jante 17: 2=60€; 4=80€. Jante 18 ou superior: 2=80€; 4=100€. Registo até 07/10/2026 no portal setembro.oficinapromocao.com. Limite de 450 pneus na ação; até 4 pneus por email/BI/CC/NIF; exclui renting. Fonte inclui camionetas até 3.500 kg: restringir a visualização do dashboard ao segmento ligeiros.",
+      "resumo_interpretacao": "Campanha terminada recuperada do relatório diário anterior; datas, escalões e termos verificados na página oficial Euromaster."
+    },
+    {
+      "ambito": "Portugal",
+      "publico_alvo": "Consumidor final — pneus ligeiros",
+      "estado_validacao": "Pendente de validação",
+      "origem_historica": "Relatórios diários anteriores (setembro/outubro 2026)",
+      "data_ultima_verificacao": "2026-10-08",
+      "candidate_id": "DIARIO-MICHELIN-EUROMASTER-AGO-2026",
+      "titulo": "Michelin × Euromaster — Agosto 2026",
+      "marca_sugerida": "Michelin",
+      "retalhista_sugerido": "Euromaster — centros aderentes",
+      "data_inicio": "2026-08-03",
+      "data_fim": "2026-08-16",
+      "mecanicas_sugeridas": [
+        "Compra e montagem de 2 ou 4 pneus Michelin, jante 15 polegadas ou superior"
+      ],
+      "numero_pneus": "2 ou 4",
+      "jante_dimensao": "15 polegadas ou superior",
+      "modelos_abrangidos": "Pneus Michelin para turismo e SUV/4x4; modelos concretos por confirmar",
+      "oferta_sugerida": "Reembolso, vale combustível, vale Pingo Doce ou vale Decathlon até 80 €",
+      "valores_detetados": [
+        "20€",
+        "30€",
+        "40€",
+        "60€",
+        "80€"
+      ],
+      "valor_minimo": 20,
+      "valor_maximo": 80,
+      "url": "https://www.michelin.pt/promocoes-michelin/euromaster-2026",
+      "regulamento_url": "https://www.michelin.pt/promocoes-michelin/euromaster-2026",
+      "publicador": "Michelin Portugal — página promocional e bases legais",
+      "notas": "Turismo/SUV: jante 15–16: 2 pneus=20€, 4=40€; jante 17: 2=30€, 4=60€; jante 18+: 2=40€, 4=80€. Para comerciais as regras são distintas e ficam fora do âmbito do dashboard de ligeiros. Limite de 4 pneus validados por identificador. Relatórios anteriores continham indicação genérica 'agosto a novembro'; período correto da promoção Euromaster confirmado em fonte oficial: 03–16/08.",
+      "resumo_interpretacao": "Campanha terminada recuperada dos relatórios diários; período, mecânica e escalões confirmados pela página oficial Michelin."
+    },
+    {
+      "ambito": "Portugal",
+      "publico_alvo": "Consumidor final — pneus ligeiros",
+      "estado_validacao": "Pendente de validação",
+      "origem_historica": "Relatórios diários anteriores (setembro/outubro 2026)",
+      "data_ultima_verificacao": "2026-10-08",
+      "candidate_id": "DIARIO-MICHELIN-VERAO-CONFORTAUTO-2026",
+      "titulo": "Michelin — Verão 2026 (Confortauto)",
+      "marca_sugerida": "Michelin",
+      "retalhista_sugerido": "Confortauto — rede aderente (a ação abrange pontos de venda em Portugal)",
+      "data_inicio": "2026-06-22",
+      "data_fim": "2026-07-31",
+      "mecanicas_sugeridas": [
+        "Compra e montagem de 2 ou 4 pneus Michelin para turismo/SUV/4x4, jante 15 polegadas ou superior"
+      ],
+      "numero_pneus": "2 ou 4",
+      "jante_dimensao": "15 polegadas ou superior",
+      "modelos_abrangidos": "Pneus Michelin turismo/SUV/4x4; referências concretas por confirmar",
+      "oferta_sugerida": "Reembolso, vale combustível, recarga elétrica, Decathlon, Pingo Doce ou jogo de pneus de bicicleta Michelin; até 80 € nas jantes ligeiros apresentadas no regulamento",
+      "valores_detetados": [
+        "20€",
+        "30€",
+        "40€",
+        "60€",
+        "80€"
+      ],
+      "valor_minimo": 20,
+      "valor_maximo": 80,
+      "url": "https://www.confortauto.pt/pages/desconto-pneus-em-ofertas-michelin-verano",
+      "regulamento_url": "https://www.confortauto.pt/pages/desconto-pneus-em-ofertas-michelin-verano",
+      "publicador": "Confortauto Portugal — bases legais Promoção Verão 2026",
+      "notas": "Turismo/SUV: jante 15: 2 pneus=20€, 4=40€; jante 16: 2=30€, 4=60€; jante 17–18: 2=40€, 4=80€. Página inclui veículos comerciais com escalões próprios, não incluídos. Registo até 12/08/2026. Confortauto anuncia no seu agregador 'até 100 €', mas o regulamento recuperado discrimina até 80 € para estas dimensões; confirmar se existe escalão jante 19+ ou campanha relacionada antes de alterar o teto.",
+      "resumo_interpretacao": "Recuperada do relatório diário histórico; condições extraídas das bases legais da Confortauto. Divergência no teto publicitado assinalada, sem extrapolar."
+    },
+    {
+      "ambito": "Portugal",
+      "publico_alvo": "Consumidor final — pneus ligeiros",
+      "estado_validacao": "Pendente de validação",
+      "origem_historica": "Relatórios diários anteriores (setembro/outubro 2026)",
+      "data_ultima_verificacao": "2026-10-08",
+      "candidate_id": "DIARIO-HANKOOK-CONFORTAUTO-JUL-2026",
+      "titulo": "Hankook × Confortauto — Promoção Verão 2026",
+      "marca_sugerida": "Hankook",
+      "retalhista_sugerido": "Confortauto Hankook Masters — centros aderentes",
+      "data_inicio": "2026-07-01",
+      "data_fim": "2026-07-31",
+      "mecanicas_sugeridas": [
+        "Compra e montagem de 2 ou 4 pneus Hankook, jante 17 polegadas ou superior"
+      ],
+      "numero_pneus": "2 ou 4",
+      "jante_dimensao": "17 polegadas ou superior",
+      "modelos_abrangidos": "Pneus Hankook turismo/SUV/4x4; modelos concretos por confirmar",
+      "oferta_sugerida": "Cheque à escolha: Moeve, Decathlon, Amazon ou Cartão Dá, entre 30 € e 80 €",
+      "valores_detetados": [
+        "30€",
+        "40€",
+        "60€",
+        "80€"
+      ],
+      "valor_minimo": 30,
+      "valor_maximo": 80,
+      "url": "https://www.confortauto.pt/pages/ofertas-promociones/copia-de-promocoes-e-ofertas-em-pneus-hankook",
+      "regulamento_url": "https://premioshk.pt/bases-legales",
+      "publicador": "Hankook — bases legais Portugal; Confortauto Portugal",
+      "notas": "Jante 17–19: 2 pneus=30€, 4=60€; jante 20+: 2=40€, 4=80€. Só pessoas singulares maiores de idade; 1 participação por NIF/fatura, máximo 4 pneus. Registo até 15/08/2026; campanha limitada a orçamento de prémios de 100.000€. Relatórios anteriores mencionavam 31/08; regulamento oficial confirma fim em 31/07.",
+      "resumo_interpretacao": "Campanha terminada recuperada dos relatórios diários e confirmada nas bases legais portuguesas Hankook/Confortauto."
     }
   ]
 }
