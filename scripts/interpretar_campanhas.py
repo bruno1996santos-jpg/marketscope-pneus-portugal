@@ -8,7 +8,7 @@ RETAILERS=['Norauto','Feu Vert','Confortauto','Euromaster','First Stop','Roady',
 
 def normalize_evidence(value):
  """Normaliza escapes Unicode literais e entidades HTML sem alterar outros dados."""
- value=re.sub(r'\\\\u([0-9a-fA-F]{4})',lambda m: chr(int(m.group(1),16)),value or '')
+ value=re.sub(r'\\u([0-9a-fA-F]{4})',lambda m: chr(int(m.group(1),16)),value or '')
  value=html.unescape(value)
  value=re.sub(r'<[^>]*>', ' ', value)
  return re.sub(r'\s+', ' ', value).strip()
