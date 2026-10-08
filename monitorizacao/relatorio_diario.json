@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-08",
+  "origin": "Relatório diário de monitorização de campanhas de pneus ligeiros — ChatGPT",
+  "notice": "Dados de pesquisa sujeitos a verificação do regulamento; não aprovados automaticamente.",
+  "campanhas": [
+    {
+      "candidate_id": "DIARIO-CONTINENTAL-OUTONO-2026",
+      "titulo": "Continental — Este Outono, Escolha Segurança (2026)",
+      "marca_sugerida": "Continental",
+      "retalhista_sugerido": "Oficinas aderentes (ContiService e outras redes; confirmar ponto de venda)",
+      "mecanicas_sugeridas": [
+        "Compra e montagem de 2 ou 4 pneus Continental, jante 17 ou superior"
+      ],
+      "oferta_sugerida": "Vouchers Pingo Doce, Galp, Decathlon ou Miio, no valor de 30 € a 100 € conforme jante e quantidade",
+      "numero_pneus": "2 ou 4",
+      "jante_dimensao": "17 polegadas ou superior",
+      "modelos_abrangidos": "Pneus ligeiros Continental elegíveis (modelos específicos por confirmar)",
+      "valores_detetados": [
+        "30€",
+        "40€",
+        "50€",
+        "60€",
+        "80€",
+        "100€"
+      ],
+      "valor_minimo": 30,
+      "valor_maximo": 100,
+      "data_inicio": "2026-10-05",
+      "data_fim": "2026-10-31",
+      "ambito": "Portugal",
+      "publico_alvo": "Consumidor final; pneus ligeiros",
+      "url": "https://www.contiservice.pt/campanhas/2026/promocao-pneus-continental-outono",
+      "outras_fontes": [
+        "https://www.pneubeato.pt/promocao-pneu-continental.html",
+        "https://www.promocontinental.pt"
+      ],
+      "regulamento_url": "",
+      "publicador": "Relatório diário MarketScope + fontes ContiService e Pneu Beato",
+      "notas": "Tabela indicada nas fontes: 2 pneus — jante 17: 30€; jante 18–19: 40€; jante 20+: 50€. 4 pneus — jante 17: 60€; jante 18–19: 80€; jante 20+: 100€. Registo de compra/fatura até 04/11/2026 em promocontinental.pt; até ao limite global de 35.000€ em participações. Redes e aderência de cada loja devem ser confirmadas. O relatório diário menciona ainda limites por participante/fatura, dependentes da verificação do regulamento integral.",
+      "resumo_interpretacao": "Dados do relatório diário de 08/10/2026 corroborados por fontes públicas de campanha. Regulamento integral ainda não recuperado para esta edição; validar as condições e os modelos antes de aprovar.",
+      "estado_validacao": "Pendente de validação"
+    }
+  ]
+}
