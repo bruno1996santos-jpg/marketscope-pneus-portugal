@@ -238,23 +238,25 @@
         "Compra e montagem de 2 ou 4 pneus Michelin para turismo/SUV/4x4, jante 15 polegadas ou superior"
       ],
       "numero_pneus": "2 ou 4",
-      "jante_dimensao": "15 polegadas ou superior",
+      "jante_dimensao": "15 polegadas ou superior (incluindo 19+)",
       "modelos_abrangidos": "Pneus Michelin turismo/SUV/4x4; referências concretas por confirmar",
-      "oferta_sugerida": "Reembolso, vale combustível, recarga elétrica, Decathlon, Pingo Doce ou jogo de pneus de bicicleta Michelin; até 80 € nas jantes ligeiros apresentadas no regulamento",
+      "oferta_sugerida": "Reembolso ou vale combustível, recarga elétrica, Decathlon, Pingo Doce ou jogo de pneus de bicicleta Michelin, até 100 € nos escalões de turismo/SUV",
       "valores_detetados": [
         "20€",
         "30€",
         "40€",
+        "50€",
         "60€",
-        "80€"
+        "80€",
+        "100€"
       ],
       "valor_minimo": 20,
-      "valor_maximo": 80,
+      "valor_maximo": 100,
       "url": "https://www.confortauto.pt/pages/desconto-pneus-em-ofertas-michelin-verano",
       "regulamento_url": "https://www.confortauto.pt/pages/desconto-pneus-em-ofertas-michelin-verano",
       "publicador": "Confortauto Portugal — bases legais Promoção Verão 2026",
-      "notas": "Turismo/SUV: jante 15: 2 pneus=20€, 4=40€; jante 16: 2=30€, 4=60€; jante 17–18: 2=40€, 4=80€. Página inclui veículos comerciais com escalões próprios, não incluídos. Registo até 12/08/2026. Confortauto anuncia no seu agregador 'até 100 €', mas o regulamento recuperado discrimina até 80 € para estas dimensões; confirmar se existe escalão jante 19+ ou campanha relacionada antes de alterar o teto.",
-      "resumo_interpretacao": "Recuperada do relatório diário histórico; condições extraídas das bases legais da Confortauto. Divergência no teto publicitado assinalada, sem extrapolar."
+      "notas": "Turismo/SUV/4x4: jante 15: 2=20€, 4=40€; jante 16: 2=30€, 4=60€; jante 17–18: 2=40€, 4=80€; jante 19+: 2=50€, 4=100€. Regras próprias de comerciais excluídas. Registo até 12/08/2026. Correção de valor máximo após consulta ao regulamento Confortauto completo (anteriormente registo histórico incompleto de 80 €).",
+      "resumo_interpretacao": "Campanha histórica recuperada; escalão 19+ e teto 100 € confirmados nas bases legais Confortauto."
     },
     {
       "ambito": "Portugal",
@@ -455,6 +457,37 @@
       "publicador": "Norauto Portugal — página oficial de pneus e promoções",
       "notas": "Oferta do contrato de garantia de pneus na compra e montagem entre 01/09 e 30/09/2026. Condições detalhadas da garantia e quantidade elegível por confirmar.",
       "resumo_interpretacao": "Campanha histórica identificada em setembro; datas e oferta verificadas na página oficial Norauto."
+    },
+    {
+      "candidate_id": "DIARIO-SAILUN-CONFORTAUTO-FEV-2026",
+      "titulo": "Sailun × Confortauto — Pingo Doce Fevereiro 2026",
+      "marca_sugerida": "Sailun",
+      "retalhista_sugerido": "Confortauto — oficinas aderentes",
+      "data_inicio": "2026-02-01",
+      "data_fim": "2026-02-28",
+      "mecanicas_sugeridas": [
+        "Compra e montagem de 2 ou 4 pneus Sailun, jante 17 polegadas ou superior"
+      ],
+      "numero_pneus": "2 ou 4",
+      "jante_dimensao": "17 polegadas ou superior",
+      "modelos_abrangidos": "Pneus Sailun jante 17+; modelos por confirmar",
+      "oferta_sugerida": "Cartão presente Pingo Doce: 25 € por 2 pneus ou 50 € por 4 pneus",
+      "valores_detetados": [
+        "25€",
+        "50€"
+      ],
+      "valor_minimo": 25,
+      "valor_maximo": 50,
+      "ambito": "Portugal (promoção também realizada em Espanha)",
+      "publico_alvo": "Consumidor final — pneus ligeiros",
+      "url": "https://www.confortauto.pt/pages/desconto-pneus-em-ofertas-sailun",
+      "regulamento_url": "https://www.confortauto.pt/pages/desconto-pneus-em-ofertas-sailun",
+      "publicador": "Confortauto — bases promocionais Sailun 2026",
+      "notas": "Para receber prémio, envio de fatura de compra e captura de avaliação Google da oficina. Máximo 8 pneus por participante. O regulamento declara 01–28/02 na abertura, mas menciona contraditoriamente 01–18/02 noutra cláusula; fim 28/02 usado provisoriamente, confirmar antes de aprovar.",
+      "resumo_interpretacao": "Campanha histórica de fevereiro confirmada na fonte Confortauto, com contradição interna sobre último dia de compras assinalada.",
+      "estado_validacao": "Pendente de validação",
+      "origem_historica": "Relatório anterior 23/09/2026",
+      "data_ultima_verificacao": "2026-10-08"
     }
   ]
 }
