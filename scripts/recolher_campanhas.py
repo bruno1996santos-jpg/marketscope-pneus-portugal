@@ -169,7 +169,16 @@ def official_candidate(brand,url,now):
         t=norm(text)
         # Página oficial tem de demonstrar Portugal + promoção + pneus e não pode declarar
         # explicitamente que não existem promoções em vigor.
-        inactive=hit([r'n[aã]o existem promo[cç][oõ]es em vigor',r'de momento n[aã]o existem promo[cç][oõ]es em vigor',r'sem promo[cç][oõ]es em vigor'],t)
+        # Não confundir a página institucional de promoções com uma campanha.
+        # Verificar a frase no texto visível, não em scripts/menus ocultos.
+        inactive=hit([
+            r'(?:de momento\\s+)?n[aã]o\\s+existem\\s+promo[cç][oõ]es\\s+em\\s+vigor',
+            r'sem\\s+promo[cç][oõ]es\\s+em\\s+vigor',
+            r'n[aã]o\\s+h[aá]\\s+promo[cç][oõ]es\\s+(?:ativas|dispon[ií]veis)'
+        ], t)
+        if inactive:
+            print(f'Página sem campanhas ativas (não criar candidata): {brand} {url}')
+            return None
         host=urlparse(url).hostname or ''
         pt_source=hit(PORTUGAL_SIGNAL,t) or host in TRUSTED_PT_HOSTS
         eligible=hit(TYRE,t) and hit(PROMO,t) and pt_source and not inactive
@@ -227,7 +236,7 @@ def main():
         r=official_candidate(brand,url,now)
         if r:
             rows[url]=r
-        elif url in previous:
+        elif url in previous and url != 'https://www.continental-tires.com/pt/pt/pneus-promocao/':
             # Tolerância a falhas transitórias: conserva a última candidata oficial
             # durante até 72h; depois disso deixa-a cair para evitar campanhas eternamente stale.
             old=previous[url]
