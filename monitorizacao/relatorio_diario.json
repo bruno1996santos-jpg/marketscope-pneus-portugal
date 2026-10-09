@@ -941,6 +941,42 @@
       "notas": "Escalões: jante 15: 2 pneus=10 €, 4=20 €; jante 16: 2=30 €, 4=60 €; jante 17: 2=40 €, 4=80 €; jante 18+: 2=50 €, 4=100 €. Registos até 06/06/2026; resolução de incidentes até 12/06/2026. Participação em oficinas aderentes, compra e montagem dentro do período. Acumulável com descontos adicionais. Limite de quatro pneus por CC/BI/NIF ou documento equivalente, telefone, email e/ou conta bancária. Voucher por email até cinco dias úteis após registo correto. Exclusão de renting e funcionários Michelin ou Euromaster (redação do PDF; possível inconsistência não corrigida). Contacto info@maio.oficinapromocao.com.",
       "resumo_interpretacao": "Transcrição de documento PDF interno fornecido pelo utilizador; condições sujeitas a validação manual.",
       "estado_validacao": "Pendente de validação"
+    },
+    {
+      "candidate_id": "PDF-CONTINENTAL-PRIMAVERA-MAR-2026",
+      "titulo": "Continental — Campanha de Primavera 2026",
+      "marca_sugerida": "Continental",
+      "retalhista_sugerido": "Pontos de venda aderentes em Portugal Continental, Madeira e Açores; redes Norauto, Feu Vert, MyForce e concessionários, além de oficinas independentes",
+      "data_inicio": "2026-03-02",
+      "data_fim": "2026-03-31",
+      "mecanicas_sugeridas": [
+        "Compra e montagem de 2 ou 4 pneus Continental ligeiros de jante 17 polegadas ou superior em pontos de venda aderentes",
+        "Participação através da submissão de fatura em www.promocontinental.pt até 05/04/2026"
+      ],
+      "numero_pneus": "2 ou 4 por fatura; máximo 8 pneus por NIF; máximo 4 participações por consumidor e por IP",
+      "jante_dimensao": "17 polegadas ou superior",
+      "modelos_abrangidos": "Todos os pneus Continental ligeiros de jante 17 polegadas ou superior",
+      "oferta_sugerida": "Vouchers Pingo Doce, Fnac, Galp, Decathlon ou Miio no valor de 30 € a 100 €",
+      "valores_detetados": [
+        "30€",
+        "40€",
+        "50€",
+        "60€",
+        "80€",
+        "100€"
+      ],
+      "valor_minimo": 30,
+      "valor_maximo": 100,
+      "ambito": "Portugal Continental, Açores e Madeira",
+      "publico_alvo": "Consumidor final maior de idade; exclui empresas, frotas, renting e revenda",
+      "url": "",
+      "regulamento_url": "",
+      "publicador": "Histórico interno — Termos e Condições Campanha Primavera Continental 2026 (PDF de 15 páginas)",
+      "origem_historica": "Histórico interno — PDF / regulamento fornecido pelo utilizador",
+      "data_ultima_verificacao": "2026-10-09",
+      "notas": "Tabela expressa no regulamento: 2 pneus — jante 17=30€, 18=40€, 19=40€, 20+=50€; 4 pneus — jante 17=60€, 18=AMBÍGUO, 19=80€, 20+=100€. ATENÇÃO: a cláusula dos 4 pneus jante 18 diz 'prémio no valor de 40€', mas na mesma frase descreve dois vouchers de 20€ 'perfazendo 80€'; matematicamente dois vouchers de 20€ totalizam 40€. Não corrigir nem assumir um escalão sem confirmação. Limite global 25.000€ em vouchers, com cessação antecipada caso esgotado. Inscrição até 05/04/2026. Compra e montagem no período promocional; fatura completa com modelo, jante, nome, NIF e dados do ponto de venda. Não acumulável com outras promoções Continental no mesmo período. Prémios por email até 10 dias úteis após registo validado. Inclui lista de pontos de venda no regulamento (páginas 3–13), incluindo Norauto, Feu Vert, MyForce e concessionários. Apenas autoconsumo; não válidas faturas de um único pneu ou emitidas em nome de pontos de venda. O rodapé de proteção de dados da pág. 15 contém menção residual à campanha de verão de 2025; não corresponde ao período desta ação.",
+      "resumo_interpretacao": "Campanha distinta das promoções Continental de maio e outubro. Fonte primária: documento PDF de 15 páginas fornecido pelo utilizador em 09/10/2026. Escalão de 4 pneus jante 18 contém inconsistência interna e carece de validação.",
+      "estado_validacao": "Pendente de validação"
     }
   ]
 }
