@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "source": "Tarefa ChatGPT — Monitorizar campanhas pneus",
+  "last_completed_at": null,
+  "last_result": "not_verified",
+  "last_write_at": null,
+  "write_status": "not_verified",
+  "campaigns_added": 0,
+  "campaigns_updated": 0,
+  "note": "Estado inicial: ainda não foi comprovada uma execução automática com gravação deste ficheiro. Não confundir verificação técnica GitHub Actions com pesquisa semântica diária."
+}
