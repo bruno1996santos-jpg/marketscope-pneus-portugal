@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-08",
+  "updated_at": "2026-10-09",
   "origin": "Relatório diário de monitorização de campanhas de pneus ligeiros — ChatGPT",
   "notice": "Base única do relatório diário e histórico interno PPT. Novos registos importados como pendentes; duplicados potenciais excluídos. Não inferir fontes online inexistentes.",
   "campanhas": [
@@ -903,6 +903,44 @@
       "modelos_abrangidos": "Pneus para turismo, SUV e 4x4; modelos específicos por confirmar",
       "notas": "Pneus verão: jante 17: 2=25€,4=50€; 18–19: 2=40€,4=80€; >=20: 2=50€,4=100€. All Season: jante 17: 2=30€,4=60€; 18–19: 2=50€,4=100€; >=20: 2=60€,4=120€. Até 550 participações e máximo 3 participações por Cartão de Cidadão; fatura até 10/08/2026. O slide refere 'Até 100€' no texto mas a tabela All Season atinge 120€ — conservar discrepância e confirmar antes de aprovar. Fonte documental: print de slide PowerPoint fornecido pelo utilizador; sem URL pública confirmada para esta edição.",
       "resumo_interpretacao": "Dados transcritos de material histórico interno. Não confundidos com confirmação online atual. Confirmar antes de aprovar."
+    },
+    {
+      "candidate_id": "PDF-CONTINENTAL-EUROMASTER-MAI-2026",
+      "titulo": "Continental × Euromaster — Maio 2026",
+      "marca_sugerida": "Continental",
+      "retalhista_sugerido": "Euromaster — oficinas aderentes",
+      "data_inicio": "2026-05-04",
+      "data_fim": "2026-05-31",
+      "mecanicas_sugeridas": [
+        "Compra e montagem de 2 ou 4 pneus Continental de jante 15 polegadas ou superior durante a campanha",
+        "Registo em maio.oficinapromocao.com com dados, IBAN, escolha de voucher e fatura"
+      ],
+      "numero_pneus": "2 ou 4; limite de 4 pneus por participante",
+      "jante_dimensao": "15 polegadas ou superior",
+      "modelos_abrangidos": "Pneus turismo, 4x4/SUV e carrinha até 3.500 kg; modelo deve constar na fatura",
+      "oferta_sugerida": "Vouchers de combustível, Amazon ou Pingo Doce entre 10 € e 100 €",
+      "valores_detetados": [
+        "10€",
+        "20€",
+        "30€",
+        "40€",
+        "50€",
+        "60€",
+        "80€",
+        "100€"
+      ],
+      "valor_minimo": 10,
+      "valor_maximo": 100,
+      "ambito": "Portugal",
+      "publico_alvo": "Particulares e B2B de veículos ligeiros (distinguir B2C no dashboard)",
+      "url": "",
+      "regulamento_url": "",
+      "publicador": "Histórico interno — PDF Continental Maio 2026",
+      "origem_historica": "Histórico interno — PDF",
+      "data_ultima_verificacao": "2026-10-09",
+      "notas": "Escalões: jante 15: 2 pneus=10 €, 4=20 €; jante 16: 2=30 €, 4=60 €; jante 17: 2=40 €, 4=80 €; jante 18+: 2=50 €, 4=100 €. Registos até 06/06/2026; resolução de incidentes até 12/06/2026. Participação em oficinas aderentes, compra e montagem dentro do período. Acumulável com descontos adicionais. Limite de quatro pneus por CC/BI/NIF ou documento equivalente, telefone, email e/ou conta bancária. Voucher por email até cinco dias úteis após registo correto. Exclusão de renting e funcionários Michelin ou Euromaster (redação do PDF; possível inconsistência não corrigida). Contacto info@maio.oficinapromocao.com.",
+      "resumo_interpretacao": "Transcrição de documento PDF interno fornecido pelo utilizador; condições sujeitas a validação manual.",
+      "estado_validacao": "Pendente de validação"
     }
   ]
 }
