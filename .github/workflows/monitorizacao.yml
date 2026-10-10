@@ -29,11 +29,34 @@ jobs:
           assert all(ids) and len(ids) == len(set(ids)), 'IDs em falta ou duplicados'
           print('Relatório diário válido:', len(ids), 'campanhas')
           PY
+      - name: Registar execução técnica independente
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+          sources = json.loads(Path('monitorizacao/fontes.json').read_text(encoding='utf-8'))
+          checked = len(sources)
+          successful = sum(1 for s in sources.values() if s.get('status') == 200)
+          failed = checked - successful
+          result = {
+            'schema_version': 1,
+            'source': 'GitHub Actions — verificação técnica de URLs conhecidas',
+            'last_completed_at': datetime.now(timezone.utc).isoformat(timespec='seconds'),
+            'last_result': 'success' if failed == 0 else 'partial',
+            'sources_checked': checked,
+            'sources_accessible': successful,
+            'sources_unavailable': failed,
+            'semantic_campaign_research': False,
+            'note': 'Este estado confirma exclusivamente a verificação técnica de fontes, não a pesquisa diária ChatGPT, nem a deteção ou publicação de campanhas.'
+          }
+          Path('monitorizacao/estado_verificacao_fontes.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          PY
       - name: Guardar monitorização técnica
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add monitorizacao/fontes.json monitorizacao/relatorio.md
+          git add monitorizacao/fontes.json monitorizacao/relatorio.md monitorizacao/estado_verificacao_fontes.json
           if ! git diff --cached --quiet; then
             git commit -m 'Atualizar verificação técnica de fontes'
             git push
