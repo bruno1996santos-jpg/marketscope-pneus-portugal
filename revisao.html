@@ -56,7 +56,7 @@ async function load(){try{
   }
  }
  rows=[...all.values()];
- for(const r of rows)r._sourceMissing=r.estado_validacao==='Pendente de validação'&&!activeIds.has(r.candidate_id);
+ for(const r of rows)r._sourceMissing=r.estado_validacao==='Pendente de validação'&&!activeIds.has(r.candidate_id)&&!String(r.notas||'').includes('[Importação alternativa MarketScope]');
  const novas=rows.filter(r=>!r.id),atualizar=rows.filter(r=>r.id&&r._refreshPending);
  if(novas.length||atualizar.length){
   say('A sincronizar dados do relatório diário…');
@@ -122,7 +122,7 @@ $('report-commit').onclick=async()=>{
    const {data:existing,error:findError}=await db.from('campaigns').select('candidate_id').eq('candidate_id',r.candidate_id).maybeSingle();
    if(findError)throw findError;
    if(existing){skipped++;continue}
-   const p=payload(r);p.verification_status='pending';p.reviewer_notes=null;
+   const p=payload(r);p.verification_status='pending';p.reviewer_notes=null;p.notes='[Importação alternativa MarketScope] '+(p.notes||'');
    const {error:insertError}=await db.from('campaigns').insert(p);
    if(insertError){
     if(insertError.code==='23505'){skipped++;continue}
