@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-09",
+  "updated_at": "2026-10-10",
   "origin": "Relatório diário de monitorização de campanhas de pneus ligeiros — ChatGPT",
   "notice": "Base única do relatório diário e histórico interno PPT. Novos registos importados como pendentes; duplicados potenciais excluídos. Não inferir fontes online inexistentes.",
   "campanhas": [
@@ -70,7 +70,7 @@
       "publico_alvo": "Consumidor final; pneus ligeiros",
       "url": "https://www.michelin.pt/promocoes-michelin/outono-2026",
       "publicador": "Michelin Portugal",
-      "notas": "Turismo/SUV/4x4: 2 pneus 15” 20€, 16” 30€, 17–18” 40€, 19”+ 50€; 4 pneus 40€/60€/80€/100€. A página inclui também comerciais, fora do âmbito principal do dashboard. Confirma regulamento.",
+      "notas": "Turismo/SUV/4x4: 2 pneus 15” 20€, 16” 30€, 17–18” 40€, 19”+ 50€; 4 pneus 40€/60€/80€/100€. A página inclui também comerciais, fora do âmbito principal do dashboard. Confirma regulamento.\n\nDIVERGÊNCIA DOCUMENTAL (relatório de monitorização 10/10/2026): na página Michelin Outono, a tabela de comerciais indica 40€/80€ para 2/4 pneus de jante ≥15, enquanto as bases legais na mesma página referem 20€/40€ para jante 15 e 30€/60€ para jantes 16–17. Foi também assinalada sobreposição no escalão de jante 16 em turismo. Preservar os valores existentes e confirmar antes de rever; comerciais fora da análise principal B2C ligeiros. Fonte: https://www.michelin.pt/promocoes-michelin/outono-2026",
       "resumo_interpretacao": "Campanha do relatório diário e página oficial Michelin; diferenças entre quadro e texto das bases legais devem ser verificadas antes da aprovação.",
       "estado_validacao": "Pendente de validação"
     },
@@ -1009,6 +1009,110 @@
       "notas": "A compra e montagem de pneus Yokohama deve ocorrer de 01 a 31/08/2026; participação de 01/08 a 15/09/2026. Benefício de 15€ para 2 pneus ou 40€ para 4 pneus (jante 17+). Enviar fatura e captura de avaliação da oficina no Google através de WhatsApp, conforme regulamento. Até 8 pneus por documento de identificação. A promoção abrange Portugal e Espanha. Esta campanha foi verificada separadamente da menção de Yokohama no relatório automático de 09/10/2026; identidade exata com o registo do relatório ainda por confirmar.",
       "resumo_interpretacao": "Campanha histórica recolhida do regulamento Confortauto oficial. Não está confirmado que coincide com a Yokohama mencionada no relatório automático diário; validar antes de aprovar.",
       "estado_validacao": "Pendente de validação"
+    },
+    {
+      "estado_validacao": "Pendente de validação",
+      "origem_historica": "Relatório de monitorização 10/10/2026 — fontes oficiais indicadas",
+      "data_ultima_verificacao": "2026-10-10",
+      "ambito": "Portugal",
+      "publico_alvo": "Consumidor final — pneus ligeiros",
+      "candidate_id": "DIARIO-MICHELIN-NORAUTO-OUT-2026",
+      "titulo": "Michelin × Norauto — Outubro 2026 (pneus de verão)",
+      "marca_sugerida": "Michelin",
+      "retalhista_sugerido": "Norauto",
+      "data_inicio": "2026-10-01",
+      "data_fim": "2026-10-25",
+      "mecanicas_sugeridas": [
+        "Compra e montagem de 2 ou 4 pneus Michelin de verão elegíveis; exclui CrossClimate e Alpin",
+        "Turismo/SUV/4x4: jante 15–16: 2 pneus=20€, 4=40€; jante 17: 2=30€, 4=60€; jante 18+: 2=40€, 4=80€"
+      ],
+      "numero_pneus": "2 ou 4",
+      "jante_dimensao": "15 polegadas ou superior",
+      "modelos_abrangidos": "Pneus Michelin de verão; excluem-se CrossClimate e Alpin",
+      "oferta_sugerida": "Vouchers até 80 € na compra e montagem de pneus Michelin de verão",
+      "valores_detetados": [
+        "20€",
+        "30€",
+        "40€",
+        "60€",
+        "80€"
+      ],
+      "valor_minimo": 20,
+      "valor_maximo": 80,
+      "url": "https://s1.medias-norauto.pt/pdf/PT/2025-2026/Michelin_BASES_LEGAIS_PROMOCAO_NORAUTO_OUTUBRO_2026.pdf",
+      "regulamento_url": "https://s1.medias-norauto.pt/pdf/PT/2025-2026/Michelin_BASES_LEGAIS_PROMOCAO_NORAUTO_OUTUBRO_2026.pdf",
+      "publicador": "Norauto — regulamento Michelin outubro 2026, indicado no relatório de monitorização",
+      "notas": "Registos até 03/11/2026. Limite global 1000 pneus validados. Excluem-se frotas de renting e acumulação com outras promoções Michelin. O relatório documenta também comerciais jante 15+: 2 pneus=30€,4=60€, fora do âmbito B2C ligeiros. IMPORTANTE: o PDF oficial não pôde ser reaberto nesta verificação; campos extraídos do relatório diário fornecido pelo utilizador, sujeitos a confirmação na Revisão.",
+      "resumo_interpretacao": "Nova campanha distinta da Michelin Outono geral (CrossClimate/Alpin). Condições recuperadas do relatório de monitorização de 10/10/2026."
+    },
+    {
+      "estado_validacao": "Pendente de validação",
+      "origem_historica": "Relatório de monitorização 10/10/2026 — fontes oficiais indicadas",
+      "data_ultima_verificacao": "2026-10-10",
+      "ambito": "Portugal",
+      "publico_alvo": "Consumidor final — pneus ligeiros",
+      "candidate_id": "DIARIO-COOPER-MAI-2026",
+      "titulo": "Cooper — Avança com Cooper (Maio 2026)",
+      "marca_sugerida": "Cooper",
+      "retalhista_sugerido": "Oficinas aderentes em Portugal Continental",
+      "data_inicio": "2026-05-04",
+      "data_fim": "2026-05-31",
+      "mecanicas_sugeridas": [
+        "Compra e montagem de 2 ou 4 pneus Cooper elegíveis em oficina aderente e registo online",
+        "Jantes 15–17: 2 pneus=15€, 4=30€; jantes 18 ou superior: 2=30€, 4=60€"
+      ],
+      "numero_pneus": "2 ou 4; uma participação por NIF/nome/veículo/telefone",
+      "jante_dimensao": "15 polegadas ou superior",
+      "modelos_abrangidos": "Cooper de verão, All Season e inverno para turismo, SUV, 4x4 e carrinhas",
+      "oferta_sugerida": "Reembolso por transferência bancária entre 15 € e 60 € conforme tabela; texto do regulamento menciona até 80 €",
+      "valores_detetados": [
+        "15€",
+        "30€",
+        "60€",
+        "80€"
+      ],
+      "valor_minimo": 15,
+      "valor_maximo": 60,
+      "url": "https://www.goodyear.eu/pt_pt/consumer/promotion-hub/national-promotion-sell-out-may-portugal-cooper-pid-6903/terms-and-conditions.html",
+      "regulamento_url": "https://www.goodyear.eu/pt_pt/consumer/promotion-hub/national-promotion-sell-out-may-portugal-cooper-pid-6903/terms-and-conditions.html",
+      "publicador": "Goodyear Portugal — regulamento Avança com Cooper",
+      "notas": "Compra/montagem entre 04/05 e 31/05/2026. Inscrição até 07/06/2026, no portal pt.coopertirepromo.com. Fonte oficial contém CONTRADIÇÕES: secção duração e prémios fala em 600 reembolsos, secção limitações fala em 500; texto de notificação indica reembolso máximo de 80€, apesar de tabela apenas atingir 60€. Não resolver por inferência, requer validação. A campanha exclui Madeira e Açores; organização Goodyear Portugal para pneus da marca Cooper.",
+      "resumo_interpretacao": "Regulamento oficial Goodyear consultado; campanha histórica Cooper de maio não corresponde à Goodyear × Norauto maio."
+    },
+    {
+      "estado_validacao": "Pendente de validação",
+      "origem_historica": "Relatório de monitorização 10/10/2026 — fontes oficiais indicadas",
+      "data_ultima_verificacao": "2026-10-10",
+      "ambito": "Portugal",
+      "publico_alvo": "Consumidor final — pneus ligeiros",
+      "candidate_id": "DIARIO-MICHELIN-NORAUTO-JAN-2026",
+      "titulo": "Michelin × Norauto — Janeiro 2026",
+      "marca_sugerida": "Michelin",
+      "retalhista_sugerido": "Norauto",
+      "data_inicio": "2026-01-01",
+      "data_fim": "2026-01-18",
+      "mecanicas_sugeridas": [
+        "Compra e montagem de 2 ou 4 pneus Michelin elegíveis",
+        "Turismo/SUV/4x4: 15–16: 2 pneus=20€, 4=40€; 17: 2=30€,4=60€; 18+: 2=40€,4=80€"
+      ],
+      "numero_pneus": "2 ou 4; máximo 4 pneus por participante",
+      "jante_dimensao": "Texto inicial diz 16 polegadas ou superior; tabela de prémios inclui 15 polegadas — elegibilidade de 15 por confirmar",
+      "modelos_abrangidos": "Michelin para turismo, SUV, 4x4; comerciais mencionados no regulamento mas fora da tabela de ligeiros",
+      "oferta_sugerida": "Vale digital combustível, Decathlon ou Pingo Doce até 80 €",
+      "valores_detetados": [
+        "20€",
+        "30€",
+        "40€",
+        "60€",
+        "80€"
+      ],
+      "valor_minimo": 20,
+      "valor_maximo": 80,
+      "url": "https://s1.medias-norauto.pt/pdf/PT/2025-2026/Bases-Legais-Campanha-Michelin-26.pdf",
+      "regulamento_url": "https://s1.medias-norauto.pt/pdf/PT/2025-2026/Bases-Legais-Campanha-Michelin-26.pdf",
+      "publicador": "Norauto — bases legais Michelin janeiro 2026",
+      "notas": "Inscrição até 29/01/2026; incidentes até 05/02/2026. Limite global de 1000 pneus validados. Descrição inicial impõe jante ≥16, tabela inclui jante 15 com prémios de 20€/40€ — não decidir elegibilidade da jante 15 sem validação. Regulamento também prevê comerciais ≥15: 2=30€,4=60€, excluídos do âmbito B2C ligeiros. Não acumulável com outras promoções Michelin; renting excluído; até 10 dias úteis para entrega do prémio por email.",
+      "resumo_interpretacao": "Campanha histórica distinta de fevereiro e março. Regulamento Michelin/Norauto de três páginas consultado, com inconsistência de elegibilidade na jante 15."
     }
   ]
 }
