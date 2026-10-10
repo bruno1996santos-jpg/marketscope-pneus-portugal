@@ -41,6 +41,15 @@
    box.replaceChildren(line('Pesquisa diária: estado indisponível. ('+e.message+')',true));
    problems.push('Não é possível confirmar a última pesquisa.');
   }
+  try {
+   const response=await fetch('monitorizacao/estado_verificacao_fontes.json?t='+Date.now(),{cache:'no-store'});
+   if(response.ok){
+    const technical=await response.json();
+    if(technical.last_completed_at&&Number.isFinite(Date.parse(technical.last_completed_at))){
+     box.appendChild(line('Verificação técnica de fontes (GitHub Actions): '+datePt(technical.last_completed_at)+'; '+technical.sources_accessible+'/'+technical.sources_checked+' URLs acessíveis. Não substitui a pesquisa de campanhas.'));
+    }
+   }
+  } catch(e) { /* A verificação técnica é informação complementar. */ }
   try{
    const r=await fetch('https://api.github.com/repos/'+repo+'/commits?path='+encodeURIComponent(catalog)+'&per_page=1&t='+Date.now(),{cache:'no-store',headers:{Accept:'application/vnd.github+json'}});
    if(!r.ok)throw new Error('HTTP '+r.status);
