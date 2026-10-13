@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-10",
+  "updated_at": "2026-10-13",
   "origin": "Relatório diário de monitorização de campanhas de pneus ligeiros — ChatGPT",
   "notice": "Base única do relatório diário e histórico interno PPT. Novos registos importados como pendentes; duplicados potenciais excluídos. Não inferir fontes online inexistentes.",
   "campanhas": [
@@ -1113,6 +1113,204 @@
       "publicador": "Norauto — bases legais Michelin janeiro 2026",
       "notas": "Inscrição até 29/01/2026; incidentes até 05/02/2026. Limite global de 1000 pneus validados. Descrição inicial impõe jante ≥16, tabela inclui jante 15 com prémios de 20€/40€ — não decidir elegibilidade da jante 15 sem validação. Regulamento também prevê comerciais ≥15: 2=30€,4=60€, excluídos do âmbito B2C ligeiros. Não acumulável com outras promoções Michelin; renting excluído; até 10 dias úteis para entrega do prémio por email.",
       "resumo_interpretacao": "Campanha histórica distinta de fevereiro e março. Regulamento Michelin/Norauto de três páginas consultado, com inconsistência de elegibilidade na jante 15."
+    },
+    {
+      "candidate_id": "CONTINENTAL-VERAO-2026-0701-0724",
+      "titulo": "Continental — Promoção Pneus Continental Verão 2026",
+      "marca_sugerida": "Continental",
+      "retalhista_sugerido": "Pontos de venda aderentes; ContiService e Carpneu",
+      "data_inicio": "2026-07-01",
+      "data_fim": "2026-07-24",
+      "url": "https://www.contiservice.pt/campanhas/2026/promocao-pneus-continental-verao",
+      "outras_fontes": [
+        "https://carpneu.net/campanha-continental-14/"
+      ],
+      "mecanicas_sugeridas": [
+        "Compra e montagem de 2 ou 4 pneus Continental de jante 17 polegadas ou superior",
+        "Registo da fatura até 29/07/2026 na plataforma promocional Continental",
+        "Seleção de voucher após validação"
+      ],
+      "numero_pneus": "2 ou 4",
+      "jante_dimensao": "17 polegadas ou superior",
+      "modelos_abrangidos": "Pneus Continental para ligeiros; modelos específicos por confirmar",
+      "oferta_sugerida": "Vouchers Galp, Fnac, Miio, Pingo Doce ou Decathlon até 100 €",
+      "valores_detetados": [
+        "30€",
+        "40€",
+        "50€",
+        "60€",
+        "80€",
+        "100€"
+      ],
+      "valor_minimo": 30,
+      "valor_maximo": 100,
+      "ambito": "Portugal; pontos de venda aderentes",
+      "publico_alvo": "Consumidor final de pneus ligeiros",
+      "notas": "Campanha histórica terminada. Jante 17: 2 pneus=30€, 4=60€; 18-19: 2=40€,4=80€; >=20: 2=50€,4=100€. ContiService confirma período 01-24/07/2026, registo até 29/07 e limite global de 35.000€ em participações. Carpneu confirma escalões. Regulamento integral e modelos específicos por confirmar. Não duplicar com campanhas Continental março/outubro.",
+      "publicador": "ContiService (rede apoiada pela Continental); Carpneu",
+      "estado_validacao": "Pendente de validação"
+    },
+    {
+      "candidate_id": "PIRELLI-CARPNEU-2026-0502-0530",
+      "titulo": "Pirelli × Carpneu — Voucher em Serviços Maio 2026",
+      "marca_sugerida": "Pirelli",
+      "retalhista_sugerido": "Carpneu",
+      "data_inicio": "2026-05-02",
+      "data_fim": "2026-05-30",
+      "url": "https://carpneu.net/campanha-carpneu-pirelli/",
+      "mecanicas_sugeridas": [
+        "Compra de 2 ou 4 pneus Pirelli de jante 17 polegadas ou superior",
+        "Atribuição de voucher para serviços Carpneu"
+      ],
+      "numero_pneus": "2 ou 4",
+      "jante_dimensao": "17 polegadas ou superior",
+      "modelos_abrangidos": "Pneus Pirelli; modelos específicos por confirmar",
+      "oferta_sugerida": "Voucher para serviços Carpneu até 100 €, utilizável até 31/12/2026",
+      "valores_detetados": [
+        "20€",
+        "30€",
+        "40€",
+        "50€",
+        "60€",
+        "100€"
+      ],
+      "valor_minimo": 20,
+      "valor_maximo": 100,
+      "ambito": "Portugal; Carpneu",
+      "publico_alvo": "Consumidor final de pneus ligeiros",
+      "notas": "Campanha histórica terminada. Jante 17: 2=20€,4=40€; 18-19: 2=30€,4=60€; >=20: 2=50€,4=100€. Limitada ao stock, uma participação por NIF; voucher até 31/12/2026. Obrigatoriedade de montagem e modelos elegíveis por confirmar. Distinta da Pirelli Verão junho-julho.",
+      "publicador": "Carpneu",
+      "estado_validacao": "Pendente de validação"
+    },
+    {
+      "candidate_id": "CONTINENTAL-HAWKERS-2026-0401-0430",
+      "titulo": "Continental — Oferta de Óculos de Sol Hawkers Abril 2026",
+      "marca_sugerida": "Continental",
+      "retalhista_sugerido": "Pontos de venda aderentes; ContiService e Carpneu",
+      "data_inicio": "2026-04-01",
+      "data_fim": "2026-04-30",
+      "url": "https://www.contiservice.pt/campanhas/2026/promocao-primavera-continental",
+      "outras_fontes": [
+        "https://carpneu.net/campanha-continental-13/"
+      ],
+      "mecanicas_sugeridas": [
+        "Compra de 4 pneus Continental para ligeiros, SUV ou 4x4",
+        "Oferta imediata de um par de óculos Hawkers",
+        "Uma oferta por fatura, limitada ao stock"
+      ],
+      "numero_pneus": "4",
+      "jante_dimensao": "Por confirmar",
+      "modelos_abrangidos": "Pneus Continental para ligeiros, SUV e 4x4; modelos específicos por confirmar",
+      "oferta_sugerida": "Um par de óculos de sol Hawkers",
+      "valores_detetados": [],
+      "valor_minimo": null,
+      "valor_maximo": null,
+      "ambito": "Portugal; pontos de venda aderentes",
+      "publico_alvo": "Clientes particulares; exclui empresas, frotas e renting",
+      "notas": "Campanha histórica terminada. ContiService confirma 01-30/04/2026, oferta imediata, máximo de uma unidade por fatura, sujeita a stock e possibilidade de encurtar/alargar período. Jante mínima e modelos específicos por confirmar. Não confundir com vouchers Continental março.",
+      "publicador": "ContiService (rede apoiada pela Continental); Carpneu",
+      "estado_validacao": "Pendente de validação"
+    },
+    {
+      "candidate_id": "GOODYEAR-VULCO-OUT-DEZ-2026",
+      "titulo": "Goodyear × Vulco — Até 120 € em Vouchers Outono 2026",
+      "marca_sugerida": "Goodyear",
+      "retalhista_sugerido": "Oficinas Vulco aderentes em Portugal",
+      "data_inicio": "2026-10-10",
+      "data_fim": "2026-12-21",
+      "url": "https://www.goodyear.eu/pt_pt/consumer/promotion-hub/vulco-oct-national-promotion-gy-portugal-pid-8505.html",
+      "outras_fontes": [
+        "https://www.brasefilho.com/promocoes/page/1?searchTerm=campanha"
+      ],
+      "mecanicas_sugeridas": [
+        "Compra de 2 ou 4 pneus Goodyear de verão, inverno ou todas as estações em oficinas aderentes",
+        "Obter código promocional da oficina e fatura",
+        "Registar a compra e anexar fatura até 28/12/2026"
+      ],
+      "numero_pneus": "2 ou 4",
+      "jante_dimensao": "17 polegadas ou superior",
+      "modelos_abrangidos": "Pneus Goodyear de verão, inverno e All Season para turismo e comerciais ligeiros; modelos específicos por confirmar",
+      "oferta_sugerida": "Voucher combustível, Amazon ou Cartão Dá até 120 €",
+      "valores_detetados": [
+        "25€",
+        "35€",
+        "45€",
+        "50€",
+        "60€",
+        "80€",
+        "100€",
+        "120€"
+      ],
+      "valor_minimo": 25,
+      "valor_maximo": 120,
+      "ambito": "Portugal; oficinas Vulco participantes",
+      "publico_alvo": "Consumidor final de pneus de turismo e comerciais ligeiros",
+      "notas": "Campanha iniciada 10/10/2026, terminada para compras 21/12/2026, registo até 28/12/2026. Verão/inverno: jante 17 25€/60€, 18 35€/80€, >=19 50€/100€ para 2/4 pneus; All Season: 17 35€/80€, 18 45€/100€, >=19 60€/120€. Exige código da oficina e fatura. Fonte oficial Goodyear Portugal. Condições integrais (limites por participante, stock e regras de acumulação) não recuperadas; confirmar antes de validar. Não duplicar campanha Goodyear × Vulco junho-julho.",
+      "publicador": "Goodyear Portugal",
+      "estado_validacao": "Pendente de validação"
+    },
+    {
+      "candidate_id": "PIRELLI-BRAS-FILHO-OUT-NOV-2026",
+      "titulo": "Pirelli — Campanha Outono 2026 na Brás & Filho",
+      "marca_sugerida": "Pirelli",
+      "retalhista_sugerido": "Brás & Filho; outras oficinas aderentes por confirmar",
+      "data_inicio": "2026-10-05",
+      "data_fim": "2026-11-06",
+      "url": "https://www.brasefilho.com/promocoes/campanha-de-outono-pirelli-188",
+      "mecanicas_sugeridas": [
+        "Compra de 4 pneus Pirelli elegíveis, jante 17 polegadas ou superior",
+        "Desconto conforme a dimensão da jante, sujeito ao stock"
+      ],
+      "numero_pneus": "4 segundo mecânica detalhada; título menciona 2 ou 4 — por confirmar",
+      "jante_dimensao": "17 polegadas ou superior",
+      "modelos_abrangidos": "Pneus Pirelli de verão e All Season para turismo, SUV e 4x4; modelos específicos por confirmar",
+      "oferta_sugerida": "Desconto até 60 €",
+      "valores_detetados": [
+        "25€",
+        "40€",
+        "60€"
+      ],
+      "valor_minimo": 25,
+      "valor_maximo": 60,
+      "ambito": "Portugal; Brás & Filho, outras oficinas aderentes por confirmar",
+      "publico_alvo": "Consumidor final de pneus ligeiros",
+      "notas": "Página da Brás & Filho de 06/10/2026: compras 05/10 a 06/11/2026, ou até esgotar stock; jante 17=25€, 18-19=40€, >=20=60€. DIVERGÊNCIA: introdução menciona 2 ou 4 pneus, mas mecânica detalhada exige 4. Considerar 4 provisoriamente, confirmar com regulamento Pirelli. Forma de aplicação do desconto, montagem e limite por participante por confirmar. Fonte do retalhista; regulamento oficial Pirelli não recuperado.",
+      "publicador": "Brás & Filho",
+      "estado_validacao": "Pendente de validação"
+    },
+    {
+      "candidate_id": "FIRESTONE-PRIMAVERA-2026-0515-0615",
+      "titulo": "Firestone — Até 80 € em Cartão/Voucher Maio-Junho 2026",
+      "marca_sugerida": "Firestone",
+      "retalhista_sugerido": "Brás & Filho; oficinas aderentes por confirmar",
+      "data_inicio": "2026-05-15",
+      "data_fim": "2026-06-15",
+      "url": "https://www.brasefilho.com/promocoes/ganhe-ate-80-com-a-firestone-162",
+      "mecanicas_sugeridas": [
+        "Compra e colocação de 2 ou 4 pneus Firestone elegíveis",
+        "Solicitar código promocional e registar dados e fatura no portal de promoções Bridgestone até 25/06/2026"
+      ],
+      "numero_pneus": "2 ou 4",
+      "jante_dimensao": "17 polegadas, 18-19 polegadas, >20 polegadas segundo a fonte; elegibilidade de 20 polegadas por confirmar",
+      "modelos_abrangidos": "Pneus Firestone de verão e All Season; modelos específicos por confirmar",
+      "oferta_sugerida": "Até 80 € em cartão virtual Visa, Galp ou Pingo Doce",
+      "valores_detetados": [
+        "10€",
+        "20€",
+        "25€",
+        "30€",
+        "40€",
+        "50€",
+        "60€",
+        "80€"
+      ],
+      "valor_minimo": 10,
+      "valor_maximo": 80,
+      "ambito": "Portugal; oficinas aderentes por confirmar",
+      "publico_alvo": "Consumidor final de pneus ligeiros",
+      "notas": "Campanha histórica terminada. Fonte Brás & Filho publicada 13/05/2026: 15/05-15/06; registo até 25/06. Verão 2/4 pneus: 17 10€/20€, 18-19 20€/40€, >20 30€/60€. All Season 2/4: 17 20€/40€, 18-19 25€/50€, >20 40€/80€. Fonte usa >20, não >=20; dimensão exata de 20 por confirmar. Regulamento oficial específico não recuperado; limites e lista de oficinas por confirmar.",
+      "publicador": "Brás & Filho",
+      "estado_validacao": "Pendente de validação"
     }
   ]
 }
