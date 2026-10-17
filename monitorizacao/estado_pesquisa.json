@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "source": "Tarefa ChatGPT — Monitorizar campanhas pneus",
-  "last_completed_at": "2026-10-11T11:16:59.622Z",
+  "last_completed_at": "2026-10-17T11:04:54.676Z",
   "last_result": "success",
   "last_write_at": null,
   "write_status": "failed",
   "campaigns_added": 0,
   "campaigns_updated": 0,
-  "note": "Pesquisa 2026-10-11 concluída; gravação do catálogo não confirmada (failed). Novas campanhas documentadas no relatório, sem aprovação."
+  "note": "Pesquisa de 17/10 concluída; gravação do catálogo falhou/não foi confirmada. 2 novas campanhas e 2 alterações documentais no relatório, sem aprovações."
 }
