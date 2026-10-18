@@ -1,44 +1,44 @@
 {
   "https://premioshk.pt/bases-legales": {
-    "checked_at": "2026-10-17T07:50:43+00:00",
+    "checked_at": "2026-10-18T07:50:10+00:00",
     "error": "",
-    "sha256": "dd36d50dd599fed7aef4c6c71c43f2ed4b5a83a3e9fa2d474e17824cc347352d",
+    "sha256": "b204289c7fffb5cb3e179b3275e8bf9466230fe4f091b260611cf4bef9e608cc",
     "status": 200
   },
   "https://www.goodyear.eu/content/dam/goodyear/consumer/countries/portugal/promotions/2026/base-de-promocao-goodyear-promo-sell-out-portugal-sin-vulco.pdf": {
-    "checked_at": "2026-10-17T07:50:43+00:00",
+    "checked_at": "2026-10-18T07:50:10+00:00",
     "error": "",
     "sha256": "b05863f9cae2139f93fdd3f328f2619b37b0d1a369e9d1050d3cd013f33379e0",
     "status": 200
   },
   "https://www.goodyear.eu/pt_pt/consumer/promotion-hub/disfrute-ao-maximo-may-2026-portugal--pid-7004/terms-and-conditions.html": {
-    "checked_at": "2026-10-17T07:50:43+00:00",
+    "checked_at": "2026-10-18T07:50:10+00:00",
     "error": "",
     "sha256": "df3f47414cacae489220fd7255c4212cbef46e2e00211d57f6d34d7712278aaa",
     "status": 200
   },
   "https://www.goodyear.eu/pt_pt/consumer/promotion-hub/national-promotion-sell-out-may-portugal-cooper-pid-6903/terms-and-conditions.html": {
-    "checked_at": "2026-10-17T07:50:43+00:00",
+    "checked_at": "2026-10-18T07:50:10+00:00",
     "error": "",
     "sha256": "424c162b8d03ebc357089a718786f75174d97bb049403d256376cfd325d4ab8f",
     "status": 200
   },
   "https://www.michelin.pt/promocoes-michelin/codigo-promocional": {
-    "checked_at": "2026-10-17T07:50:43+00:00",
+    "checked_at": "2026-10-18T07:50:10+00:00",
     "error": "",
-    "sha256": "aa2684e92525b1f71dfe4638159055e47fa4d500ca6250fce0149c4ee24397f0",
+    "sha256": "80b64df955bb10a08aaaf12b7834a268132d12652dab0da30532719232a6c414",
     "status": 200
   },
   "https://www.norauto.pt/e/marca-pneu-norauto.html": {
-    "checked_at": "2026-10-17T07:50:43+00:00",
+    "checked_at": "2026-10-18T07:50:10+00:00",
     "error": "HTTP Error 403: Forbidden",
     "sha256": "",
     "status": 403
   },
   "https://www.pirelli.com/tyres/pt-pt/carro/ofertas-promocoes": {
-    "checked_at": "2026-10-17T07:50:43+00:00",
+    "checked_at": "2026-10-18T07:50:10+00:00",
     "error": "",
-    "sha256": "58a971484b99b9e401d733b8dd05501da9426d214a64b615650820cdd0f7f37a",
+    "sha256": "a8c9a9621c781f29e9b975e0cf82ee7d9510867b9b4412605c2d41c556758d36",
     "status": 200
   }
 }
