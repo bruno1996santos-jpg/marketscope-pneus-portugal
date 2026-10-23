@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "source": "GitHub Actions — verificação técnica de URLs conhecidas",
-  "last_completed_at": "2026-10-22T08:04:58+00:00",
+  "last_completed_at": "2026-10-23T08:01:30+00:00",
   "last_result": "partial",
   "sources_checked": 7,
   "sources_accessible": 6,
