@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-13",
+  "updated_at": "2026-10-23",
   "origin": "Relatório diário de monitorização de campanhas de pneus ligeiros — ChatGPT",
   "notice": "Base única do relatório diário e histórico interno PPT. Novos registos importados como pendentes; duplicados potenciais excluídos. Não inferir fontes online inexistentes.",
   "campanhas": [
@@ -97,7 +97,7 @@
       "publico_alvo": "Consumidor final; pneus ligeiros",
       "url": "https://www.michelin.pt/promocoes-michelin/concessionarios-2026",
       "publicador": "Michelin Portugal",
-      "notas": "Redes de concessionários indicadas na página oficial; confirmar concessionário aderente, quantidades e prémios por jante no regulamento.",
+      "notas": "Redes de concessionários indicadas na página oficial; confirmar concessionário aderente, quantidades e prémios por jante no regulamento.\n\nDIVERGÊNCIA 23/10/2026: página oficial Michelin atualmente consultada apresenta fim 31/10, enquanto regulamento PDF identificado em monitorizações anteriores indicava 16/11. Não alterar data de fim sem reconciliação das fontes.",
       "resumo_interpretacao": "Campanha reportada no relatório diário e confirmada na página oficial.",
       "estado_validacao": "Pendente de validação"
     },
@@ -1245,7 +1245,7 @@
       "valor_maximo": 120,
       "ambito": "Portugal; oficinas Vulco participantes",
       "publico_alvo": "Consumidor final de pneus de turismo e comerciais ligeiros",
-      "notas": "Campanha iniciada 10/10/2026, terminada para compras 21/12/2026, registo até 28/12/2026. Verão/inverno: jante 17 25€/60€, 18 35€/80€, >=19 50€/100€ para 2/4 pneus; All Season: 17 35€/80€, 18 45€/100€, >=19 60€/120€. Exige código da oficina e fatura. Fonte oficial Goodyear Portugal. Condições integrais (limites por participante, stock e regras de acumulação) não recuperadas; confirmar antes de validar. Não duplicar campanha Goodyear × Vulco junho-julho.",
+      "notas": "Campanha iniciada 10/10/2026, terminada para compras 21/12/2026, registo até 28/12/2026. Verão/inverno: jante 17 25€/60€, 18 35€/80€, >=19 50€/100€ para 2/4 pneus; All Season: 17 35€/80€, 18 45€/100€, >=19 60€/120€. Exige código da oficina e fatura. Fonte oficial Goodyear Portugal. Condições integrais (limites por participante, stock e regras de acumulação) não recuperadas; confirmar antes de validar. Não duplicar campanha Goodyear × Vulco junho-julho.\n\nRegulamento integral identificado em monitorizações anteriores: 500 cheques-presente, uma participação por NIF, Portugal continental; data de incidências 28/02/2026 cronologicamente incompatível. Por confirmar novamente.",
       "publicador": "Goodyear Portugal",
       "estado_validacao": "Pendente de validação"
     },
@@ -1310,6 +1310,88 @@
       "publico_alvo": "Consumidor final de pneus ligeiros",
       "notas": "Campanha histórica terminada. Fonte Brás & Filho publicada 13/05/2026: 15/05-15/06; registo até 25/06. Verão 2/4 pneus: 17 10€/20€, 18-19 20€/40€, >20 30€/60€. All Season 2/4: 17 20€/40€, 18-19 25€/50€, >20 40€/80€. Fonte usa >20, não >=20; dimensão exata de 20 por confirmar. Regulamento oficial específico não recuperado; limites e lista de oficinas por confirmar.",
       "publicador": "Brás & Filho",
+      "estado_validacao": "Pendente de validação"
+    },
+    {
+      "candidate_id": "NORAUTO-PREVENSYS-OUT-NOV-2026-1014-1102",
+      "titulo": "Norauto Prevensys — Até 80 € de desconto direto outubro–novembro 2026",
+      "marca_sugerida": "Norauto",
+      "retalhista_sugerido": "Norauto Portugal",
+      "data_inicio": "2026-10-14",
+      "data_fim": "2026-11-02",
+      "url": "https://www.norauto.pt/p/pneu-norauto-prevensys-5-205-60-r16-96-v-xl-2869641.html",
+      "mecanicas_sugeridas": [
+        "Compra e montagem de pneus Norauto Prevensys",
+        "Desconto direto por pneu consoante a jante"
+      ],
+      "numero_pneus": "Até 8 por cliente segundo condições anteriores; por reconfirmar",
+      "jante_dimensao": "Até 15: 5 €/pneu; 16–17: 10 €/pneu; 18–19: 15 €/pneu; ≥20: 20 €/pneu (escalões por reconfirmar)",
+      "modelos_abrangidos": "Norauto Prevensys; seleção por confirmar",
+      "oferta_sugerida": "Até 80 € de desconto direto anunciado",
+      "valores_detetados": [
+        "80€"
+      ],
+      "valor_minimo": null,
+      "valor_maximo": 80,
+      "ambito": "Portugal; Norauto",
+      "publico_alvo": "Consumidor final de pneus ligeiros",
+      "notas": "Página oficial de produto confirma período 14/10–02/11 e promoção até 80 €. Escalões completos e limite de 8 pneus constam de monitorizações anteriores, sem regulamento autónomo reconfirmado. Divergência: 8 pneus × 20 € ultrapassaria 80 €; teto por confirmar. Não duplicar edição setembro.",
+      "publicador": "Norauto Portugal",
+      "estado_validacao": "Pendente de validação"
+    },
+    {
+      "candidate_id": "NORAUTO-ANIVERSARIO-MULTIMARCA-2026-0420-0429",
+      "titulo": "Norauto — Campanha Aniversário Multimarca Abril 2026",
+      "marca_sugerida": "Multimarca (Norauto Prevensys, Michelin, Continental, Goodyear, Hankook)",
+      "retalhista_sugerido": "Norauto Portugal",
+      "data_inicio": "2026-04-20",
+      "data_fim": "2026-04-29",
+      "url": "https://s1.medias-norauto.pt/pdf/PT/2025-2026/Condicoes_promo_Pneus_anivers%C3%A1rio_04_2026.pdf",
+      "mecanicas_sugeridas": [
+        "Compra e montagem de seleção de pneus de verão turismo",
+        "Desconto direto até 25 € por pneu, máximo 100 € por 4 pneus",
+        "Limite 4 pneus por cliente e stock"
+      ],
+      "numero_pneus": "Até 4 por cliente",
+      "jante_dimensao": "Não especificada",
+      "modelos_abrangidos": "Seleção de pneus de verão das cinco marcas; modelos concretos por confirmar",
+      "oferta_sugerida": "Até 25 € por pneu; 100 € por quatro",
+      "valores_detetados": [
+        "25€",
+        "100€"
+      ],
+      "valor_minimo": null,
+      "valor_maximo": 100,
+      "ambito": "Portugal continental",
+      "publico_alvo": "Consumidor final de pneus de turismo",
+      "notas": "Regulamento oficial confirma 20–29/04/2026, sujeito a stock. Registar uma única campanha multimarca, distinta de Michelin × Norauto abril–maio.",
+      "publicador": "Norauto Portugal",
+      "estado_validacao": "Pendente de validação"
+    },
+    {
+      "candidate_id": "NORAUTO-PRIMEIRO-PRECO-10X-2026-1001-1031",
+      "titulo": "Norauto — Reembolsamos 10× a Diferença em Pneus 1.º Preço Outubro 2026",
+      "marca_sugerida": "Multimarca — pneus de primeiro preço",
+      "retalhista_sugerido": "Norauto Portugal",
+      "data_inicio": "2026-10-01",
+      "data_fim": "2026-10-31",
+      "url": "https://s1.medias-norauto.pt/pdf/PT/2026-2027/Condi%C3%A7%C3%B5es_Campanha_Reembolsamos_10%C3%97_Diferen%C3%A7a_pneus_%201.pdf",
+      "mecanicas_sugeridas": [
+        "Comparação de pneu novo da mesma dimensão com concorrência",
+        "Orçamento timbrado ou captura de ecrã como comprovativo",
+        "Reembolso anunciado 10× diferença; desconto direto refere apenas a diferença"
+      ],
+      "numero_pneus": "Não indicado",
+      "jante_dimensao": "Mesma dimensão para comparação",
+      "modelos_abrangidos": "Pneus novos de primeiro preço; exclui motociclos",
+      "oferta_sugerida": "Reembolso de 10× a diferença de preço",
+      "valores_detetados": [],
+      "valor_minimo": null,
+      "valor_maximo": null,
+      "ambito": "Portugal; Norauto",
+      "publico_alvo": "Consumidor final de pneus para automóvel",
+      "notas": "Condições documentadas em monitorização anterior. Divergência entre reembolso 10× e desconto direto de apenas 1×; limites monetários por confirmar. URL do regulamento recuperado de monitorização anterior, sem nova confirmação de acesso nesta execução.",
+      "publicador": "Norauto Portugal",
       "estado_validacao": "Pendente de validação"
     }
   ]
