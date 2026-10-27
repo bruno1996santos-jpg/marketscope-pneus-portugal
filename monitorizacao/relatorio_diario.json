@@ -1326,20 +1326,28 @@
         "Compra e montagem de pneus Norauto Prevensys",
         "Desconto direto por pneu consoante a jante"
       ],
-      "numero_pneus": "Até 8 por cliente segundo condições anteriores; por reconfirmar",
-      "jante_dimensao": "Até 15: 5 €/pneu; 16–17: 10 €/pneu; 18–19: 15 €/pneu; ≥20: 20 €/pneu (escalões por reconfirmar)",
+      "numero_pneus": "Até 8 pneus por cliente; quantidade mínima não especificada na página",
+      "jante_dimensao": "Até 15: 5 €/pneu; 16–17: 10 €/pneu; 18–19: 15 €/pneu; ≥20: 20 €/pneu",
       "modelos_abrangidos": "Norauto Prevensys; seleção por confirmar",
       "oferta_sugerida": "Até 80 € de desconto direto anunciado",
       "valores_detetados": [
+        "5€",
+        "10€",
+        "15€",
+        "20€",
         "80€"
       ],
-      "valor_minimo": null,
+      "valor_minimo": 5,
       "valor_maximo": 80,
       "ambito": "Portugal; Norauto",
       "publico_alvo": "Consumidor final de pneus ligeiros",
-      "notas": "Página oficial de produto confirma período 14/10–02/11 e promoção até 80 €. Escalões completos e limite de 8 pneus constam de monitorizações anteriores, sem regulamento autónomo reconfirmado. Divergência: 8 pneus × 20 € ultrapassaria 80 €; teto por confirmar. Não duplicar edição setembro.",
+      "notas": "Página oficial de produto confirma período 14/10–02/11 e promoção até 80 €. Escalões completos e limite de 8 pneus constam de monitorizações anteriores, sem regulamento autónomo reconfirmado. Divergência: 8 pneus × 20 € ultrapassaria 80 €; teto por confirmar. Não duplicar edição setembro.\n\nVERIFICAÇÃO DIRETA 27/10/2026 (página oficial Norauto): campanha 14/10–02/11/2026, desconto por pneu até jante 15: 5€, jantes 16–17: 10€, 18–19: 15€, 20+: 20€. Até 8 unidades por cliente, montagem obrigatória, sem entrega ao domicílio, não acumulável e limitada ao stock. O título anuncia até 80€, mas o limite de 8 pneus a 20€ por pneu permitiria matematicamente 160€; manter a ambiguidade, não inferir teto adicional. Fonte oficial: https://www.norauto.pt/e/marca-pneu-norauto.html",
       "publicador": "Norauto Portugal",
-      "estado_validacao": "Pendente de validação"
+      "estado_validacao": "Pendente de validação",
+      "regulamento_url": "https://www.norauto.pt/e/marca-pneu-norauto.html",
+      "outras_fontes": [
+        "https://www.norauto.pt/e/marca-pneu-norauto.html"
+      ]
     },
     {
       "candidate_id": "NORAUTO-ANIVERSARIO-MULTIMARCA-2026-0420-0429",
