@@ -108,16 +108,19 @@
       "marca_sugerida": "Bridgestone",
       "retalhista_sugerido": "Oficinas aderentes",
       "mecanicas_sugeridas": [
-        "Compra/troca de pelo menos 2 pneus Bridgestone com código de oficina aderente"
+        "Compra/troca de 2 ou 4 pneus Bridgestone em oficinas aderentes com código da oficina",
+        "Verão: jante 17=25€/50€, 18–19=40€/80€, ≥20=50€/100€, CRV todas as medidas=25€/50€ (2/4 pneus)",
+        "All Season: jante 16=20€/40€, 17=30€/60€, 18–19=45€/90€, ≥20=55€/110€, CRV todas as medidas=30€/60€ (2/4 pneus)"
       ],
       "oferta_sugerida": "Até 110 € em cartão Visa ou vales Galp, Decathlon ou Pingo Doce",
-      "numero_pneus": "2 ou mais",
-      "jante_dimensao": "Por confirmar",
-      "modelos_abrangidos": "Por confirmar",
+      "numero_pneus": "2 ou 4 pneus",
+      "jante_dimensao": "Verão: 17, 18–19, ≥20; All Season: 16, 17, 18–19, ≥20; CRV: todas as medidas",
+      "modelos_abrangidos": "Verão; All Season; CRV (todas as medidas)",
       "valores_detetados": [
-        "110€"
+        "Verão 2/4 pneus: 17 25€/50€; 18–19 40€/80€; ≥20 50€/100€; CRV 25€/50€",
+        "All Season 2/4 pneus: 16 20€/40€; 17 30€/60€; 18–19 45€/90€; ≥20 55€/110€; CRV 30€/60€"
       ],
-      "valor_minimo": null,
+      "valor_minimo": 20,
       "valor_maximo": 110,
       "data_inicio": "2026-09-15",
       "data_fim": "2026-10-31",
@@ -125,7 +128,7 @@
       "publico_alvo": "Consumidor final; pneus ligeiros",
       "url": "https://promocoes.bridgestone.pt/public/promotions/campanha-back-to-work-sept-2026",
       "publicador": "Bridgestone Portugal",
-      "notas": "Registo até 25/10/2026; código da oficina obrigatório; consultar condições e elegibilidade.\n\nVERIFICAÇÃO 27/10/2026: Portal Bridgestone indica fim de compras 31/10 e registo até 10/11, em vez dos prazos anteriormente catalogados. Regulamento PDF ainda por confirmar. https://promocoes.bridgestone.pt/public/promotions/campanha-back-to-work-sept-2026",
+      "notas": "Registo até 25/10/2026; código da oficina obrigatório; consultar condições e elegibilidade.\n\nVERIFICAÇÃO 27/10/2026: Portal Bridgestone indica fim de compras 31/10 e registo até 10/11, em vez dos prazos anteriormente catalogados. Regulamento PDF ainda por confirmar. https://promocoes.bridgestone.pt/public/promotions/campanha-back-to-work-sept-2026\n\nTABELA CONFIRMADA POR IMAGEM FORNECIDA PELO UTILIZADOR (27/10/2026): Período de compra 15/09 a 31/10. Verão jante 16 assinalada com travessão (sem valor promocional); escalões por tipo de pneu e CRV detalhados em mecanicas_sugeridas. Nota anterior no registo Supabase referia inscrição até 25/10; verificação de 27/10 no portal aponta até 10/11. Confirmar prazo no regulamento; não alterar período de compras.",
       "resumo_interpretacao": "Campanha do relatório diário corroborada pelo portal oficial Bridgestone.",
       "estado_validacao": "Pendente de validação"
     },
