@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "source": "Tarefa ChatGPT — Monitorizar campanhas pneus",
-  "last_completed_at": "2026-10-23T16:50:00Z",
+  "last_completed_at": "2026-10-27T17:13:53Z",
   "last_result": "success",
-  "last_write_at": "2026-10-23T16:50:00Z",
+  "last_write_at": "2026-10-27T17:13:53Z",
   "write_status": "success",
-  "campaigns_added": 3,
-  "campaigns_updated": 2,
-  "note": "Pesquisa concluída; catálogo confirmado por releitura na branch main, commit b6635388a75c7b32319971acd65834af4eed9ebd. Divergência Michelin mantida em notas."
+  "campaigns_added": 0,
+  "campaigns_updated": 5,
+  "note": "Catálogo de 42 campanhas confirmado por releitura; 5 atualizações documentais; commit a1abe108b4e974cda9e57baf8109df98314a6a24."
 }
