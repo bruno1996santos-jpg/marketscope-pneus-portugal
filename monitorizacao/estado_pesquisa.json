@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "source": "Tarefa ChatGPT — Monitorizar campanhas pneus",
-  "last_completed_at": "2026-10-27T17:16:44Z",
+  "last_completed_at": "2026-10-28T12:56:40Z",
   "last_result": "success",
-  "last_write_at": "2026-10-27T17:16:44Z",
+  "last_write_at": "2026-10-28T12:56:40Z",
   "write_status": "success",
-  "campaigns_added": 0,
+  "campaigns_added": 2,
   "campaigns_updated": 1,
-  "note": "42 campanhas e IDs únicos confirmados por releitura; atualização documental Norauto Prevensys; commit catálogo 519a2aac7a8c834e91e74e0f5a24dccd2ae867ca. Fontes oficiais Norauto/Continental consultadas, nenhuma campanha nova comprovada."
+  "note": "44 campanhas confirmadas por releitura; 2 novas Michelin e 1 atualização Vulco. Catálogo commit bad57c6aac96c7ac9da420a9ccc3952f560fd48d."
 }
