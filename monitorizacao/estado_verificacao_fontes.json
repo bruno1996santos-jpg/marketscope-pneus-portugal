@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "source": "GitHub Actions — verificação técnica de URLs conhecidas",
-  "last_completed_at": "2026-10-27T13:24:56+00:00",
+  "last_completed_at": "2026-10-28T14:11:00+00:00",
   "last_result": "partial",
   "sources_checked": 7,
-  "sources_accessible": 5,
-  "sources_unavailable": 2,
+  "sources_accessible": 6,
+  "sources_unavailable": 1,
   "semantic_campaign_research": false,
   "note": "Este estado confirma exclusivamente a verificação técnica de fontes, não a pesquisa diária ChatGPT, nem a deteção ou publicação de campanhas."
 }
