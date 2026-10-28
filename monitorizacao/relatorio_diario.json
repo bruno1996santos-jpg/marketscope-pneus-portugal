@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-27",
+  "updated_at": "2026-10-28",
   "origin": "Relatório diário de monitorização de campanhas de pneus ligeiros — ChatGPT",
   "notice": "Base única do relatório diário e histórico interno PPT. Novos registos importados como pendentes; duplicados potenciais excluídos. Não inferir fontes online inexistentes.",
   "campanhas": [
@@ -1249,7 +1249,7 @@
       "valor_maximo": 120,
       "ambito": "Portugal; oficinas Vulco participantes",
       "publico_alvo": "Consumidor final de pneus de turismo e comerciais ligeiros",
-      "notas": "Campanha iniciada 10/10/2026, terminada para compras 21/12/2026, registo até 28/12/2026. Verão/inverno: jante 17 25€/60€, 18 35€/80€, >=19 50€/100€ para 2/4 pneus; All Season: 17 35€/80€, 18 45€/100€, >=19 60€/120€. Exige código da oficina e fatura. Fonte oficial Goodyear Portugal. Condições integrais (limites por participante, stock e regras de acumulação) não recuperadas; confirmar antes de validar. Não duplicar campanha Goodyear × Vulco junho-julho.\n\nRegulamento integral identificado em monitorizações anteriores: 500 cheques-presente, uma participação por NIF, Portugal continental; data de incidências 28/02/2026 cronologicamente incompatível. Por confirmar novamente.\n\nVERIFICAÇÃO 27/10/2026: Regulamento Goodyear confirma 500 prémios, um registo por NIF, Portugal continental e código de oficina; prazo de incidências 28/02/2026 é contraditório. https://www.goodyear.eu/pt_pt/consumer/promotion-hub/vulco-oct-national-promotion-gy-portugal-pid-8505/terms-and-conditions.html",
+      "notas": "Campanha iniciada 10/10/2026, terminada para compras 21/12/2026, registo até 28/12/2026. Verão/inverno: jante 17 25€/60€, 18 35€/80€, >=19 50€/100€ para 2/4 pneus; All Season: 17 35€/80€, 18 45€/100€, >=19 60€/120€. Exige código da oficina e fatura. Fonte oficial Goodyear Portugal. Condições integrais (limites por participante, stock e regras de acumulação) não recuperadas; confirmar antes de validar. Não duplicar campanha Goodyear × Vulco junho-julho.\n\nRegulamento integral identificado em monitorizações anteriores: 500 cheques-presente, uma participação por NIF, Portugal continental; data de incidências 28/02/2026 cronologicamente incompatível. Por confirmar novamente.\n\nVERIFICAÇÃO 27/10/2026: Regulamento Goodyear confirma 500 prémios, um registo por NIF, Portugal continental e código de oficina; prazo de incidências 28/02/2026 é contraditório. https://www.goodyear.eu/pt_pt/consumer/promotion-hub/vulco-oct-national-promotion-gy-portugal-pid-8505/terms-and-conditions.html\n\nVERIFICAÇÃO 28/10/2026: Vulco homepage anuncia fim 31/12, mas página de promoções anuncia 21/12; manter 21/12 conforme regulamento, divergência não resolvida. https://www.vulco.com/pt_pt/ e https://www.vulco.com/pt_pt/promotions.html",
       "publicador": "Goodyear Portugal",
       "estado_validacao": "Pendente de validação",
       "regulamento_url": "https://www.goodyear.eu/pt_pt/consumer/promotion-hub/vulco-oct-national-promotion-gy-portugal-pid-8505/terms-and-conditions.html"
@@ -1405,6 +1405,66 @@
       "publico_alvo": "Consumidor final de pneus para automóvel",
       "notas": "Condições documentadas em monitorização anterior. Divergência entre reembolso 10× e desconto direto de apenas 1×; limites monetários por confirmar. URL do regulamento recuperado de monitorização anterior, sem nova confirmação de acesso nesta execução.",
       "publicador": "Norauto Portugal",
+      "estado_validacao": "Pendente de validação"
+    },
+    {
+      "candidate_id": "MICHELIN-MUCHONEUMATICO-2026-0323-0416",
+      "titulo": "Michelin × Muchoneumatico.com — Março–Abril 2026",
+      "marca_sugerida": "Michelin",
+      "retalhista_sugerido": "Muchoneumatico.com; montagem em Portugal",
+      "data_inicio": "2026-03-23",
+      "data_fim": "2026-04-16",
+      "url": "https://www.michelin.pt/promocoes-michelin/muchoneumatico-2026",
+      "mecanicas_sugeridas": [
+        "Compra online de 2 ou 4 pneus Michelin e montagem em Portugal, com duas faturas"
+      ],
+      "numero_pneus": "2 ou 4",
+      "jante_dimensao": "15–16: 20€/40€; 17: 30€/60€; 18+: 40€/80€ (2/4 pneus)",
+      "modelos_abrangidos": "Michelin turismo, SUV e 4x4; modelos específicos por confirmar",
+      "oferta_sugerida": "Reembolso ou vale digital combustível, Pingo Doce ou Decathlon até 80€",
+      "valores_detetados": [
+        "20€",
+        "30€",
+        "40€",
+        "60€",
+        "80€"
+      ],
+      "valor_minimo": 20,
+      "valor_maximo": 80,
+      "ambito": "Portugal; compra em muchoneumatico.com e montagem em Portugal",
+      "publico_alvo": "Consumidor final de pneus ligeiros",
+      "notas": "Fonte oficial Michelin confirma 23/03–16/04/2026, compra e montagem e duas faturas. Comerciais excluídos do âmbito principal. Regulamento integral não reaberto nesta execução.",
+      "publicador": "Michelin Portugal",
+      "estado_validacao": "Pendente de validação"
+    },
+    {
+      "candidate_id": "MICHELIN-NORAUTO-AGOSTO-2026-0801-0823",
+      "titulo": "Michelin × Norauto — Agosto 2026",
+      "marca_sugerida": "Michelin",
+      "retalhista_sugerido": "Norauto Portugal",
+      "data_inicio": "2026-08-01",
+      "data_fim": "2026-08-23",
+      "url": "https://www.michelin.pt/promocoes-michelin/norauto-2026",
+      "mecanicas_sugeridas": [
+        "Compra e montagem de 2 ou 4 pneus Michelin em centros Norauto"
+      ],
+      "numero_pneus": "2 ou 4; limite 8 pneus por participante",
+      "jante_dimensao": "15–16: 20€/40€; 17: 30€/60€; 18+: 40€/80€ (2/4 pneus)",
+      "modelos_abrangidos": "Michelin turismo/SUV/4x4; modelos específicos por confirmar",
+      "oferta_sugerida": "Reembolso ou vale digital combustível, Pingo Doce ou Decathlon até 80€",
+      "valores_detetados": [
+        "20€",
+        "30€",
+        "40€",
+        "60€",
+        "80€"
+      ],
+      "valor_minimo": 20,
+      "valor_maximo": 80,
+      "ambito": "Portugal; rede Norauto",
+      "publico_alvo": "Consumidor final de pneus ligeiros",
+      "notas": "Bases legais oficiais Michelin confirmam 01–23/08/2026, compra e montagem em Norauto. Campanha distinta das edições janeiro, fevereiro, março, abril/maio e outubro.",
+      "publicador": "Michelin Portugal",
       "estado_validacao": "Pendente de validação"
     }
   ]
