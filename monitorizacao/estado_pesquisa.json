@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "source": "Tarefa ChatGPT — Monitorizar campanhas pneus",
-  "last_completed_at": "2026-10-28T12:56:40Z",
-  "last_result": "success",
+  "last_completed_at": "2026-10-29T18:59:00Z",
+  "last_result": "write_blocked",
   "last_write_at": "2026-10-28T12:56:40Z",
-  "write_status": "success",
-  "campaigns_added": 2,
-  "campaigns_updated": 1,
-  "note": "44 campanhas confirmadas por releitura; 2 novas Michelin e 1 atualização Vulco. Catálogo commit bad57c6aac96c7ac9da420a9ccc3952f560fd48d."
+  "write_status": "blocked",
+  "campaigns_added": 0,
+  "campaigns_updated": 0,
+  "note": "Pesquisa 29/10: Goodyear Retail Nacional 10/10–15/11 confirmado, ausente do catálogo; tentativa de escrita do catálogo não confirmada após releitura. Sailun setembro não confirmado (fonte pública apresenta fevereiro). Catálogo preservado 44."
 }
