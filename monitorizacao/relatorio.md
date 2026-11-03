@@ -1,14 +1,14 @@
 # Monitorização automática de fontes — MarketScope
 
-Verificação UTC: 2026-11-02T17:16:08+00:00
+Verificação UTC: 2026-11-03T15:22:16+00:00
 
 > Esta verificação deteta alterações técnicas no conteúdo das páginas. Não confirma automaticamente novas campanhas nem altera os dados do dashboard; as alterações identificadas exigem validação humana.
 
 ## Alterações/alertas (3)
 
 - **Fonte alterada** — [https://premioshk.pt/bases-legales](https://premioshk.pt/bases-legales) — HTTP: 200; conteúdo/hash diferente da verificação anterior
-- **Fonte alterada** — [https://www.michelin.pt/promocoes-michelin/codigo-promocional](https://www.michelin.pt/promocoes-michelin/codigo-promocional) — HTTP: 200; conteúdo/hash diferente da verificação anterior
 - **Erro de acesso** — [https://www.norauto.pt/e/marca-pneu-norauto.html](https://www.norauto.pt/e/marca-pneu-norauto.html) — HTTP: 403; HTTP Error 403: Forbidden
+- **Fonte alterada** — [https://www.pirelli.com/tyres/pt-pt/carro/ofertas-promocoes](https://www.pirelli.com/tyres/pt-pt/carro/ofertas-promocoes) — HTTP: 200; conteúdo/hash diferente da verificação anterior
 
 ## Estado das fontes
 
