@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "source": "Tarefa ChatGPT — Monitorizar campanhas pneus",
-  "last_completed_at": "2026-10-29T18:59:00Z",
+  "last_completed_at": "2026-11-04T14:14:50Z",
   "last_result": "write_blocked",
   "last_write_at": "2026-10-28T12:56:40Z",
   "write_status": "blocked",
   "campaigns_added": 0,
   "campaigns_updated": 0,
-  "note": "Pesquisa 29/10: Goodyear Retail Nacional 10/10–15/11 confirmado, ausente do catálogo; tentativa de escrita do catálogo não confirmada após releitura. Sailun setembro não confirmado (fonte pública apresenta fevereiro). Catálogo preservado 44."
+  "note": "Pesquisa 04/11: catálogo com 44 campanhas preservado; Goodyear Retail Nacional 10/10–15/11 continua por importar; tentativa de gravação não confirmada após releitura. Hankook novembro NÃO confirmado: bases legais atuais dizem julho. Sem outras alterações confirmadas."
 }
