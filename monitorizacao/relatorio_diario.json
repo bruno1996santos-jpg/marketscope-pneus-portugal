@@ -1466,6 +1466,40 @@
       "notas": "Bases legais oficiais Michelin confirmam 01–23/08/2026, compra e montagem em Norauto. Campanha distinta das edições janeiro, fevereiro, março, abril/maio e outubro.",
       "publicador": "Michelin Portugal",
       "estado_validacao": "Pendente de validação"
+    },
+    {
+      "candidate_id": "NORAUTO-CONTINENTAL-BLACK-DAYS-2026-1101-1115",
+      "titulo": "Continental × Norauto — Black Days 2026",
+      "marca_sugerida": "Continental",
+      "retalhista_sugerido": "Norauto",
+      "mecanicas_sugeridas": [
+        "Desconto direto na compra e montagem de pneus Continental nos centros Norauto aderentes",
+        "Desconto máximo anunciado de 80 €; escalões por jante e número de pneus ainda por confirmar"
+      ],
+      "oferta_sugerida": "Até 80 € de desconto direto na compra e montagem de pneus Continental",
+      "tipo_beneficio": "Desconto direto em pneus",
+      "numero_pneus": "Por confirmar",
+      "jante_dimensao": "Por confirmar",
+      "modelos_abrangidos": "Pneus Continental elegíveis; modelos exatos por confirmar",
+      "valores_detetados": [
+        "Até 80 € de desconto direto"
+      ],
+      "valor_minimo": null,
+      "valor_maximo": 80,
+      "data_inicio": "2026-11-01",
+      "data_fim": "2026-11-15",
+      "ambito": "Portugal; centros Norauto aderentes",
+      "publico_alvo": "Consumidor final; pneus ligeiros",
+      "url": "https://www.norauto.pt/e/marca-pneu-continental.html",
+      "outras_fontes": [
+        "https://centros.norauto.pt/porto/porto/rua-engenheiro-ezequiel",
+        "https://centros.norauto.pt/porto/matosinhos/av-arq-fernando-tavora",
+        "https://www.norauto.pt/t/pneu/continental/r-20.html"
+      ],
+      "publicador": "Norauto Portugal — Black Days Continental (páginas oficiais dos centros e catálogo online)",
+      "notas": "Verificação 05/11/2026. Páginas oficiais de diversos centros Norauto anunciam «Black Days Continental» de 01/11/2026 a 15/11/2026, desconto direto até 80 €, sujeito a compra e montagem. Páginas de produto Continental na Norauto exibem referência a desconto direto até 80 € até 15/11/2026, mas algumas também mostram reduções de preços individuais; não confundir redução de preço do produto com o escalão total da campanha. A página de marca indicada pelo utilizador é sobretudo institucional na versão de texto recuperada; a promoção é corroborada pelas páginas dos centros. Por confirmar: tabela por jante, número de pneus, modelos específicos, exclusões, acumulação, limites por cliente, regulamento integral e abrangência detalhada. Campanha distinta de Continental Outono (05–31/10), Continental × Norauto Maio/Junho e Junho. Nova campanha adicionada para revisão, sem aprovação automática.",
+      "resumo_interpretacao": "Campanha nova, novembro de 2026, confirmada por vários canais oficiais Norauto; detalhes de elegibilidade requerem revisão.",
+      "estado_validacao": "Pendente de validação"
     }
   ]
 }
