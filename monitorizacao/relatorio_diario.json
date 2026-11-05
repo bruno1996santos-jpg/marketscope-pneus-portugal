@@ -1473,18 +1473,22 @@
       "marca_sugerida": "Continental",
       "retalhista_sugerido": "Norauto",
       "mecanicas_sugeridas": [
-        "Desconto direto na compra e montagem de pneus Continental nos centros Norauto aderentes",
-        "Desconto máximo anunciado de 80 €; escalões por jante e número de pneus ainda por confirmar"
+        "Compra e montagem de pneus Continental em centros Norauto aderentes",
+        "Desconto direto por unidade conforme jante: <16\" = 5 €/pneu e 20 € por 4; 17\" = 10 €/pneu e 40 € por 4; 18–19\" = 15 €/pneu e 60 € por 4; >20\" = 20 €/pneu e 80 € por 4",
+        "Não acumulável com outras promoções e parceiros; limitado ao stock existente"
       ],
       "oferta_sugerida": "Até 80 € de desconto direto na compra e montagem de pneus Continental",
       "tipo_beneficio": "Desconto direto em pneus",
-      "numero_pneus": "Por confirmar",
-      "jante_dimensao": "Por confirmar",
+      "numero_pneus": "Desconto por unidade; valores para 4 pneus explicitados",
+      "jante_dimensao": "Jantes <16\"; 17\"; 18–19\"; >20\" (jantes 16\" e 20\" não explicitadas)",
       "modelos_abrangidos": "Pneus Continental elegíveis; modelos exatos por confirmar",
       "valores_detetados": [
-        "Até 80 € de desconto direto"
+        "<16\": 5 € por pneu; 20 € por 4",
+        "17\": 10 € por pneu; 40 € por 4",
+        "18–19\": 15 € por pneu; 60 € por 4",
+        ">20\": 20 € por pneu; 80 € por 4"
       ],
-      "valor_minimo": null,
+      "valor_minimo": 5,
       "valor_maximo": 80,
       "data_inicio": "2026-11-01",
       "data_fim": "2026-11-15",
@@ -1497,7 +1501,7 @@
         "https://www.norauto.pt/t/pneu/continental/r-20.html"
       ],
       "publicador": "Norauto Portugal — Black Days Continental (páginas oficiais dos centros e catálogo online)",
-      "notas": "Verificação 05/11/2026. Páginas oficiais de diversos centros Norauto anunciam «Black Days Continental» de 01/11/2026 a 15/11/2026, desconto direto até 80 €, sujeito a compra e montagem. Páginas de produto Continental na Norauto exibem referência a desconto direto até 80 € até 15/11/2026, mas algumas também mostram reduções de preços individuais; não confundir redução de preço do produto com o escalão total da campanha. A página de marca indicada pelo utilizador é sobretudo institucional na versão de texto recuperada; a promoção é corroborada pelas páginas dos centros. Por confirmar: tabela por jante, número de pneus, modelos específicos, exclusões, acumulação, limites por cliente, regulamento integral e abrangência detalhada. Campanha distinta de Continental Outono (05–31/10), Continental × Norauto Maio/Junho e Junho. Nova campanha adicionada para revisão, sem aprovação automática.",
+      "notas": "Verificação 05/11/2026. Páginas oficiais de diversos centros Norauto anunciam «Black Days Continental» de 01/11/2026 a 15/11/2026, desconto direto até 80 €, sujeito a compra e montagem. Páginas de produto Continental na Norauto exibem referência a desconto direto até 80 € até 15/11/2026, mas algumas também mostram reduções de preços individuais; não confundir redução de preço do produto com o escalão total da campanha. A página de marca indicada pelo utilizador é sobretudo institucional na versão de texto recuperada; a promoção é corroborada pelas páginas dos centros. Escalões por jante, desconto por unidade e por 4 pneus confirmados por imagem fornecida pelo utilizador em 05/11/2026. Restam por confirmar modelos específicos, limites por cliente, regulamento integral e abrangência detalhada. Campanha distinta de Continental Outono (05–31/10), Continental × Norauto Maio/Junho e Junho. Nova campanha adicionada para revisão, sem aprovação automática.\n\nATUALIZAÇÃO COM IMAGEM DO UTILIZADOR (05/11/2026): <16\" = 5€/pneu ou 20€/4; 17\" = 10€/pneu ou 40€/4; 18–19\" = 15€/pneu ou 60€/4; >20\" = 20€/pneu ou 80€/4. Não acumulável com outras promoções e parceiros, limitado ao stock existente. Jantes 16 e 20 não explicitadas. A imagem não discrimina total para exatamente 2 pneus; não apresentar um escalão de 2 pneus como confirmado.",
       "resumo_interpretacao": "Campanha nova, novembro de 2026, confirmada por vários canais oficiais Norauto; detalhes de elegibilidade requerem revisão.",
       "estado_validacao": "Pendente de validação"
     }
