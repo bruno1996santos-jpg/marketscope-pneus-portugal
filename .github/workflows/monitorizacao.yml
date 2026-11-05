@@ -1,65 +1,24 @@
-name: Verificar fontes MarketScope
+name: Validar catálogo MarketScope
 on:
-  schedule:
-    - cron: '30 7 * * *'
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 jobs:
-  monitor:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Configurar Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
-      - name: Verificar fontes conhecidas (sem criar candidatas paralelas)
-        run: python scripts/monitorizar_fontes.py
-      - name: Validar estrutura da base do relatório diário
+      - name: Validar catálogo de campanhas
         run: |
           python - <<'PY'
           import json
           from pathlib import Path
-          p = Path('monitorizacao/relatorio_diario.json')
-          d = json.loads(p.read_text(encoding='utf-8'))
-          assert isinstance(d.get('campanhas'), list), 'O relatório diário deve incluir campanhas[]'
-          ids = [x.get('candidate_id') for x in d['campanhas']]
-          assert all(ids) and len(ids) == len(set(ids)), 'IDs em falta ou duplicados'
-          print('Relatório diário válido:', len(ids), 'campanhas')
+          d = json.loads(Path('monitorizacao/relatorio_diario.json').read_text(encoding='utf-8'))
+          campaigns = d.get('campanhas')
+          assert isinstance(campaigns, list), 'campanhas[] em falta'
+          ids = [x.get('candidate_id') for x in campaigns]
+          assert all(ids), 'candidate_id em falta'
+          assert len(ids) == len(set(ids)), 'candidate_id duplicados'
+          print('Catálogo válido:', len(ids), 'campanhas')
           PY
-      - name: Registar execução técnica independente
-        run: |
-          python - <<'PY'
-          import json
-          from datetime import datetime, timezone
-          from pathlib import Path
-          sources = json.loads(Path('monitorizacao/fontes.json').read_text(encoding='utf-8'))
-          checked = len(sources)
-          successful = sum(1 for s in sources.values() if s.get('status') == 200)
-          failed = checked - successful
-          result = {
-            'schema_version': 1,
-            'source': 'GitHub Actions — verificação técnica de URLs conhecidas',
-            'last_completed_at': datetime.now(timezone.utc).isoformat(timespec='seconds'),
-            'last_result': 'success' if failed == 0 else 'partial',
-            'sources_checked': checked,
-            'sources_accessible': successful,
-            'sources_unavailable': failed,
-            'semantic_campaign_research': False,
-            'note': 'Este estado confirma exclusivamente a verificação técnica de fontes, não a pesquisa diária ChatGPT, nem a deteção ou publicação de campanhas.'
-          }
-          Path('monitorizacao/estado_verificacao_fontes.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-          PY
-      - name: Guardar monitorização técnica
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add monitorizacao/fontes.json monitorizacao/relatorio.md monitorizacao/estado_verificacao_fontes.json
-          if ! git diff --cached --quiet; then
-            git commit -m 'Atualizar verificação técnica de fontes'
-            git push
-          else
-            echo 'Sem alterações para guardar.'
-          fi
