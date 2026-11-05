@@ -1504,6 +1504,72 @@
       "notas": "Verificação 05/11/2026. Páginas oficiais de diversos centros Norauto anunciam «Black Days Continental» de 01/11/2026 a 15/11/2026, desconto direto até 80 €, sujeito a compra e montagem. Páginas de produto Continental na Norauto exibem referência a desconto direto até 80 € até 15/11/2026, mas algumas também mostram reduções de preços individuais; não confundir redução de preço do produto com o escalão total da campanha. A página de marca indicada pelo utilizador é sobretudo institucional na versão de texto recuperada; a promoção é corroborada pelas páginas dos centros. Escalões por jante, desconto por unidade e por 4 pneus confirmados por imagem fornecida pelo utilizador em 05/11/2026. Restam por confirmar modelos específicos, limites por cliente, regulamento integral e abrangência detalhada. Campanha distinta de Continental Outono (05–31/10), Continental × Norauto Maio/Junho e Junho. Nova campanha adicionada para revisão, sem aprovação automática.\n\nATUALIZAÇÃO COM IMAGEM DO UTILIZADOR (05/11/2026): <16\" = 5€/pneu ou 20€/4; 17\" = 10€/pneu ou 40€/4; 18–19\" = 15€/pneu ou 60€/4; >20\" = 20€/pneu ou 80€/4. Não acumulável com outras promoções e parceiros, limitado ao stock existente. Jantes 16 e 20 não explicitadas. A imagem não discrimina total para exatamente 2 pneus; não apresentar um escalão de 2 pneus como confirmado.",
       "resumo_interpretacao": "Campanha nova, novembro de 2026, confirmada por vários canais oficiais Norauto; detalhes de elegibilidade requerem revisão.",
       "estado_validacao": "Pendente de validação"
+    },
+    {
+      "candidate_id": "FEUVERT-MICHELIN-CONDICOES-7500-2026",
+      "titulo": "Michelin × Feu Vert — Promoção de pneus 2026",
+      "marca_sugerida": "Michelin",
+      "retalhista_sugerido": "Feu Vert",
+      "mecanicas_sugeridas": [
+        "Promoção de reembolso Michelin anunciada em produtos Feu Vert; funcionamento exato por confirmar",
+        "Verificar se corresponde à campanha Michelin Outono 2026 já registada, antes da aprovação"
+      ],
+      "oferta_sugerida": "Até 100 € de reembolso anunciado em pneus Michelin selecionados",
+      "tipo_beneficio": "Reembolso monetário",
+      "numero_pneus": "Por confirmar",
+      "jante_dimensao": "Por confirmar",
+      "modelos_abrangidos": "Pneus Michelin selecionados; por confirmar",
+      "valores_detetados": [
+        "Até 100 € de reembolso (etiqueta no catálogo Feu Vert)"
+      ],
+      "valor_minimo": null,
+      "valor_maximo": 100,
+      "data_inicio": null,
+      "data_fim": null,
+      "ambito": "Portugal; Feu Vert",
+      "publico_alvo": "Consumidor final; pneus ligeiros",
+      "url": "https://www.feuvert.pt/static/condicoes-legais-promo-michelin-7500.html",
+      "outras_fontes": [
+        "https://www.feuvert.pt/pneus/r6.html",
+        "https://www.michelin.pt/promocoes-michelin/outono-2026"
+      ],
+      "publicador": "Feu Vert Portugal",
+      "notas": "Incluída para revisão a pedido do utilizador em 05/11/2026. URL de condições legais não acessível na consulta, pelo que as datas e os escalões NÃO foram confirmados. Catálogo Feu Vert apresenta 'ATÉ 100€ REEMBOLSO MICHELIN'. Possível sobreposição com a campanha nacional Michelin Outono (01/10–16/11) já registada; verificar se se trata da mesma campanha antes de aprovar para evitar dupla contagem.",
+      "resumo_interpretacao": "Candidata pendente de validação da identidade, datas e condições; possível duplicado de campanha Michelin nacional.",
+      "estado_validacao": "Pendente de validação"
+    },
+    {
+      "candidate_id": "FEUVERT-CONTINENTAL-CONDICOES-7339-2026",
+      "titulo": "Continental × Feu Vert — Promoção de pneus 2026",
+      "marca_sugerida": "Continental",
+      "retalhista_sugerido": "Feu Vert",
+      "mecanicas_sugeridas": [
+        "Desconto direto em pneus Continental selecionados anunciado no catálogo Feu Vert",
+        "Exemplos por produto: descontos de 5 €, 10 € e 15 € por pneu; não extrapolar para outras jantes"
+      ],
+      "oferta_sugerida": "Até 100 € de desconto direto anunciado em pneus Continental",
+      "tipo_beneficio": "Desconto direto em pneus",
+      "numero_pneus": "Por confirmar",
+      "jante_dimensao": "Por confirmar",
+      "modelos_abrangidos": "Pneus Continental selecionados; por confirmar",
+      "valores_detetados": [
+        "Até 100 € de desconto direto (etiqueta no catálogo Feu Vert)",
+        "Exemplos por produto: 5 €, 10 €, 15 € por pneu"
+      ],
+      "valor_minimo": null,
+      "valor_maximo": 100,
+      "data_inicio": null,
+      "data_fim": null,
+      "ambito": "Portugal; Feu Vert",
+      "publico_alvo": "Consumidor final; pneus ligeiros",
+      "url": "https://www.feuvert.pt/static/condicoes-legais-pneus-continental-7339.html",
+      "outras_fontes": [
+        "https://www.feuvert.pt/pneus/continental/r6.html"
+      ],
+      "publicador": "Feu Vert Portugal",
+      "notas": "Incluída para revisão a pedido do utilizador em 05/11/2026. Página de condições legais não acessível nesta consulta; datas e escalões gerais não confirmados. Feu Vert anuncia 'ATÉ 100€ DESCONTO CONTINENTAL' em produtos elegíveis, com preços que mostram descontos unitários de 5 €, 10 € e 15 € para referências concretas. Não extrapolar estes exemplos para a tabela completa nem confundir com a campanha Continental × Norauto Black Days.",
+      "resumo_interpretacao": "Candidata pendente de validação da mecânica e datas em condições legais Feu Vert.",
+      "estado_validacao": "Pendente de validação"
     }
   ]
 }
