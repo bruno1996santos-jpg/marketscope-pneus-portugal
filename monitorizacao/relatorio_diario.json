@@ -1544,19 +1544,20 @@
       "marca_sugerida": "Continental",
       "retalhista_sugerido": "Feu Vert",
       "mecanicas_sugeridas": [
-        "Desconto direto em pneus Continental selecionados anunciado no catálogo Feu Vert",
-        "Exemplos por produto: descontos de 5 €, 10 € e 15 € por pneu; não extrapolar para outras jantes"
+        "Escalões da tabela fornecida pelo utilizador em 06/11/2026: Turismo/SUV/4x4 — jante 15: 2 pneus=20 €, 4=40 €; jante 16: 2=30 €, 4=60 €; jantes 17–18: 2=40 €, 4=80 €; jante 19 ou superior: 2=50 €, 4=100 €",
+        "Veículos comerciais (segmento distinto): jante 15: 2=20 €, 4=40 €; jantes 16–17: 2=30 €, 4=60 €",
+        "A campanha está descrita no catálogo Feu Vert como desconto direto; a imagem isolada não indica a modalidade de atribuição"
       ],
       "oferta_sugerida": "Até 100 € de desconto direto anunciado em pneus Continental",
       "tipo_beneficio": "Desconto direto em pneus",
-      "numero_pneus": "Por confirmar",
-      "jante_dimensao": "Por confirmar",
+      "numero_pneus": "2 ou 4 pneus",
+      "jante_dimensao": "Turismo/SUV/4x4: 15\", 16\", 17–18\", 19\"+; Comerciais: 15\", 16–17\"",
       "modelos_abrangidos": "Pneus Continental selecionados; por confirmar",
       "valores_detetados": [
-        "Até 100 € de desconto direto (etiqueta no catálogo Feu Vert)",
-        "Exemplos por produto: 5 €, 10 €, 15 € por pneu"
+        "Turismo/SUV/4x4, 2/4 pneus: jante 15 20€/40€; 16 30€/60€; 17–18 40€/80€; 19+ 50€/100€",
+        "Comerciais, 2/4 pneus: jante 15 20€/40€; 16–17 30€/60€"
       ],
-      "valor_minimo": null,
+      "valor_minimo": 20,
       "valor_maximo": 100,
       "data_inicio": null,
       "data_fim": null,
@@ -1567,8 +1568,8 @@
         "https://www.feuvert.pt/pneus/continental/r6.html"
       ],
       "publicador": "Feu Vert Portugal",
-      "notas": "Incluída para revisão a pedido do utilizador em 05/11/2026. Página de condições legais não acessível nesta consulta; datas e escalões gerais não confirmados. Feu Vert anuncia 'ATÉ 100€ DESCONTO CONTINENTAL' em produtos elegíveis, com preços que mostram descontos unitários de 5 €, 10 € e 15 € para referências concretas. Não extrapolar estes exemplos para a tabela completa nem confundir com a campanha Continental × Norauto Black Days.",
-      "resumo_interpretacao": "Candidata pendente de validação da mecânica e datas em condições legais Feu Vert.",
+      "notas": "Atualização de 06/11/2026: o utilizador forneceu uma tabela de valores para esta campanha. Turismo/SUV/4x4: jante 15 (2/4 pneus) 20€/40€; 16 30€/60€; 17–18 40€/80€; 19+ 50€/100€. Comerciais: jante 15 20€/40€; 16–17 30€/60€. O dashboard de pneus ligeiros deverá comparar somente Turismo/SUV/4x4, mantendo os comerciais documentados em separado. A imagem não indica datas, modelos exatos ou modalidade de atribuição; o benefício descrito como desconto direto provém do catálogo Feu Vert previamente recolhido. As datas e demais condições legais estão por confirmar.",
+      "resumo_interpretacao": "Escalões por jante e quantidade confirmados na imagem fornecida em 06/11/2026; datas e condições integrais ainda por confirmar. Não alterar o estado de aprovação decidido pelo utilizador.",
       "estado_validacao": "Pendente de validação"
     }
   ]
