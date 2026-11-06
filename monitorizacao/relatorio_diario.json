@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-28",
+  "updated_at": "2026-11-06",
   "origin": "Relatório diário de monitorização de campanhas de pneus ligeiros — ChatGPT",
   "notice": "Base única do relatório diário e histórico interno PPT. Novos registos importados como pendentes; duplicados potenciais excluídos. Não inferir fontes online inexistentes.",
   "campanhas": [
@@ -1511,18 +1511,20 @@
       "marca_sugerida": "Michelin",
       "retalhista_sugerido": "Feu Vert",
       "mecanicas_sugeridas": [
-        "Promoção de reembolso Michelin anunciada em produtos Feu Vert; funcionamento exato por confirmar",
-        "Verificar se corresponde à campanha Michelin Outono 2026 já registada, antes da aprovação"
+        "Escalões indicados anteriormente na conversa para Michelin × Feu Vert — Turismo/SUV/4x4: jante 15: 2 pneus=20€, 4=40€; 16: 2=30€, 4=60€; 17–18: 2=40€, 4=80€; 19+: 2=50€, 4=100€",
+        "Veículos comerciais, documentados em separado: jante 15: 2=20€, 4=40€; jantes 16–17: 2=30€, 4=60€",
+        "ATENÇÃO: os mesmos escalões constam no registo Continental × Feu Vert; confirmar se a tabela original se aplica de facto a Michelin antes de usar numa comparação validada"
       ],
       "oferta_sugerida": "Até 100 € de reembolso anunciado em pneus Michelin selecionados",
       "tipo_beneficio": "Reembolso monetário",
-      "numero_pneus": "Por confirmar",
-      "jante_dimensao": "Por confirmar",
+      "numero_pneus": "2 ou 4 pneus",
+      "jante_dimensao": "Turismo/SUV/4x4: 15\", 16\", 17–18\", 19\"+; comerciais: 15\", 16–17\"",
       "modelos_abrangidos": "Pneus Michelin selecionados; por confirmar",
       "valores_detetados": [
-        "Até 100 € de reembolso (etiqueta no catálogo Feu Vert)"
+        "Turismo/SUV/4x4 — 2 e 4 pneus: 15 20€/40€; 16 30€/60€; 17–18 40€/80€; 19+ 50€/100€",
+        "Comerciais — 2 e 4 pneus: 15 20€/40€; 16–17 30€/60€"
       ],
-      "valor_minimo": null,
+      "valor_minimo": 20,
       "valor_maximo": 100,
       "data_inicio": null,
       "data_fim": null,
@@ -1534,9 +1536,10 @@
         "https://www.michelin.pt/promocoes-michelin/outono-2026"
       ],
       "publicador": "Feu Vert Portugal",
-      "notas": "Incluída para revisão a pedido do utilizador em 05/11/2026. URL de condições legais não acessível na consulta, pelo que as datas e os escalões NÃO foram confirmados. Catálogo Feu Vert apresenta 'ATÉ 100€ REEMBOLSO MICHELIN'. Possível sobreposição com a campanha nacional Michelin Outono (01/10–16/11) já registada; verificar se se trata da mesma campanha antes de aprovar para evitar dupla contagem.",
-      "resumo_interpretacao": "Candidata pendente de validação da identidade, datas e condições; possível duplicado de campanha Michelin nacional.",
-      "estado_validacao": "Pendente de validação"
+      "notas": "Incluída para revisão a pedido do utilizador em 05/11/2026. URL de condições legais não acessível na consulta, pelo que as datas e os escalões NÃO foram confirmados. Catálogo Feu Vert apresenta 'ATÉ 100€ REEMBOLSO MICHELIN'. Possível sobreposição com a campanha nacional Michelin Outono (01/10–16/11) já registada; verificar se se trata da mesma campanha antes de aprovar para evitar dupla contagem. Atualização solicitada em 06/11/2026: refletidos os escalões apresentados na resposta anterior como Michelin × Feu Vert. Importante: a mesma tabela foi anteriormente atribuída a Continental × Feu Vert no sistema, pelo que a atribuição da tabela à marca Michelin carece de confirmação documental; evitar duplo uso sem validação. Datas de campanha e condições legais integrais permanecem por confirmar.",
+      "resumo_interpretacao": "Escalões introduzidos a pedido do utilizador com base na conversa anterior. Associação específica dos valores à campanha Michelin carece de confirmação porque o mesmo quadro está no registo Continental × Feu Vert. Estado de validação preservado.",
+      "estado_validacao": "Pendente de validação",
+      "data_ultima_verificacao": "2026-11-06"
     },
     {
       "candidate_id": "FEUVERT-CONTINENTAL-CONDICOES-7339-2026",
