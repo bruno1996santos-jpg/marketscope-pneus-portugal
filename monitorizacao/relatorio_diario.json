@@ -1547,20 +1547,20 @@
       "marca_sugerida": "Continental",
       "retalhista_sugerido": "Feu Vert",
       "mecanicas_sugeridas": [
-        "Escalões da tabela fornecida pelo utilizador em 06/11/2026: Turismo/SUV/4x4 — jante 15: 2 pneus=20 €, 4=40 €; jante 16: 2=30 €, 4=60 €; jantes 17–18: 2=40 €, 4=80 €; jante 19 ou superior: 2=50 €, 4=100 €",
-        "Veículos comerciais (segmento distinto): jante 15: 2=20 €, 4=40 €; jantes 16–17: 2=30 €, 4=60 €",
-        "A campanha está descrita no catálogo Feu Vert como desconto direto; a imagem isolada não indica a modalidade de atribuição"
+        "Tabela corrigida pelo utilizador em 06/11/2026: jante 16: 2 pneus=10 €, 4=20 €; jante 17: 2=20 €, 4=40 €; jante 18: 2=30 €, 4=60 €; jante 19: 2=40 €, 4=80 €; jante 20 ou superior: 2=50 €, 4=100 €",
+        "Valores aplicáveis à compra de 2 ou 4 pneus. A imagem mais recente não identifica escalões de veículos comerciais.",
+        "Modalidade do desconto direto mencionada no catálogo Feu Vert; não confirmada isoladamente pela imagem dos escalões."
       ],
       "oferta_sugerida": "Até 100 € de desconto direto anunciado em pneus Continental",
       "tipo_beneficio": "Desconto direto em pneus",
       "numero_pneus": "2 ou 4 pneus",
-      "jante_dimensao": "Turismo/SUV/4x4: 15\", 16\", 17–18\", 19\"+; Comerciais: 15\", 16–17\"",
+      "jante_dimensao": "16\", 17\", 18\", 19\", 20\" ou superior",
       "modelos_abrangidos": "Pneus Continental selecionados; por confirmar",
       "valores_detetados": [
-        "Turismo/SUV/4x4, 2/4 pneus: jante 15 20€/40€; 16 30€/60€; 17–18 40€/80€; 19+ 50€/100€",
-        "Comerciais, 2/4 pneus: jante 15 20€/40€; 16–17 30€/60€"
+        "2 pneus: jante 16\"=10 €, 17\"=20 €, 18\"=30 €, 19\"=40 €, 20\"+=50 €",
+        "4 pneus: jante 16\"=20 €, 17\"=40 €, 18\"=60 €, 19\"=80 €, 20\"+=100 €"
       ],
-      "valor_minimo": 20,
+      "valor_minimo": 10,
       "valor_maximo": 100,
       "data_inicio": null,
       "data_fim": null,
@@ -1571,9 +1571,10 @@
         "https://www.feuvert.pt/pneus/continental/r6.html"
       ],
       "publicador": "Feu Vert Portugal",
-      "notas": "Atualização de 06/11/2026: o utilizador forneceu uma tabela de valores para esta campanha. Turismo/SUV/4x4: jante 15 (2/4 pneus) 20€/40€; 16 30€/60€; 17–18 40€/80€; 19+ 50€/100€. Comerciais: jante 15 20€/40€; 16–17 30€/60€. O dashboard de pneus ligeiros deverá comparar somente Turismo/SUV/4x4, mantendo os comerciais documentados em separado. A imagem não indica datas, modelos exatos ou modalidade de atribuição; o benefício descrito como desconto direto provém do catálogo Feu Vert previamente recolhido. As datas e demais condições legais estão por confirmar.",
-      "resumo_interpretacao": "Escalões por jante e quantidade confirmados na imagem fornecida em 06/11/2026; datas e condições integrais ainda por confirmar. Não alterar o estado de aprovação decidido pelo utilizador.",
-      "estado_validacao": "Pendente de validação"
+      "notas": "CORREÇÃO de 06/11/2026 com nova imagem enviada pelo utilizador: a tabela atribuída anteriormente à Continental × Feu Vert estava errada. Substituir integralmente por jante 16: 2 pneus=10€, 4=20€; jante 17: 2=20€, 4=40€; jante 18: 2=30€, 4=60€; jante 19: 2=40€, 4=80€; jante 20 ou superior: 2=50€, 4=100€. A imagem atual não apresenta escalões para comerciais; os escalões comerciais anteriormente atribuídos à Continental foram removidos deste registo. Não alterar Michelin × Feu Vert com esta correção. Datas, modelos exatos e condições legais integrais da Continental Feu Vert continuam por confirmar.",
+      "resumo_interpretacao": "Tabela Continental Feu Vert corrigida pelo utilizador em 06/11/2026 com nova imagem. Substitui os escalões anteriores erradamente atribuídos; campanha mantém aprovação conforme decisão na plataforma e datas não confirmadas.",
+      "estado_validacao": "Pendente de validação",
+      "data_ultima_verificacao": "2026-11-06"
     }
   ]
 }
