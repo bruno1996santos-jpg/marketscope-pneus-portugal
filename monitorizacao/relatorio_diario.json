@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-06",
+  "updated_at": "2026-11-09",
   "origin": "Relatório diário de monitorização de campanhas de pneus ligeiros — ChatGPT",
   "notice": "Base única do relatório diário e histórico interno PPT. Novos registos importados como pendentes; duplicados potenciais excluídos. Não inferir fontes online inexistentes.",
   "campanhas": [
@@ -1575,6 +1575,46 @@
       "resumo_interpretacao": "Tabela Continental Feu Vert corrigida pelo utilizador em 06/11/2026 com nova imagem. Substitui os escalões anteriores erradamente atribuídos; campanha mantém aprovação conforme decisão na plataforma e datas não confirmadas.",
       "estado_validacao": "Pendente de validação",
       "data_ultima_verificacao": "2026-11-06"
+    },
+    {
+      "candidate_id": "GOODYEAR-RETAIL-OUT-NOV-2026",
+      "titulo": "Goodyear — Promoção Nacional Outono 2026 (Retalho Geral)",
+      "marca_sugerida": "Goodyear",
+      "retalhista_sugerido": "Retalho geral — lojas participantes da promoção nacional Goodyear (não exclusiva Vulco)",
+      "data_inicio": "2026-10-10",
+      "data_fim": "2026-11-15",
+      "mecanicas_sugeridas": [
+        "Compra de 2 ou 4 pneus Goodyear Verão, Inverno ou All Season para ligeiros de passageiros ou comerciais ligeiros, em pontos de venda participantes",
+        "Solicitar o código individual à loja; registar-se com código promocional e fatura até 22/11/2026",
+        "Verão/Inverno — jante 17: 2=25€, 4=60€; 18: 2=35€, 4=80€; 19+: 2=50€, 4=100€",
+        "All Season — jante 17: 2=35€, 4=80€; 18: 2=45€, 4=100€; 19+: 2=60€, 4=120€"
+      ],
+      "numero_pneus": "2 ou 4 pneus",
+      "jante_dimensao": "17\", 18\", 19\" ou superior",
+      "modelos_abrangidos": "Pneus Goodyear Verão, Inverno e All Season (turismo e comerciais ligeiros); modelos exatos por confirmar",
+      "oferta_sugerida": "Voucher de combustível, Amazon ou Cartão Dá, de 25 € a 120 €, conforme jante, pneus e estação",
+      "tipo_beneficio": "Voucher / vale digital",
+      "valores_detetados": [
+        "25€",
+        "35€",
+        "45€",
+        "50€",
+        "60€",
+        "80€",
+        "100€",
+        "120€"
+      ],
+      "valor_minimo": 25,
+      "valor_maximo": 120,
+      "ambito": "Portugal; pontos de venda participantes na promoção nacional (retalho geral)",
+      "publico_alvo": "Consumidor final; pneus ligeiros para passageiros e comerciais ligeiros",
+      "url": "https://www.goodyear.eu/pt_pt/consumer/promotion-hub/national-oct-national-promotion-gy-portugal-pid-8506.html",
+      "regulamento_url": "https://www.goodyear.eu/pt_pt/consumer/promotion-hub/national-oct-national-promotion-gy-portugal-pid-8506.html#terms",
+      "publicador": "Goodyear Portugal — Promoção Nacional Outono 2026",
+      "notas": "Registo até 22/11/2026. Compra e montagem de 10/10 a 15/11/2026 inclusive, em lojas participantes mediante código fornecido pela loja; exige fatura com data, quantidade, modelo, dimensão, ponto de venda, NIF e código da fatura. A campanha é distinta de GOODYEAR-VULCO-OUT-DEZ-2026, que tem a mesma data de início, mas é exclusiva Vulco e acaba em 21/12/2026, com submissão até 28/12/2026. Não agrupar nem substituir os registos. Prémios Verão/Inverno jante 17=25€/60€, 18=35€/80€, 19+=50€/100€; All Season 17=35€/80€, 18=45€/100€, 19+=60€/120€ (2/4 pneus).",
+      "resumo_interpretacao": "Nova campanha autónoma identificada pelo utilizador em 09/11/2026. Datas e escalões confirmados na página oficial Goodyear. Rede retalho geral não é o mesmo que a campanha Vulco; manter períodos separados.",
+      "estado_validacao": "Pendente de validação",
+      "data_ultima_verificacao": "2026-11-09"
     }
   ]
 }
