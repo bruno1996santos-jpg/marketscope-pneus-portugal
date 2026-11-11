@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "source": "Tarefa ChatGPT — Monitorizar campanhas pneus",
-  "last_completed_at": "2026-11-05T15:31:18.752Z",
-  "last_result": "write_blocked",
+  "last_completed_at": "2026-11-11T16:45:28.161Z",
+  "last_result": "supabase_insert_confirmed",
   "last_write_at": "2026-10-28T12:56:40Z",
-  "write_status": "blocked",
-  "campaigns_added": 0,
+  "write_status": "supabase_success",
+  "campaigns_added": 2,
   "campaigns_updated": 0,
-  "note": "Pesquisa 05/11/2026: catálogo permanece com 44 campanhas; Goodyear Retail Nacional 10/10–15/11 por importar. Tentativa de atualização do catálogo não confirmada após releitura; nenhuma campanha existente alterada."
+  "note": "Pesquisa online 11/11/2026: duas novas edições confirmadas em regulamentos oficiais, Hankook × Confortauto novembro (01–30/11) e Sailun × Confortauto setembro (01–30/09). Inseridas e relidas em public.campaigns com pending e marcador [Importação alternativa MarketScope]. GitHub relatorio_diario.json não alterado. Feu Vert Michelin e Continental: páginas de condições legais inacessíveis (DisabledError); candidatas já existentes, não duplicadas. Orange Friday ContiService já na Revisão. Cobertura parcial; sem aprovação automática."
 }
