@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "source": "Tarefa ChatGPT — Monitorizar campanhas pneus",
-  "last_completed_at": "2026-11-11T16:45:28.161Z",
-  "last_result": "supabase_insert_confirmed",
+  "last_completed_at": "2026-11-13T09:44:33.685Z",
+  "last_result": "no_changes",
   "last_write_at": "2026-10-28T12:56:40Z",
-  "write_status": "supabase_success",
-  "campaigns_added": 2,
+  "write_status": "no_changes",
+  "campaigns_added": 0,
   "campaigns_updated": 0,
-  "note": "Pesquisa online 11/11/2026: duas novas edições confirmadas em regulamentos oficiais, Hankook × Confortauto novembro (01–30/11) e Sailun × Confortauto setembro (01–30/09). Inseridas e relidas em public.campaigns com pending e marcador [Importação alternativa MarketScope]. GitHub relatorio_diario.json não alterado. Feu Vert Michelin e Continental: páginas de condições legais inacessíveis (DisabledError); candidatas já existentes, não duplicadas. Orange Friday ContiService já na Revisão. Cobertura parcial; sem aprovação automática."
+  "note": "Pesquisa ONLINE nova 13/11/2026: catálogo GitHub main com 48 candidatas, comparado com public.campaigns Supabase. Nenhuma campanha nova distinta e suficientemente documentada; sem inserções nem alterações ao catálogo. Consultados Michelin (Outono e Euromaster), Continental (ContiService e Euromaster), Bridgestone (portal promoções), Goodyear (hub Portugal), Hankook/Confortauto, Sailun/Confortauto, Norauto (Black Days Continental e descontos Prevensys), Feu Vert (site e catálogo Michelin/Continental), Confortauto, Euromaster, Vulco (pesquisa exploratória), Pirelli (pesquisa exploratória). Feu Vert Michelin e Continental: catálogo de pneus acessível com etiquetas até 100 EUR; páginas de condições legais 7500 e 7339 inacessíveis por cache miss, sem confirmar datas nem relação Michelin Outono. Outras combinações não verificadas exaustivamente. Registos Feu Vert já existentes, não duplicados; nenhuma decisão humana alterada. Estado desta execução gravado sem alterações de campanhas."
 }
